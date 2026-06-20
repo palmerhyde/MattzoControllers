@@ -175,6 +175,26 @@ pio run --target uploadfs
 
 Configuration changes require uploadfs.
 
+## macOS flashing notes (MTC4BT)
+
+Gotchas hit when first flashing on the M1 Mac (all resolved):
+
+* **PlatformIO CLI** isn't on PATH — use the bundled binary:
+  `~/.platformio/penv/bin/pio run -e esp32` (build), `-t upload` (firmware),
+  `-t uploadfs` (configs). Or just use the VS Code PlatformIO buttons.
+* **`intelhex` missing:** build fails with `ModuleNotFoundError: No module named
+  'intelhex'`. Fix once: `~/.platformio/penv/bin/pip install intelhex`.
+* **`data_dir` needs a leading slash on macOS:** in `my_platformio.ini` set
+  `data_dir = /$PROJECT_DIR/data`, otherwise `uploadfs` fails with
+  "can't read source directory".
+* **Serial port** is `/dev/cu.usbserial-0001` (CP2102 bridge, no driver needed).
+  Set `upload_com_port` to this in `my_platformio.ini` (was a stale Windows `COM3`).
+* Use a **data** micro-USB cable — charge-only cables power the board (red LED on)
+  but never enumerate. Check with `ioreg -p IOUSB -l`.
+
+`my_platformio.ini` and `data/` are gitignored (machine-specific), so these
+settings live locally only.
+
 ---
 
 # Controller Configuration
@@ -224,11 +244,11 @@ Syslog app names should match the controller.
 
 # Current Hardware
 
-* ESP32 MTC4BT controller
+* ESP32 MTC4BT controller (flashed and working on macOS)
 * LEGO Powered Up hubs
 * Mattzo controllers
-* Rocrail layout (currently unavailable)
-* MQTT broker on Mac
+* Rocrail layout (restored — version-controlled in `Rocrail/`, auto-opens in Rocrail)
+* MQTT broker on Mac (Mosquitto)
 
 ---
 
@@ -246,23 +266,32 @@ Do not reference these systems unless migrating data.
 
 ---
 
-# Immediate Goal
+# Immediate Goal — ACHIEVED
 
-Successfully flash one MTC4BT controller.
+Successfully flash one MTC4BT controller. ✅ (achieved 2026-06-20)
 
-Success criteria:
+Success criteria (all met):
 
-1. Controller joins BilliBoo WiFi.
-2. Controller resolves camberbrickgreen.local.
-3. Controller connects to MQTT.
-4. Controller communicates with Powered Up hubs.
+1. ✅ Controller joins BilliBoo WiFi.
+2. ✅ Controller resolves camberbrickgreen.local.
+3. ✅ Controller connects to MQTT.
+4. ✅ Controller communicates with Powered Up hubs.
+
+First locomotive verified end-to-end: **60197** (Rocrail address 1), driven
+forward/reverse with working lights (F1) via RocView → Rocrail → MQTT → MTC4BT
+→ Bluetooth. The board serial port on this Mac is `/dev/cu.usbserial-0001`.
 
 ---
 
+# Completed
+
+* ✅ Install Rocrail on Mac.
+* ✅ Restore Rocrail layout from backup (now in `Rocrail/`, auto-opens on launch).
+* ✅ Flash MTC4BT controller and test the first locomotive.
+
 # Future Goals
 
-* Install Rocrail on Mac.
-* Restore Rocrail layout from backup.
+* Test remaining locomotives (60052, 10233, 10194, and others).
 * Enable OTA updates.
 * Add additional controllers.
 * Enable syslog if needed.
