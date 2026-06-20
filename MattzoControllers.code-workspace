@@ -1,6 +1,10 @@
 {
 	"folders": [
 		{
+  			"name": "Repo Root",
+  			"path": "."
+		},
+		{
 			"path": "src/MTC4PF"
 		},
 		{
@@ -13,6 +17,9 @@
 		},
 		{
 			"path": "src/mc_lib"
+		},
+		{
+  			"path": "src/camberbrick-green"
 		}
 	],
 	"settings": {
