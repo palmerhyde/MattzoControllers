@@ -6,3 +6,12 @@
 /.vs/MattoControllers/FileContentIndex
 /.vs/MattoControllers/v17/.wsuo
 /.vs/VSWorkspaceState.json
+
+# macOS finder junk
+.DS_Store
+
+# sync-mattzobricks-docs skill: local venv and sync state
+.claude/skills/sync-mattzobricks-docs/.venv/
+
+# Mattzobricks documentation is kept in sync via Obsidian Sync, not git
+**/Mattzobricks Documentation/
