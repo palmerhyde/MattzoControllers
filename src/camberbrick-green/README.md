@@ -286,3 +286,11 @@ The goal is reliability and maintainability rather than experimentation.
 
 ### liams notes
 /opt/homebrew/opt/mosquitto/sbin/mosquitto -c /opt/homebrew/etc/mosquitto/mosquitto.conf
+
+Initialize Camberbrick Green development environment
+
+- Add repository root to workspace
+- Add Camberbrick Green documentation folder
+- Ignore macOS .DS_Store files
+- Migrate development environment to macOS
+- Rename default branch to main
