@@ -1,0 +1,25 @@
+# Rocrail workspace .gitignore
+#
+# A Rocrail workspace holds one layout's data (plan.xml, rocrail.ini, images, ...).
+# We version-control the layout itself, but ignore files Rocrail regenerates at
+# runtime and resources that belong to the installed Rocrail.app instead.
+
+# Auto-saved plan snapshots (Rocrail keeps up to maxbackup of these)
+**/backup/
+
+# Trace / log output
+**/trace/
+**/*.trc
+
+# Rocrail's own .bak copies of plan.xml / rocrail.ini / etc.
+**/*.bak
+
+# Resource dirs that live inside Rocrail.app; Rocrail symlinks these into the
+# workspace at runtime (they were broken translocation links on import).
+**/svg
+**/web
+
+# Machine-specific / local-only
+**/installpath.txt
+**/lic.dat
+.DS_Store

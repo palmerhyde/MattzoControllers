@@ -1,0 +1,404 @@
+<decoder manu="Doehler-Haass" type="." web="http://doehler-haass.de/cms/pages/haeufige-fragen/decoder-par-tabelle.php" collapse="false" info="Beschreibung für Lokdecoder:
+DH05C, DH10C, DH12A, DH16A, DH18A, DH21A, DH22A, FH05B, FH22A und PD12A
+
+Par-Tabelle: http://doehler-haass.de/cms/pages/haeufige-fragen/decoder-par-tabelle.php
+Handbuch: http://doehler-haass.de/cms/media/pdf/DH05C_DH10C_DH16A.pdf">
+  <cvbyte nr="1" cat="Adresse" desc="Par001 -> Adresse Einer-Stelle " info="0 bis 99 (1)"/>
+  <cvbyte nr="2" cat="Adresse" desc="Par002 -> Adresse Hunderter-Stelle" info="0 bis 99 (10)"/>
+  <cvbyte nr="3" cat="Adresse" desc="Par003 -> SX1 Adresse" info="bei &gt; 111 inaktiv / 0 bis 255 (112)"/>
+  <cvbyte nr="4" cat="Adresse" desc="Par004 -> Adresse für SX1, 1. Zusatzkanal. Funktionen F1 – F8" info="0 bis 255 (1)"/>
+  <cvbyte nr="5" cat="Adresse" desc="Par005 -> Adresse für SX1, 2. Zusatzkanal. Funktionen F9 – F16" info="0 bis 255 (0)"/>
+  <cvbyte nr="6" cat="Adresse" desc="Par006 -> Loknummernausgabe" info=" Aktiv = 1 / Optionen 0,1 (1)"/>
+  <cvbyte nr="7" cat="Adresse" desc="Par007 -> Wirkungsweise Zusatzkanal" info="0 = relativ: 1. Zusatzkanal = par003 + par004 2. Zusatzkanal = par003 + par005 1 = absolut / 0,1 (0)"/>
+  <cvbyte nr="8" cat="Adresse" desc="Par008 -> Verbundadresse Einer-Stelle" info="Derzeit ohne Funktion."/>
+  <cvbyte nr="9" cat="Adresse" desc="Par009 -> Verbundadresse Hunderter-Stelle" info="Derzeit ohne Funktion."/>
+  <!-- <cvbyte nr="10" cat="NN" desc="par 010 leer" info="k.a."/> -->
+  <cvbyte nr="11" cat="Geschwindigkeit" desc="Par011 -> Beschleunigungszeit" info="Der Wert entspricht der Zeit in Sekunden vom Stillstand bis zur Höchstgeschwindigkeit / 0 – 255	(3)"/>
+  <cvbyte nr="12" cat="Geschwindigkeit" desc="Par012 -> Bremszeit" info="Der Wert entspricht der Zeit in Sekunden von der Höchstgeschwindigkeit bis zum Stillstand / 0 – 255	(3)"/>
+  <cvbyte nr="13" cat="Geschwindigkeit" desc="Par013 -> Höchstgeschwindigkei" info="0 bis 255 (92)"/>
+  <cvbyte nr="14" cat="Geschwindigkeit" desc="Par014 -> Anfahrspannung" info="0 bis 15 (0)"/>
+  <cvbyte nr="15" cat="Geschwindigkeit" desc="Par015 -> Langsamfahrt Geschwindigkeit" info="(Siehe par091) / Nur bei Asymmetrie und geeigneten Bremsmodulen / 0 – 127(63)"/>
+  <cvbyte nr="16" cat="Geschwindigkeit" desc="Par016 -> Anfahrverzögerung Fahrstufe 1" info="(Siehe par095) / Je 100 ms, 0 = ausgeschaltet / 0 bis 255 (0)"/>
+  <cvbyte nr="17" cat="Geschwindigkeit" desc="Par017 -> Geschwindigkeitsminderung Analog" info="(Nicht relevant für FH05B/FH22A) / 0 = geringe Minderung … 31 = starke Minderung	0 – 31	(15)"/>
+  <cvbyte nr="18" cat="Geschwindigkeit" desc="Par018 -> Rangiergang Geschwindigkeit" info="(Wie bei par013) / 0 – 127	(63)"/>
+  <cvbyte nr="19" cat="Geschwindigkeit" desc="Par019 -> Rangiergang Verzögerungszeit" info="(Wie bei par011)	0 – 255	(1)"/>
+  <!-- <cvbyte nr="20" cat="NN" desc="par 020 leer" info="k.a."/> -->
+  <cvbyte nr="21" cat="Bremsabschnitt" desc="Par021 -> Bremsabschnitte" info="1 oder 2	0, 1	(0)"/>
+  <cvbyte nr="22" cat="consist" desc="Par022 -> Consist Modus F1 – F8" info="Derzeit ohne Funktion."/>
+  <cvbyte nr="23" cat="consist" desc="Par023 -> Consist Modus FL, F9 – F12" info="Derzeit ohne Funktion."/>
+  <cvbyte nr="24" cat="Licht" desc="Par024 -> Ausschaltfunktion für LV" info="Bit 0 = F1 ... Bit 7 = F8	0 – 255	(0)"/>
+  <cvbyte nr="25" cat="Licht" desc="Par025 -> Ausschaltfunktion für LR" info="Bit 0 = F1 ... Bit 7 = F8	0 – 255	(0)"/>
+  <cvbyte nr="26" cat="AUX" desc="Par026 -> Ausschaltfunktion für AUX1" info="Bit 0 = F1 ... Bit 7 = F8	0 – 255	(0)"/>
+  <cvbyte nr="27" cat="AUX" desc="Par027 -> Ausschaltfunktion für AUX2" info="Bit 0 = F1 ... Bit 7 = F8	0 – 255	(0)"/>
+  <cvbyte nr="28" cat="Analog" desc="Par028 -> Analog Modus F1 – F8 -> Doppelklick" info="0 – 255	(1)">
+  <adip>
+      <dipgroup caption="Analog Modus" type="1" ori="1" spacing="4">
+        <dipvalue name="F1" value="1"/>
+        <dipvalue name="F2" value="2"/>
+        <dipvalue name="F3" value="4"/>
+        <dipvalue name="F4" value="8"/>
+        <dipvalue name="F5" value="16"/>
+        <dipvalue name="F6" value="32"/>
+        <dipvalue name="F7" value="64"/>
+        <dipvalue name="F8" value="128"/>
+      </dipgroup>
+    </adip>
+	</cvbyte>
+  <cvbyte nr="29" cat="Analog" desc="Par029 -> Analog Modus FL, F9 – F12 -> Doppelklick" info="0 – 63	(3)">
+   <adip>
+      <dipgroup caption="Analog Modus" type="1" ori="1" spacing="4">
+        <dipvalue name="FL(f)" value="1"/>
+        <dipvalue name="FL(r)" value="2"/>
+        <dipvalue name="F9" value="4"/>
+        <dipvalue name="F10" value="8"/>
+        <dipvalue name="F11" value="16"/>
+        <dipvalue name="F12" value="32"/>
+      </dipgroup>
+    </adip>
+	</cvbyte>
+  <!-- <cvbyte nr="30" cat="NN" desc="par 030 leer" info="k.a."/> -->
+  <cvbyte nr="31" cat="Einstellungen" desc="Par031 -> Vertauschung Gleis" info="0 = normal, 1 = vertauscht	0, 1	(0)"/>
+  <cvbyte nr="32" cat="Motor" desc="Par032 -> Vertauschung Motor (Nicht relevant für FH05B/FH22A)" info="0 = normal, 1 = vertauscht	0, 1	(0)"/>
+  <cvbyte nr="33" cat="Licht" desc="Par033 -> Vertauschung Licht" info="0 = normal, 1 = vertauscht	0, 1	(0)"/>
+  <cvbyte nr="51" cat="Geschwindigkeit" desc="Par051 -> Kennlinie" info="Durchbiegung der Kennlinie, 0 = gerade ... 7 = stark gekrümmt	0 – 7	(5)."/>
+  <cvbyte nr="52" cat="Motor" desc="Par052 -> Regelvariante (Nicht relevant für FH05B/FH22A)" info="0 = Einstellung durch par056 ff., 1 = Hart, 2 = Weich, 3 = Sehr weich	0 – 3	(2)"/>
+  <cvbyte nr="53" cat="Motor" desc="Par053 -> Impulsbreite (Nicht relevant für FH05B/FH22A)" info="0 = 1 ms, 1 = 2 ms, 2 = 4 ms, 3 = 8 ms	0 – 3	(1)"/>
+  <cvbyte nr="54" cat="Motor" desc="Par054 -> Motorfrequenz (Nicht relevant für FH05B/FH22A)" info="0 = 32 kHz, 1 = 16 kHz, 2 = niederfrequent Bit 2 = Proportionalteilbegrenzung	0 – 7	(1)"/>
+  <cvbyte nr="55" cat="Bremsabschnitt" desc="Par055 -> Maximale Fahrstufe in zweiteiligen Bremsabschnitten" info="(Siehe par021) Nur bei Bremsdiode	0 – 127	(12)"/>
+  <cvbyte nr="56" cat="Motor" desc="Par056 -> Motorregelung Proportionalteil (Nicht relevant für FH05B/FH22A)" info="Nur bei par052 = 0, siehe www.doehler-haass.de / „Häufige Fragen“	0 – 7	(3)"/>
+  <cvbyte nr="57" cat="Motor" desc="Par057 -> Motorregelung Integralteil" info="(Wie bei par056)	0 – 3	(3)"/>
+  <cvbyte nr="58" cat="Motor" desc="Par058 -> Motorregelung Messzeit" info="(Wie bei par056)	0 – 3	(1)"/>
+  <cvbyte nr="59" cat="Motor" desc="Par059 -> Motorregelung Impulsbreite" info="(Wie bei par056)	0 – 7	(3)"/>
+  <!-- <cvbyte nr="60" cat="NN" desc="par 060 leer" info="k.a."/> -->
+  <cvbyte nr="61" cat="Funktion" desc="Par061 -> Funktionszuordnung F0(f)" info="0 – 255	(1)"/>
+  <cvbyte nr="62" cat="Funktion" desc="Par062 -> Funktionszuordnung F0(r)" info="0 – 255	(2)"/>
+  <cvbyte nr="63" cat="Funktion" desc="Par063 -> Funktionszuordnung F1(f+r)" info="Wird par063 gesetzt, wird par075 genauso gesetzt  0 – 255(4)"/>
+  <cvbyte nr="75" cat="Funktion" desc="Par075 -> Funktionszuordnung F1(r)" info="Soll par075 einen anderen Wert haben als par063, muss erst par063 und danach erst par075 gesetzt werden	0 – 255	(4)"/>
+  <cvbyte nr="64" cat="Funktion" desc="Par064 -> Funktionszuordnung F2(f+r)" info="Wird par064 gesetzt, wird par085 genauso gesetzt  0 – 255(8)"/>
+  <cvbyte nr="85" cat="Funktion" desc="Par085 -> Funktionszuordnung F2(r)" Info="Soll par085 einen anderen Wert haben als par064, muss erst par064 und danach erst par085 gesetzt werden	0 – 255	(8)"/>
+  <cvbyte nr="65" cat="Funktion" desc="Par064 -> Funktionszuordnung F3" info="0 – 255	(16)"/>
+  <cvbyte nr="66" cat="Funktion" desc="Par066 -> Funktionszuordnung F4" info="0 – 255	(128)"/>
+  <cvbyte nr="67" cat="Funktion" desc="Par067 -> Funktionszuordnung F5" info="0 – 255	(32)"/>
+  <cvbyte nr="68" cat="Funktion" desc="Par068 -> Funktionszuordnung F6" info="0 – 255	(0)"/>
+  <cvbyte nr="69" cat="Funktion" desc="Par069 -> Funktionszuordnung F7" info="0 – 255	(0)"/>
+  <cvbyte nr="70" cat="Funktion" desc="Par070 -> Funktionszuordnung F8" info="0 – 255	(64)"/>
+  <cvbyte nr="71" cat="Funktion" desc="Par071 -> Funktionszuordnung F9" info="0 – 255	(0)"/>
+  <cvbyte nr="72" cat="Funktion" desc="Par072 -> Funktionszuordnung F10" info="0 – 255	(0)"/>
+  <cvbyte nr="73" cat="Funktion" desc="Par073 -> Funktionszuordnung F11" info="0 – 255	(0)"/>
+  <cvbyte nr="74" cat="Funktion" desc="Par074 -> Funktionszuordnung F12" info="0 – 255	(0)"/>
+  <cvbyte nr="76" cat="AUX" desc="Par076 -> Timer für Ausschalten AUX1" info="Je 100 ms, 0 = ausgeschaltet	0 – 250	(0)"/>
+  <cvbyte nr="77" cat="AUX" desc="Par077 -> Timer für Ausschalten AUX2" info="Je 100 ms, 0 = ausgeschaltet	0 – 250	(0)"/>
+  <cvbyte nr="78" cat="AUX" desc="Par078 -> Timer für Ausschalten AUX3" info="Je 100 ms, 0 = ausgeschaltet	0 – 250	(0)"/>
+  <cvbyte nr="79" cat="AUX" desc="Par079 -> Timer für Ausschalten AUX4" info="Je 100 ms, 0 = ausgeschaltet	0 – 250	(0)"/>
+  <!-- <cvbyte nr="80" cat="NN" desc="par 060 leer" info="k.a."/> -->
+  <cvbyte nr="81" cat="Licht" desc="Par081 -> Dimmung Licht „normal“" info="0 = dunkel … 31 = volle Helligkeit	0 – 31	(31)"/>
+  <cvbyte nr="82" cat="Licht" desc="Par082 -> Dimmung Licht „alternativ“" info="0 = dunkel … 31 = volle Helligkeit	0 – 31	(15)"/>
+  <cvbyte nr="83" cat="AUX" desc="Par083 -> Dimmung AUX1" info="0 = dunkel … 31 = volle Helligkeit	0 – 31	(31)"/>
+  <cvbyte nr="84" cat="AUX" desc="Par084 -> Dimmung AUX2" info="0 = dunkel … 31 = volle Helligkeit	0 – 31	(31)"/>
+  <cvbyte nr="86" cat="Licht" desc="Par086 -> Funktionszuordnung LV+LR ein/AUX1+AUX2 aus" info="Bit 0 = F1 … Bit 7 = F8	0 – 255	(0)"/>
+  <cvbyte nr="87" cat="Licht" desc="Par087 -> Funktionszuordnung AUX1+AUX2 ein/LV+LR aus" info="Bit 0 = F1 … Bit 7 = F8	0 – 255	(0)"/>
+  <cvbyte nr="88" cat="Einstellungen" desc="Par088 -> Einstellungen -> Doppelklick">
+	<adip>
+      <dipgroup caption="Einstellung" type="1" ori="1" spacing="4">
+        <dipvalue name="(Bit 0) Unverstärkte Funktionsausgänge anstelle von ZCLK und ZDAT" value="1"/>
+        <dipvalue name="(Bit 1) Energiesparmodus ausschalten" value="2"/>
+        <dipvalue name="(Bit 2) SUSI-Fahrtrichtung invertieren" value="4"/>
+        <dipvalue name="(Bit 3) SUSI-Anfahrverzögerung ausschalten" value="8"/>
+        <dipvalue name="(Bit 4) Erweiterte Funktionszuordnungen aktivieren" value="16"/>
+        <dipvalue name="(Bit 5) 0 = AUX3 und AUX4 an ZCLK und ZDAT," value="0"/>
+        <dipvalue name="(bit 5) 1 = AUX5 und AUX6 an ZCLK und ZDAT" value="32"/>
+      </dipgroup>
+    </adip>
+	</cvbyte>
+  <!-- <cvbyte nr="89" cat="Speed Table" desc="Index 23"/> -->
+  <!-- <cvbyte nr="90" cat="Speed Table" desc="Index 24"/> -->
+  <cvbyte nr="91" cat="Einstellungen" desc="Par091 -> Bremseinstellungen -> Doppelklick">
+  <adip>
+      <dipgroup caption="Bremseinstellungen" type="1" ori="1" spacing="4">
+        <dipvalue name="Asymmetrie normal" value="1"/>
+        <dipvalue name="Asymmetrie invers" value="2"/>
+        <dipvalue name="Derzeit ohne Funktion" value="4"/>
+        <dipvalue name="Derzeit ohne Funktion" value="8"/>
+        <dipvalue name="Negative Spannung" value="16"/>
+        <dipvalue name="Positive Spannung" value="32"/>
+        <dipvalue name="Bremsdiode normal" value="64"/>
+        <dipvalue name="Bremsdiode invers" value="128"/>
+      </dipgroup>
+    </adip>
+	</cvbyte>  
+  <cvbyte nr="92" cat="Analog" desc="Par092 -> Entscheidungsschwelle für Asymmetrie" info="0=geringe Asymmetrie … 15 = starke Asymmetrie	0 – 15	(6)"/>
+  <cvbyte nr="93" cat="Analog" desc="Par093 -> Vorwärts-Trim" info="0 = ausgeschaltet, kleiner 128 Reduktion, größer 128 Erhöhung der Geschwindigkeit	0 – 255	(0)"/>
+  <cvbyte nr="94" cat="Analog" desc="Par094 -> Rückwärts-Trim" info="0 = ausgeschaltet, kleiner 128 Reduktion, größer 128 Erhöhung der Geschwindigkeit	0 – 255	(0)"/>
+  <cvbyte nr="95" cat="Funktion" desc="Par095 -> Funktionszuordnung Anfahrverzögerung" info="Bit 0 = F1 … Bit 7 = F8	0 – 255	(0)"/>
+  <cvbyte nr="96" cat="Analog" desc="Par096 -> Bremsrampe vorwärts und rückwärts" info="Nur bei Asymmetrie und par051 = 0, 0 = ausgeschaltet, eingestellt wird die Bremszeit aus höchster Fahrstufe in Sekunden, bei kleineren Fahrstufen errechnet der Decoder die Bremsrampe selbstständig	0 – 255	(0)"/>
+  <cvbyte nr="97" cat="Analog" desc="Par097 -> Bremsrampe rückwärts" info="Nur bei Asymmetrie und par051 = 0, 0 = ausgeschaltet, eingestellt wird die Bremszeit aus höchster Fahrstufe in Sekunden, bei kleineren Fahrstufen errechnet der Decoder die Bremsrampe selbstständig / 0 = es wird der Wert aus par096 genutzt, ermöglicht unterschiedliche Bremszeiten für vorwärts und rückwärts	0 – 255	(0)"/>
+  <cvbyte nr="98" cat="info" desc="Par098 -> Benutzerkennzeichen 1" info="0 – 255	(0)"/>
+  <cvbyte nr="99" cat="info" desc="Par099 -> Benutzerkennzeichen 2" info="0 – 255	(0)"/>
+  <cvbyte nr="101" cat="info" desc="Par101 -> Herstellerkennung(Nur lesen)" readonly="false" info="(Nur lesen) 97 = Doehler &amp; Haass (Decoder Reset mit „101“)"/>
+  <cvbyte nr="102" cat="info" desc="Par102 -> Decoderkennzeichen" readonly="true" info="Nur Lesen
+DH05C = 52,  DH10C = 102
+DH12A = 120, DH16A = 160
+DH18A = 180, DH21A = 200
+DH22A = 202, FH05B = 41
+FH22A = 192, PD12A = 130
+Vollständige Liste unter www.doehler-haass.de / „Häufige Fragen“"/>
+  <cvbyte nr="103" cat="info" desc="Par103 -> Versionsnummer" readonly="true" info="Nur Lesen"/>
+  <cvbyte nr="104" cat="info" desc="Par104 -> Datum" readonly="true" info="Nur Lesen"/>
+  <cvbyte nr="105" cat="info" desc="Par105 -> Revisionsnummer" readonly="true" info="Nur Lesen"/>
+  <cvbyte nr="106" cat="info" desc="Par106 -> Datum" readonly="true" info="Nur Lesen"/>
+  <cvbyte nr="141" cat="AUX" desc="Par141 -> Ausschaltfunktion für AUX3" info="Bit 0 = F1 ... Bit 7 = F8	0 – 255	(0)"/>
+  <cvbyte nr="142" cat="AUX" desc="Par142 -> Ausschaltfunktion für AUX4" info="Bit 0 = F1 ... Bit 7 = F8	0 – 255	(0)"/>
+  <cvbyte nr="143" cat="AUX" desc="Par143 -> Ausschaltfunktion für AUX5" info="Bit 0 = F1 ... Bit 7 = F8	0 – 255	(0)"/>
+  <cvbyte nr="144" cat="AUX" desc="Par144 -> Ausschaltfunktion für AUX6" info="Bit 0 = F1 ... Bit 7 = F8	0 – 255	(0)"/>
+  <cvbyte nr="145" cat="AUX" desc="Par145 -> Timer für Ausschalten AUX5" info="Je 100 ms, 0 = ausgeschaltet	0 – 250	(0)"/>
+  <cvbyte nr="146" cat="AUX" desc="Par146 -> Timer für Ausschalten AUX6" info="Je 100 ms, 0 = ausgeschaltet	0 – 250	(0)"/>
+  <cvbyte nr="147" cat="Licht" desc="Par147 -> Funktionszuordnung Abblendlicht" info="0 = deaktiviert
+1 … 28 = F1 … F28
+29 = F0 (Licht)
+Nur bei par088 Bit 4 = 1
+0 – 29	(8)"/>
+  <cvbyte nr="148" cat="Funktion" desc="Par148 -> Funktionszuordnung Rangiergang" info="(Wie bei par147)	0 – 29	(4)"/>
+  <cvbyte nr="149" cat="Funktion" desc="Par149 -> Funktionszuordnung Verzögerungen ausschalten" info="(Wie bei par147)	0 – 29	(9)"/>
+  <cvbyte nr="151" cat="Kupplung" desc="Par151 -> Timer für Heranfahren" info="Je 100 ms, 0 = kein Heranfahren	0 – 250	(0)"/>
+  <cvbyte nr="152" cat="Kupplung" desc="Par152 -> Timer für Warten" info="Je 100 ms, 0 = kein Warten	0 – 250	(0)"/>
+  <cvbyte nr="153" cat="Kupplung" desc="Par153 -> Timer für Wegfahren" info="Je 100 ms, 0 = kein Wegfahren	0 – 250	(0)"/>
+  <cvbyte nr="154" cat="Kupplung" desc="Par154 -> Fahrstufe für Heranfahren" info="0 – 127	(12)"/>
+  <cvbyte nr="155" cat="Kupplung" desc="Par155 -> Fahrstufe für Wegfahren" info="0 – 127	(12)"/>
+  <cvbyte nr="156" cat="Kupplung" desc="Par156 -> Einstellungen Kupplung -> Doppelklick" info="Einstellungen für den Kupplungsablauf">
+    <adip>
+      <dipgroup caption="Kupplungsablauf" type="1" ori="1" spacing="4">
+        <dipvalue name="Kupplungsablauf und Timer deaktivieren" value="64"/>
+        <dipvalue name="Kupplungsablauf nur im Rangiergang" value="128"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="161" cat="Licht" desc="Par161 -> Bedingungen für LV -> Doppelklick" info="Es kann (darf!) immer nur eine Zahl aus jedem abgrenzten Bereich aufaddiert werden!">
+    <adip>
+      <dipgroup caption="Bereich 1" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+        <dipvalue name="Nur bei vorwärts" value="+1"/>
+        <dipvalue name="Nur bei rückwärts" value="+2"/>
+      </dipgroup>	  
+      <dipgroup caption="Bereich 2" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur im Stand" value="+3"/>
+        <dipvalue name="Nur bei Fahrt" value="+6"/>
+      </dipgroup>	
+	  <dipgroup caption="Bereich 3" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur bei F0 (Licht) aus" value="+9"/>
+        <dipvalue name="Nur bei F0 (Licht) an" value="+18"/>
+      </dipgroup>
+	  <dipgroup caption="Bereich 4" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nicht im Rangiergang" value="+27"/>
+        <dipvalue name="Nur im Rangiergang" value="+54"/>
+        <dipvalue name="Im Rangiergang Richtung ignorieren" value="+81"/>
+        <dipvalue name="Im Rangiergang Fahrt/Stand ignorieren" value="+108"/>
+        <dipvalue name="Im Rangiergang Richtung und Fahrt/Stand ignorieren" value="+135"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+   <cvbyte nr="162" cat="Licht" desc="Par162 -> Bedingungen für LR -> Doppelklick" info="Es kann (darf!) immer nur eine Zahl aus jedem abgrenzten Bereich aufaddiert werden!">
+    <adip>
+      <dipgroup caption="Bereich 1" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+        <dipvalue name="Nur bei vorwärts" value="+1"/>
+        <dipvalue name="Nur bei rückwärts" value="+2"/>
+      </dipgroup>	  
+      <dipgroup caption="Bereich 2" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur im Stand" value="+3"/>
+        <dipvalue name="Nur bei Fahrt" value="+6"/>
+      </dipgroup>	
+	  <dipgroup caption="Bereich 3" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur bei F0 (Licht) aus" value="+9"/>
+        <dipvalue name="Nur bei F0 (Licht) an" value="+18"/>
+      </dipgroup>
+	  <dipgroup caption="Bereich 4" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nicht im Rangiergang" value="+27"/>
+        <dipvalue name="Nur im Rangiergang" value="+54"/>
+        <dipvalue name="Im Rangiergang Richtung ignorieren" value="+81"/>
+        <dipvalue name="Im Rangiergang Fahrt/Stand ignorieren" value="+108"/>
+        <dipvalue name="Im Rangiergang Richtung und Fahrt/Stand ignorieren" value="+135"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+   <cvbyte nr="163" cat="AUX" desc="Par163 -> Bedingungen für AUX1 -> Doppelklick" info="Es kann (darf!) immer nur eine Zahl aus jedem abgrenzten Bereich aufaddiert werden!">
+    <adip>
+      <dipgroup caption="Bereich 1" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+        <dipvalue name="Nur bei vorwärts" value="+1"/>
+        <dipvalue name="Nur bei rückwärts" value="+2"/>
+      </dipgroup>	  
+      <dipgroup caption="Bereich 2" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur im Stand" value="+3"/>
+        <dipvalue name="Nur bei Fahrt" value="+6"/>
+      </dipgroup>	
+	  <dipgroup caption="Bereich 3" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur bei F0 (Licht) aus" value="+9"/>
+        <dipvalue name="Nur bei F0 (Licht) an" value="+18"/>
+      </dipgroup>
+	  <dipgroup caption="Bereich 4" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nicht im Rangiergang" value="+27"/>
+        <dipvalue name="Nur im Rangiergang" value="+54"/>
+        <dipvalue name="Im Rangiergang Richtung ignorieren" value="+81"/>
+        <dipvalue name="Im Rangiergang Fahrt/Stand ignorieren" value="+108"/>
+        <dipvalue name="Im Rangiergang Richtung und Fahrt/Stand ignorieren" value="+135"/>
+      </dipgroup>
+    </adip>
+  </cvbyte> <cvbyte nr="164" cat="AUX" desc="Par164 -> Bedingungen für AUX2 -> Doppelklick" info="Es kann (darf!) immer nur eine Zahl aus jedem abgrenzten Bereich aufaddiert werden!">
+    <adip>
+      <dipgroup caption="Bereich 1" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+        <dipvalue name="Nur bei vorwärts" value="+1"/>
+        <dipvalue name="Nur bei rückwärts" value="+2"/>
+      </dipgroup>	  
+      <dipgroup caption="Bereich 2" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur im Stand" value="+3"/>
+        <dipvalue name="Nur bei Fahrt" value="+6"/>
+      </dipgroup>	
+	  <dipgroup caption="Bereich 3" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur bei F0 (Licht) aus" value="+9"/>
+        <dipvalue name="Nur bei F0 (Licht) an" value="+18"/>
+      </dipgroup>
+	  <dipgroup caption="Bereich 4" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nicht im Rangiergang" value="+27"/>
+        <dipvalue name="Nur im Rangiergang" value="+54"/>
+        <dipvalue name="Im Rangiergang Richtung ignorieren" value="+81"/>
+        <dipvalue name="Im Rangiergang Fahrt/Stand ignorieren" value="+108"/>
+        <dipvalue name="Im Rangiergang Richtung und Fahrt/Stand ignorieren" value="+135"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="165" cat="AUX" desc="Par165 -> Bedingungen für AUX3 -> Doppelklick" info="Es kann (darf!) immer nur eine Zahl aus jedem abgrenzten Bereich aufaddiert werden!">
+    <adip>
+      <dipgroup caption="Bereich 1" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+        <dipvalue name="Nur bei vorwärts" value="+1"/>
+        <dipvalue name="Nur bei rückwärts" value="+2"/>
+      </dipgroup>	  
+      <dipgroup caption="Bereich 2" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur im Stand" value="+3"/>
+        <dipvalue name="Nur bei Fahrt" value="+6"/>
+      </dipgroup>	
+	  <dipgroup caption="Bereich 3" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur bei F0 (Licht) aus" value="+9"/>
+        <dipvalue name="Nur bei F0 (Licht) an" value="+18"/>
+      </dipgroup>
+	  <dipgroup caption="Bereich 4" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nicht im Rangiergang" value="+27"/>
+        <dipvalue name="Nur im Rangiergang" value="+54"/>
+        <dipvalue name="Im Rangiergang Richtung ignorieren" value="+81"/>
+        <dipvalue name="Im Rangiergang Fahrt/Stand ignorieren" value="+108"/>
+        <dipvalue name="Im Rangiergang Richtung und Fahrt/Stand ignorieren" value="+135"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+   <cvbyte nr="166" cat="AUX" desc="Par166 -> Bedingungen für AUX4 -> Doppelklick" info="Es kann (darf!) immer nur eine Zahl aus jedem abgrenzten Bereich aufaddiert werden!">
+    <adip>
+      <dipgroup caption="Bereich 1" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+        <dipvalue name="Nur bei vorwärts" value="+1"/>
+        <dipvalue name="Nur bei rückwärts" value="+2"/>
+      </dipgroup>	  
+      <dipgroup caption="Bereich 2" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur im Stand" value="+3"/>
+        <dipvalue name="Nur bei Fahrt" value="+6"/>
+      </dipgroup>	
+	  <dipgroup caption="Bereich 3" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur bei F0 (Licht) aus" value="+9"/>
+        <dipvalue name="Nur bei F0 (Licht) an" value="+18"/>
+      </dipgroup>
+	  <dipgroup caption="Bereich 4" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nicht im Rangiergang" value="+27"/>
+        <dipvalue name="Nur im Rangiergang" value="+54"/>
+        <dipvalue name="Im Rangiergang Richtung ignorieren" value="+81"/>
+        <dipvalue name="Im Rangiergang Fahrt/Stand ignorieren" value="+108"/>
+        <dipvalue name="Im Rangiergang Richtung und Fahrt/Stand ignorieren" value="+135"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="167" cat="AUX" desc="Par167 -> Bedingungen für AUX5 -> Doppelklick" info="Es kann (darf!) immer nur eine Zahl aus jedem abgrenzten Bereich aufaddiert werden!">
+    <adip>
+      <dipgroup caption="Bereich 1" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+        <dipvalue name="Nur bei vorwärts" value="+1"/>
+        <dipvalue name="Nur bei rückwärts" value="+2"/>
+      </dipgroup>	  
+      <dipgroup caption="Bereich 2" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur im Stand" value="+3"/>
+        <dipvalue name="Nur bei Fahrt" value="+6"/>
+      </dipgroup>	
+	  <dipgroup caption="Bereich 3" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur bei F0 (Licht) aus" value="+9"/>
+        <dipvalue name="Nur bei F0 (Licht) an" value="+18"/>
+      </dipgroup>
+	  <dipgroup caption="Bereich 4" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nicht im Rangiergang" value="+27"/>
+        <dipvalue name="Nur im Rangiergang" value="+54"/>
+        <dipvalue name="Im Rangiergang Richtung ignorieren" value="+81"/>
+        <dipvalue name="Im Rangiergang Fahrt/Stand ignorieren" value="+108"/>
+        <dipvalue name="Im Rangiergang Richtung und Fahrt/Stand ignorieren" value="+135"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+    <cvbyte nr="168" cat="AUX" desc="Par168 -> Bedingungen für AUX6 -> Doppelklick" info="Es kann (darf!) immer nur eine Zahl aus jedem abgrenzten Bereich aufaddiert werden!">
+    <adip>
+      <dipgroup caption="Bereich 1" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+        <dipvalue name="Nur bei vorwärts" value="+1"/>
+        <dipvalue name="Nur bei rückwärts" value="+2"/>
+      </dipgroup>	  
+      <dipgroup caption="Bereich 2" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur im Stand" value="+3"/>
+        <dipvalue name="Nur bei Fahrt" value="+6"/>
+      </dipgroup>	
+	  <dipgroup caption="Bereich 3" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nur bei F0 (Licht) aus" value="+9"/>
+        <dipvalue name="Nur bei F0 (Licht) an" value="+18"/>
+      </dipgroup>
+	  <dipgroup caption="Bereich 4" type="0" ori="1" spacing="4">
+        <dipvalue name="Grundeinstellung" value="0"/>
+		<dipvalue name="Nicht im Rangiergang" value="+27"/>
+        <dipvalue name="Nur im Rangiergang" value="+54"/>
+        <dipvalue name="Im Rangiergang Richtung ignorieren" value="+81"/>
+        <dipvalue name="Im Rangiergang Fahrt/Stand ignorieren" value="+108"/>
+        <dipvalue name="Im Rangiergang Richtung und Fahrt/Stand ignorieren" value="+135"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="169" cat="Einstellungen" desc="Par169 -> Initialmapping" info="Diese Funktionsausgänge sind aktiv sobald der Decoder adressiert wird (ohne aktive Funktionstaste). Dadurch kann, in Verbindung mit den Bedingungen, beispielsweise eine Schleiferumschaltung realisiert werden.	0 – 255	(0)">
+    <adip>
+      <dipgroup caption="Initialmapping" type="1" ori="1" spacing="4">
+        <dipvalue name="Bit 0 LV" value="1"/>
+        <dipvalue name="Bit 1 LR" value="2"/>
+        <dipvalue name="Bit 2 AUX1" value="4"/>
+        <dipvalue name="Bit 3 AUX2" value="8"/>
+        <dipvalue name="Bit 4 AUX3" value="16"/>
+        <dipvalue name="Bit 5 AUX4" value="32"/>
+        <dipvalue name="Bit 6 AUX5" value="64"/>
+        <dipvalue name="Bit 7 AUX6" value="128"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+</decoder>

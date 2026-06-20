@@ -1,0 +1,27 @@
+<decoder manu="Arduino" type="UNO" web="https://www.arduino.cc/en/Main/ArduinoBoardUno">
+  <cvbyte nr="1" cat="address" desc="Board number" info="Bits 0-7 contain a board number with a value between 0 and 255."/>
+  <cvbyte nr="2" cat="analog" desc="Analog port 1 configuration" info="0=NOP, 1=Input, 2=Sensor, 3=Digital_Input, 4=Digital_Output, 5=Sensor, 6=reserved"/>
+  <cvbyte nr="3" cat="analog" desc="Analog port 2 configuration" info="0=NOP, 1=Input, 2=Sensor, 3=Digital_Input, 4=Digital_Output, 5=Sensor, 6=reserved"/>
+  <cvbyte nr="4" cat="analog" desc="Analog port 3 configuration" info="0=NOP, 1=Input, 2=Sensor, 3=Digital_Input, 4=Digital_Output, 5=Sensor, 6=reserved"/>
+  <cvbyte nr="5" cat="analog" desc="Analog port 4 configuration" info="0=NOP, 1=Input, 2=Sensor, 3=Digital_Input, 4=Digital_Output, 5=Sensor, 6=reserved"/>
+  <cvbyte nr="6" cat="analog" desc="Analog port 5 configuration" info="0=NOP, 1=Input, 2=Sensor, 3=Digital_Input, 4=Digital_Output, 5=Sensor, 6=reserved"/>
+  <cvbyte nr="7" cat="analog" desc="Analog port 6 configuration" info="0=NOP, 1=Input, 2=Sensor, 3=Digital_Input, 4=Digital_Output, 5=Sensor, 6=reserved"/>
+  <cvbyte nr="18" cat="digital" desc="Digital port 1 configuration" info="0=Input, 1=Output, 2=Input_Pullup, 3=Sensor_Pullup, 4=reserved"/>
+  <cvbyte nr="19" cat="digital" desc="Digital port 2 configuration" info="0=Input, 1=Output, 2=Input_Pullup, 3=Sensor_Pullup, 4=reserved"/>
+  <cvbyte nr="20" cat="digital" desc="Digital port 3 configuration" info="0=Input, 1=Output, 2=Input_Pullup, 3=Sensor_Pullup, 4=reserved"/>
+  <cvbyte nr="21" cat="digital" desc="Digital port 4 configuration" info="0=Input, 1=Output, 2=Input_Pullup, 3=Sensor_Pullup, 4=reserved"/>
+  <cvbyte nr="22" cat="digital" desc="Digital port 5 configuration" info="0=Input, 1=Output, 2=Input_Pullup, 3=Sensor_Pullup, 4=reserved"/>
+  <cvbyte nr="23" cat="digital" desc="Digital port 6 configuration" info="0=Input, 1=Output, 2=Input_Pullup, 3=Sensor_Pullup, 4=reserved"/>
+  <cvbyte nr="24" cat="digital" desc="Digital port 7 configuration" info="0=Input, 1=Output, 2=Input_Pullup, 3=Sensor_Pullup, 4=reserved"/>
+  <cvbyte nr="25" cat="digital" desc="Digital port 8 configuration" info="0=Input, 1=Output, 2=Input_Pullup, 3=Sensor_Pullup, 4=reserved"/>
+  <cvbyte nr="26" cat="digital" desc="Digital port 9 configuration" info="0=Input, 1=Output, 2=Input_Pullup, 3=Sensor_Pullup, 4=reserved"/>
+  <cvbyte nr="27" cat="digital" desc="Digital port 10 configuration" info="0=Input, 1=Output, 2=Input_Pullup, 3=Sensor_Pullup, 4=reserved"/>
+  <cvbyte nr="28" cat="digital" desc="Digital port 11 configuration" info="0=Input, 1=Output, 2=Input_Pullup, 3=Sensor_Pullup, 4=reserved"/>
+  <cvbyte nr="29" cat="digital" desc="Digital port 12 configuration" info="0=Input, 1=Output, 2=Input_Pullup, 3=Sensor_Pullup, 4=reserved"/>
+  <cvbyte nr="30" cat="digital" desc="Digital port 13 configuration" info="0=Input, 1=Output, 2=Input_Pullup, 3=Sensor_Pullup, 4=reserved"/>
+  <cvbyte nr="31" cat="digital" desc="Digital port 14 configuration" info="0=Input, 1=Output, 2=Input_Pullup, 3=Sensor_Pullup, 4=reserved"/>
+  <cvbyte nr="72" cat="RFID" desc="RFID reader 1." info="0=Disabled, 1=Enabled"/>
+  <cvbyte nr="73" cat="RFID" desc="RFID reader 2." info="0=Disabled, 1=Enabled"/>
+  <cvbyte nr="80" cat="RS485" desc="Use RS485 Software Serial." info="0=Disabled, 1=Enabled Three digital ports are used for RS485."/>
+  <cvbyte nr="81" cat="RS485" desc="RS485 Master" info="0=Slave, 1=Master"/>
+</decoder>

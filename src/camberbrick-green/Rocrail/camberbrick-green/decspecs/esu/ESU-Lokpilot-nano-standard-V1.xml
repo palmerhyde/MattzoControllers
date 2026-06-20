@@ -1,0 +1,143 @@
+﻿<!--  This is for the ESU Lokpilot nano standard V1.0 decoder.  -->
+<decoder manu="ESU" type="Lokpilot nano standard V1.0" web="http://www.esu.eu" collapse="true">
+  <cvbyte nr="1" cat="Address" desc="Short Decoder Address" info="Range 0-127 - (Range 1-255 for Motorola) Default 3"/>
+	<cvbyte nr="2" cat="Speed" desc="Vstart" info="Start voltage Sets the minimum speed of the engine Range 1 - 64 Default 3"/>
+	<cvbyte nr="3" cat="Speed" desc="Acceleration Rate" info="This value multiplied by 0.25 is the time from stop to maximum speed Range 0 - 255 Default 16"/>
+	<cvbyte nr="4" cat="Speed" desc="Deceleration Rate" info="This value multiplied by 0.25 is the time from stop to maximum speed Range 0 - 255  Default 12"/>
+	<cvbyte nr="5" cat="Speed" desc="Maximum speed" info="Maximum speed of the engine Range 0 - 64 Default 64"/>
+  <cvbyte nr="6" cat="Speed" desc="Medium speed" info="Medium speed of the engine. 0 - 64 Default 22"/>
+	<cvbyte nr="7" cat="Info" desc="Manufacturer Version No." readonly="true" info="Version number Internal software version of decoder"/>
+	<cvbyte nr="8" cat="Info" desc="Manufacturer's ID" readonly="true" info="ID ESU - Read Default 151"/>
+  <cvbyte nr="8" cat="Reset" desc="Reset Decoder" readonly="false" info="WARNING Writing value 8 in this CV will trigger a reset to factory default values"/>
+	<cvbyte nr="17" cat="Address" desc="Extended address high" info="Long address of engine Range Bitwise 11000000 to 11100111 Default 11000000 (192)"/>
+	<cvbyte nr="18" cat="Address" desc="Extended address low" info="Long address of engine Range Bitwise 00000000 to 11111111 (0 - 255) Default 10000000 (128)"/>
+	<cvbyte nr="19" cat="Consist" desc="Consist Address" info="Additional address for consist operation. Value 0 or 128 means: consist address is disabled. Active consist address Range for Forward 1 - 127. Active consist address Range for Reverse 129 - 255. Default 0"/>
+  <cvbyte nr="27" cat="Config" desc="CV27 Enabled Brake modes" info=".">
+    <adip>
+      <dipgroup caption="Allowed (enabled) Brake modes Default 24" type="1" ori="1" spacing="2">
+        <dipvalue name="Brake on DC, if polarity against driving direction" value="8"/>
+        <dipvalue name="Brake on DC, if polarity like driving direction" value="16"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="28" cat="Config" desc="CV28 RailCom Configuration Default 131" info=".">
+    <adip>
+      <dipgroup caption="Railcom Settings" type="1" ori="1">
+        <dipvalue name="Channel 1 Address broadcast enabled" value="1"/>
+        <dipvalue name="Data transmission allowed on Channel 2" value="2"/>
+        <dipvalue name="RailCom Plus automatic loco recognition active" value="128"/>
+      </dipgroup>
+    </adip>
+  </cvbyte> 
+  <cvbyte nr="29" cat="Config" desc="CV29 Decoder Configuration 1 Default 12" info=".">
+    <adip title="General Decoder Configuration">
+      <dipgroup caption="General Configuration" type="1" ori="1">
+        <dipvalue name="Invert direction" value="1"/>
+        <dipvalue name="Select 28/128 speed steps" value="2"/>
+        <dipvalue name="Enable Analog mode" value="4"/>
+        <dipvalue name="Enable RailCom" value="8"/>
+        <dipvalue name="Enable Speed curve through CV 67 - 94" value="16"/>
+        <dipvalue name="Long address as per CV17/18" value="32"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="31" cat="Info" desc="Loksound Index Register High" readonly="true" info="Index Register H Selection page for CV257-512. Undocumented Default=1"/>
+  <cvbyte nr="32" cat="Info" desc="Loksound Index Register Low" readonly="true" info="Index Register L Selection page for CV257-512. Undocumented Default=0"/>
+  <cvbyte nr="33" cat="Functions" desc="F0 Forward" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=1"/>
+  <cvbyte nr="34" cat="Functions" desc="F0 Reverse" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=2"/>
+  <cvbyte nr="35" cat="Functions" desc="F1 Forward" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=4"/>
+  <cvbyte nr="36" cat="Functions" desc="F2" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=8"/>
+  <cvbyte nr="37" cat="Functions" desc="F3" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=64"/>
+  <cvbyte nr="38" cat="Functions" desc="F4 Forward" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=128"/>
+  <cvbyte nr="39" cat="Functions" desc="F5 Forward" info="AUX3 LokPilot Fx Nano only. See Lokpilot Nano Instruction Manual Fig. 5 Default=16"/>
+  <cvbyte nr="40" cat="Functions" desc="F6 Forward" info="AUX4 LokPilot Fx Nano only. See Lokpilot Nano Instruction Manual Fig. 5 Default=32"/>
+  <cvbyte nr="41" cat="Functions" desc="F7 Forward" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="42" cat="Functions" desc="F8" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="43" cat="Functions" desc="F9" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="44" cat="Functions" desc="F10" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="45" cat="Functions" desc="F11" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="46" cat="Functions" desc="F12" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="47" cat="Functions" desc="F0 Reverse" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=4"/>
+	<cvbyte nr="49" cat="BEMF" desc="ESU BEMF" info="Back EMF Configuration. Default 16">
+    <adip title="BEMF Config">
+      <dipgroup caption="BEMF" type="0" ori="1">
+        <dipvalue name="Enable BEMF function" value="1"/>
+        <dipvalue name="Enable automatic DCC speed step detection" value="16"/>
+      </dipgroup>
+    </adip>
+  </cvbyte> 
+  <cvbyte nr="53" cat="BEMF" desc="Control Reference voltage" info="Defines the Back EMF voltage, which the motor should generate at maximum speed. If the engine does not reach maximum speed, reduce this parameter. Range 0-255 Default=140"/>
+  <cvbyte nr="54" cat="BEMF" desc="Load control Parameter K" info="K–component of the internal PI-controller. Defines the effect of load control. The higher the value, the stronger the effect of Back EMF control. Range 0 - 255 Default=50"/>
+  <cvbyte nr="55" cat="BEMF" desc="Load control Parameter I" info="I–component of the internal PI-controller. Defines the momentum (inertia) of the motor. The higher the momentum of the motor (large flywheel or bigger motor), the lower this value has to be set. Range 0 - 255 Default=100"/>
+  <cvbyte nr="67" cat="Speed Table" desc="Index 1"/>
+  <cvbyte nr="68" cat="Speed Table" desc="Index 2"/>
+  <cvbyte nr="69" cat="Speed Table" desc="Index 3"/>
+  <cvbyte nr="70" cat="Speed Table" desc="Index 4"/>
+  <cvbyte nr="71" cat="Speed Table" desc="Index 5"/>
+  <cvbyte nr="72" cat="Speed Table" desc="Index 6"/>
+  <cvbyte nr="73" cat="Speed Table" desc="Index 7"/>
+  <cvbyte nr="74" cat="Speed Table" desc="Index 8"/>
+  <cvbyte nr="75" cat="Speed Table" desc="Index 9"/>
+  <cvbyte nr="76" cat="Speed Table" desc="Index 10"/>
+  <cvbyte nr="77" cat="Speed Table" desc="Index 11"/>
+  <cvbyte nr="78" cat="Speed Table" desc="Index 12"/>
+  <cvbyte nr="79" cat="Speed Table" desc="Index 13"/>
+  <cvbyte nr="80" cat="Speed Table" desc="Index 14"/>
+  <cvbyte nr="81" cat="Speed Table" desc="Index 15"/>
+  <cvbyte nr="82" cat="Speed Table" desc="Index 16"/>
+  <cvbyte nr="83" cat="Speed Table" desc="Index 17"/>
+  <cvbyte nr="84" cat="Speed Table" desc="Index 18"/>
+  <cvbyte nr="85" cat="Speed Table" desc="Index 19"/>
+  <cvbyte nr="86" cat="Speed Table" desc="Index 20"/>
+  <cvbyte nr="87" cat="Speed Table" desc="Index 21"/>
+  <cvbyte nr="88" cat="Speed Table" desc="Index 22"/>
+  <cvbyte nr="89" cat="Speed Table" desc="Index 23"/>
+  <cvbyte nr="90" cat="Speed Table" desc="Index 24"/>
+  <cvbyte nr="91" cat="Speed Table" desc="Index 25"/>
+  <cvbyte nr="92" cat="Speed Table" desc="Index 26"/>
+  <cvbyte nr="93" cat="Speed Table" desc="Index 27"/>
+  <cvbyte nr="94" cat="Speed Table" desc="Index 28"/>
+  <cvbyte nr="112" cat="Functions" desc="Blinking frequency" info="Flashing frequency for Strobe lighting effects.Multiple of 0.065536 seconds. Range 0 - 255 Default=16"/>
+  <cvbyte nr="113" cat="Functions" desc="Head light configuration" info="Defines brightness and mode of output Head light. Range 0 - 255 Default=15"/>
+  <cvbyte nr="114" cat="Functions" desc="Rear light configuration" info="Defines brightness and mode of output Rear light Range 0 - 255 Default=15"/>
+  <cvbyte nr="115" cat="Functions" desc="AUX1 configuration" info="Defines brightness and mode of output AUX1 Range 50 - 200 Default=15"/>
+  <cvbyte nr="116" cat="Functions" desc="AUX2 configuration" info="Defines brightness and mode of output AUX2 Range 10 - 20 Default=15"/>
+  <cvbyte nr="117" cat="Functions" desc="AUX3 configuration (Nano FX Only)" readonly="true" info="Defines brightness and mode of output AUX3 Not Available on this decoder. Range 0 - 255 Default=15"/>
+  <cvbyte nr="118" cat="Functions" desc="AUX4 configuration (Nano FX Only)" readonly="true" info="Defines brightness and mode of output AUX4 Not Available on this decoder. Range 0 - 255 Default=15"/>
+  <cvbyte nr="128" cat="Functions" desc="Virtual Sound" info="Defines the start delay when function is active. A multiple of 0.065536 seconds. Range 0 - 255 Default=0"/>
+  <cvbyte nr="129" cat="Functions" desc="F13" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="130" cat="Functions" desc="F14" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="131" cat="Functions" desc="F15" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="132" cat="Functions" desc="F16" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="133" cat="Functions" desc="F17" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="134" cat="Functions" desc="F18" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="135" cat="Functions" desc="F4 Reverse" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=128"/>
+  <cvbyte nr="136" cat="Functions" desc="F5 Reverse" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=16"/>
+  <cvbyte nr="137" cat="Functions" desc="F6 Reverse" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=32"/>
+  <cvbyte nr="138" cat="Functions" desc="F7 Reverse" info="See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="139" cat="Functions" desc="CV139 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="140" cat="Functions" desc="CV140 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="141" cat="Functions" desc="CV141 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="142" cat="Functions" desc="CV142 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="143" cat="Functions" desc="CV143 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="144" cat="Functions" desc="CV144 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="145" cat="Functions" desc="CV145 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="146" cat="Functions" desc="CV146 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="147" cat="Functions" desc="CV147 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="148" cat="Functions" desc="CV148 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="149" cat="Functions" desc="CV149 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="150" cat="Functions" desc="CV150 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="151" cat="Functions" desc="CV151 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="152" cat="Functions" desc="CV152 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="153" cat="Functions" desc="CV153 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="154" cat="Functions" desc="CV154 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="155" cat="Functions" desc="CV155 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="156" cat="Functions" desc="CV156 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="157" cat="Functions" desc="CV157 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="158" cat="Functions" desc="CV158 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="159" cat="Functions" desc="CV159 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="160" cat="Functions" desc="CV160 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="161" cat="Functions" desc="CV161 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="162" cat="Functions" desc="CV162 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+  <cvbyte nr="163" cat="Functions" desc="CV163 Diverse Functions" info="Grade Crossing = 1, Dimmer = 2, Dynamic Brake = 4, Virtual Sound = 8. See Lokpilot Nano Instruction Manual Fig. 5 Default=0"/>
+</decoder>

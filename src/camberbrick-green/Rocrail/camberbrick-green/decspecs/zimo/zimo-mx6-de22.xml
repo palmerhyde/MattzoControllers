@@ -1,0 +1,168 @@
+<decoder manu="Zimo" type="MX618, 621, 622, 623, MX630, 631, 632, 633 etc." web="http://www.zimo.at/web2010/products/lokdecoder.htm">
+  <cvbyte nr="8" cat="Root" desc="Decoder Man-ID" info="Hersteller-ID (Zimo = 145) und Dekoder-Reset. Anleitung Kapitel 3.3"/>
+   <cvbyte nr="250" cat="Root" desc="Decodertyp" info="  199 - MX600
+  166 - MX600 (2021)"/>
+  <cvbyte nr="7" cat="Root" desc="Firmware-Version" readonly="true" info="Versionsnummer der geladenen Software. Subversionsnummer siehe CV#65. Anleitung Kapitel 3.3"/>
+    
+  <cvbyte nr="1" cat="Address" desc="Adresse kurz" info="Kurze Adresse. Wertebereich 1 bis 127. Def. 3. Anleitung Kapitel 3.4"/>
+  
+   <cvbyte nr="29" cat="Configuration" desc="Konfiguration1 #29" info="NMRA-DCC">
+<adip title="Konfigurationsregister">
+ <dipgroup caption="Grundeinstellungen NMRA" type="1" ori="1">
+      <dipvalue name="Fahrtrichtung invers ON" value="1"/>
+      <dipvalue name="28/128 Fahrstufen ON" value="2"/>
+      <dipvalue name="Analogerkennung ON" value="4"/>
+      <dipvalue name="RailCom ON" value="8"/>
+      <dipvalue name="Motorkennlinie CV 67-94 ON" value="16"/>
+      <dipvalue name="lange Adresse (CV17/18)ON " value="32"/>
+  </dipgroup>
+</adip>
+</cvbyte>
+  
+  <cvbyte nr="56" cat="Motor Basic" desc="Parameter P und I" info="PID-Regelung: P-Wert (Zehnestelle) und I-Wert (Einerstelle). Wertebereich 1-255. Def. 55. Gegen-EMK in Verb. mit #9 = ca.Wert 125"/>
+  <cvbyte nr="57" cat="Motor Basic" desc="Regelfrequenz" info=" max. EMK-Spannung(z.B. 140=14Volt). Def. 0. Anpassung V-max vor Einstellungen von #5/6!"/>
+  <cvbyte nr="58" cat="Motor Basic" desc="Regeleinfluß" info="Wertebereich 0-252. Def. 255."/>
+  
+   <cvbyte nr="66" cat="Motor" desc="Vorwärtstrimm" info="Anleitung Kapitel 3.6"/>
+  
+  <cvbyte nr="2" cat="Speed" desc="V-Min" info=""/>
+ <cvbyte nr="6" cat="Speed" desc="V-Mid" info="1 (=⅓ #5)"/>
+  <cvbyte nr="5" cat="Speed" desc="V-Max" info="1 (=255)"/>
+  
+  <cvbyte nr="3" cat="Speed" desc="Anfahrverzögerung" info="Wertebereich 0-255. Anleitung Kapitel 3.7"/>
+  <cvbyte nr="4" cat="Speed" desc="Bremsverzögerung" info="Wertebereich 0-255. Anleitung Kapitel 3.7"/>
+  
+  <!-- <cvbyte nr="67" cat="Speed Ext." desc="Fahrstufe01" info=""/> -->
+  <!-- <cvbyte nr="68" cat="Speed Ext." desc="Fahrstufe02" info=""/> -->
+  <!-- <cvbyte nr="69" cat="Speed Ext." desc="Fahrstufe03" info=""/> -->
+  <!-- <cvbyte nr="70" cat="Speed Ext." desc="Fahrstufe04" info=""/> -->
+  <!-- <cvbyte nr="71" cat="Speed Ext." desc="Fahrstufe05" info=""/> -->
+  <!-- <cvbyte nr="72" cat="Speed Ext." desc="Fahrstufe06" info=""/> -->
+  <!-- <cvbyte nr="73" cat="Speed Ext." desc="Fahrstufe07" info=""/> -->
+  <!-- <cvbyte nr="74" cat="Speed Ext." desc="Fahrstufe08" info=""/> -->
+  <!-- <cvbyte nr="75" cat="Speed Ext." desc="Fahrstufe09" info=""/> -->
+  <!-- <cvbyte nr="76" cat="Speed Ext." desc="Fahrstufe10" info=""/> -->
+  <!-- <cvbyte nr="77" cat="Speed Ext." desc="Fahrstufe11" info=""/> -->
+  <!-- <cvbyte nr="78" cat="Speed Ext." desc="Fahrstufe12" info=""/> -->
+  <!-- <cvbyte nr="79" cat="Speed Ext." desc="Fahrstufe13" info=""/> -->
+  <!-- <cvbyte nr="80" cat="Speed Ext." desc="Fahrstufe14" info=""/> -->
+  <!-- <cvbyte nr="81" cat="Speed Ext." desc="Fahrstufe15" info=""/> -->
+  <!-- <cvbyte nr="82" cat="Speed Ext." desc="Fahrstufe16" info=""/> -->
+  <!-- <cvbyte nr="83" cat="Speed Ext." desc="Fahrstufe17" info=""/> -->
+  <!-- <cvbyte nr="84" cat="Speed Ext." desc="Fahrstufe18" info=""/> -->
+  <!-- <cvbyte nr="85" cat="Speed Ext." desc="Fahrstufe19" info=""/> -->
+  <!-- <cvbyte nr="86" cat="Speed Ext." desc="Fahrstufe20" info=""/> -->
+  <!-- <cvbyte nr="87" cat="Speed Ext." desc="Fahrstufe21" info=""/> -->
+  <!-- <cvbyte nr="88" cat="Speed Ext." desc="Fahrstufe22" info=""/> -->
+  <!-- <cvbyte nr="89" cat="Speed Ext." desc="Fahrstufe23" info=""/> -->
+  <!-- <cvbyte nr="90" cat="Speed Ext." desc="Fahrstufe24" info=""/> -->
+  <!-- <cvbyte nr="91" cat="Speed Ext." desc="Fahrstufe25" info=""/> -->
+  <!-- <cvbyte nr="92" cat="Speed Ext." desc="Fahrstufe26" info=""/> -->
+  <!-- <cvbyte nr="93" cat="Speed Ext." desc="Fahrstufe27" info=""/> -->
+  <!-- <cvbyte nr="94" cat="Speed Ext." desc="Fahrstufe28" info=""/> -->
+  
+  <cvbyte nr="60" cat="Effekte" desc="Dimmen der Funktionsausgänge" info="Wertebereich 0-255. Def. 0. Anleitung Kapitel 3.18"/>
+  
+  <cvbyte nr="13" cat="Analog" desc="Analogbetrieb F1-F8" info=""/>
+  <cvbyte nr="14" cat="Analog" desc="Analogbetrieb F0,F9-F12" info=""/>
+  <cvbyte nr="9" cat="Motor" desc="Messlücke und Abtastrate" info="EMK-Messlücke (Zehnerstelle) und Abtastrate (Einerstelle). Anleitung Kapitel 3.6"/>
+  <cvbyte nr="10" cat="Motor" desc="Regelungs-Cutoff" info="Wertebereich 0-252. Def. 0. Anleitung Kapitel 3.6"/>
+  
+  <cvbyte nr="17" cat="Address" desc="Adresse lang hoch" info="Def. 192. Anleitung Kapitel 3.4"/>
+  <cvbyte nr="18" cat="Address" desc="Adresse lang niedrig" info="Def. 128. Anleitung Kapitel 3.4"/>
+  <!-- <cvbyte nr="19" cat="Mehrfachtraktion" desc="Verbundadresse" info="Fahrzeugadresse für Verbundbetrieb. Anleitung Kapitel 3.4"/> -->
+  <!-- <cvbyte nr="21" cat="Mehrfachtraktion" desc="Verbundbetrieb F1-F8" info="Anleitung Kapitel 3.4"/> -->
+  <!-- <cvbyte nr="22" cat="Mehrfachtraktion" desc="Verbundbetrieb F0, F9-F12" info="Anleitung Kapitel 3.4"/> -->
+  <cvbyte nr="23" cat="Speed" desc="Variation Beschleunigung" info="Wertebereich 0-255. Def. 0. Für temporäre Anpassung zur CV #3"/>
+  <cvbyte nr="24" cat="Speed" desc="Variation Verzögerung" info="Wertebereich 0-255. Def. 0. Für temporäre Anpassung zur CV #4"/>
+  <!-- <cvbyte nr="27" cat="Brake Mode" desc="Bremsen bei DC"/> -->
+  <!-- <cvbyte nr="28" cat="Configuration" desc="RailCom" info="Anleitung Kapitel 3.2"/> -->
+ 
+
+  <!-- <cvbyte nr="33" cat="Functions" desc="Function Mapping F0 vorwärts" info="F0-Funktionsmapping vorwärts. Anleitung Kapitel 3.14"/> -->
+  <!-- <cvbyte nr="34" cat="Functions" desc="Function Mapping F0 rückwärts" info="F0-Funktionsmapping rückwärts. Anleitung Kapitel 3.14"/> -->
+  <!-- <cvbyte nr="35" cat="Functions" desc="Function Mapping F1" info="F1-Funktionsmapping. Anleitung Kapitel 3.14"/> -->
+  <!-- <cvbyte nr="36" cat="Functions" desc="Function Mapping F2" info="F2-Funktionsmapping. Anleitung Kapitel 3.14"/> -->
+  <!-- <cvbyte nr="37" cat="Functions" desc="Function Mapping F3" info="F3-Funktionsmapping. Anleitung Kapitel 3.14"/> -->
+  <!-- <cvbyte nr="38" cat="Functions" desc="Function Mapping F4" info="F4-Funktionsmapping. Anleitung Kapitel 3.14"/> -->
+  <!-- <cvbyte nr="39" cat="Functions" desc="Function Mapping F5" info="F5-Funktionsmapping. Anleitung Kapitel 3.14"/> -->
+  <!-- <cvbyte nr="40" cat="Functions" desc="Function Mapping F6" info="F6-Funktionsmapping. Anleitung Kapitel 3.14"/> -->
+  <!-- <cvbyte nr="41" cat="Functions" desc="Function Mapping F7" info="F7-Funktionsmapping. Anleitung Kapitel 3.14"/> -->
+  <!-- <cvbyte nr="42" cat="Functions" desc="Function Mapping F8" info="F8-Funktionsmapping. Anleitung Kapitel 3.14"/> -->
+  <!-- <cvbyte nr="43" cat="Functions" desc="Function Mapping F9" info="F9-Funktionsmapping. Anleitung Kapitel 3.14"/> -->
+  <!-- <cvbyte nr="44" cat="Functions" desc="Function Mapping F10" info="F10-Funktionsmapping. Anleitung Kapitel 3.14"/> -->
+  <!-- <cvbyte nr="45" cat="Functions" desc="Function Mapping F11" info="F11-Funktionsmapping. Anleitung Kapitel 3.14"/> -->
+  <!-- <cvbyte nr="46" cat="Functions" desc="Function Mapping F12" info="F12-Funktionsmapping. Anleitung Kapitel 3.14"/> -->
+  <!-- <cvbyte nr="49" cat="Brake Mode" desc="Signalabhängige Beschleunigung (HLU)" info="Zimo HLU. Anleitung Kapitel 3.9"/> -->
+  <!-- <cvbyte nr="50" cat="Brake Mode" desc="Signalabhängige Bremszeit (HLU)" info="Zimo HLU. Anleitung Kapitel 3.9"/> -->
+  <!-- <cvbyte nr="51" cat="Brake Mode" desc="Signalabhängiges Geschwindigkeitslimit (HLU)" info="Zimo HLU. Zwischenstufe. Anleitung Kapitel 3.9"/> -->
+  <!-- <cvbyte nr="52" cat="Brake Mode" desc="Signalabhängiges Geschwindigkeitslimit für 'U' (HLU)" info="Zimo HLU. Stufe 'sehr langsam'. Anleitung Kapitel 3.9"/> -->
+  <!-- <cvbyte nr="53" cat="Brake Mode" desc="Signalabhängiges Geschwindigkeitslimit (HLU)" info="Zimo HLU. Zwischenstufe. Anleitung Kapitel 3.9"/> -->
+  <!-- <cvbyte nr="54" cat="Brake Mode" desc="Signalabhängiges Geschwindigkeitslimit für 'L' (HLU)" info="Zimo HLU. Stufe 'langsam'. Anleitung Kapitel 3.9"/> -->
+  <!-- <cvbyte nr="55" cat="Brake Mode" desc="Signalabhängiges Geschwindigkeitslimit (HLU)" info="Zimo HLU. Zwischenstufe. Anleitung Kapitel 3.9"/> -->
+  
+  <!-- <cvbyte nr="59" cat="Brake Mode" desc="Signalabhängige Reaktionszeit (HLU)" info="Zimo HLU. Anleitung Kapitel 3.9"/> -->
+
+  <cvbyte nr="61" cat="Functions" desc="Zimo erweitertes Mapping" info="Zimo-Erweiterung zum NMRA-Funktionsmapping. Anleitung Kapitel 3.15"/>
+  <cvbyte nr="62" cat="Effekte" desc="Minimum Dimm-Wert" info="Anleitung Kapitel 3.21"/>
+  <cvbyte nr="63" cat="Effekte" desc="Zykluszeit und Aus-Verlängerung" info="Zykluszeit (Zehnerstelle) und Aus-Verlängerung (Einerstelle). Anleitung Kapitel 3.21"/>
+  <cvbyte nr="64" cat="Effekte" desc="Ditch Light Off-Time" info="Anleitung Kapitel 3.21"/>
+  <cvbyte nr="65" cat="Root" desc="Software-Subversionsnummer" info="Als Ergänzung zu CV#7. Anleitung Kapitel 3.3"/>
+ 
+ 
+  <cvbyte nr="95" cat="Motor" desc="Rückwärtstrimm" info="Anleitung Kapitel 3.6"/>
+  <cvbyte nr="105" cat="Benutzerdaten" desc="Daten 1" info="Freier Speicherplatz zur Aufnahme von Benutzerdaten"/>
+  <cvbyte nr="106" cat="Benutzerdaten" desc="Daten 2" info="Freier Speicherplatz zur Aufnahme von Benutzerdaten"/>
+  <cvbyte nr="107" cat="Effekte" desc="Licht aus FS1" info="Anleitung Kapitel 3.16"/>
+  <cvbyte nr="108" cat="Effekte" desc="Licht aus FS2" info="Anleitung Kapitel 3.16"/>
+  <cvbyte nr="109" cat="Effekte" desc="Automatische einseitige Lichtunterdrückung" info="Anleitung Kapitel 3.16"/>
+  <cvbyte nr="110" cat="Effekte" desc="Automatische einseitige Lichtunterdrückung" info="Anleitung Kapitel 3.16"/>
+  <cvbyte nr="112" cat="Configuration" desc="Zimo-Konfiguration" info="Anleitung Kapitel 3.1, 3.6, 3.20 sowie Asymmetrie-Schwelle Gleichstrombremsen (Märklin), Anleitung Kapitel 3.11"/>
+  <cvbyte nr="113" cat="Motor" desc="Regelungs-Cutoff" info="Ausregelung bei Fahrstufe laut CV#10. Anleitung Kapitel 3.6"/>
+  <cvbyte nr="114" cat="Effekte" desc="Dimm-Maske 1" info="Ausschluss einzelner Ausgänge vom Dimmen laut CV#60. Anleitung Kapitel 3.18"/>
+  <cvbyte nr="115" cat="Kupplungssteuerung" desc="Kupplungssteuerung" info="Wertebereich 0-99. Def. 0. Anleitung Kapitel 3.23"/>
+  <cvbyte nr="116" cat="Kupplungssteuerung" desc="Kupplungswalzer" info="Wertebereich 0-199. Def. 0. Anleitung Kapitel 3.23"/>
+  <cvbyte nr="117" cat="Effekte" desc="Blinken" info="Wertebereich 0-99. Def. 0. Einschalt- und Ausschaltphase. Anleitung Kapitel 3.19"/>
+  <cvbyte nr="118" cat="Effekte" desc="Blink-Maske" info="Funktionsausgänge für Blinken laut CV#117. Anleitung Kapitel 3.19"/>
+  <cvbyte nr="119" cat="Effekte" desc="Abblend-Maske F6" info="Angabe der Funktionsausgänge für Abblenden mit F6 auf Wert von CV#60. Anleitung Kapitel 3.18"/>
+  <cvbyte nr="120" cat="Effekte" desc="Abblend-Maske F7" info="Angabe der Funktionsausgänge für Abblenden mit F6 auf Wert von CV#60. Anleitung Kapitel 3.18"/>
+  <cvbyte nr="121" cat="Speed" desc="Exponentielle Beschleunigungskurve" info="Kurvenbereich (Zehnerstelle) und Krümmung (Einerstelle). Wertebereich 0 bis 99. Def. 0. Anleitung Kapitel 3.7"/>
+  <cvbyte nr="122" cat="Speed" desc="Exponentielle Bremskurve" info="Kurvenbereich (Zehnerstelle) und Krümmung (Einerstelle). Wertebereich 0 bis 99. Def. 0. Anleitung Kapitel 3.7"/>
+  <cvbyte nr="123" cat="Speed" desc="Adaptives Beschleunigungs- und Bremsverfahren" info="Annäherung beim Beschleunigen (Zehnerstelle) und Bremsen (Einerstelle). Wertebereich 0 bis 99. Def. 0. Anleitung Kapitel 3.7"/>
+  <cvbyte nr="124" cat="Configuration" desc="Rangiertastenfunktion" info="Anleitung Kapitel 3.13. Außerdem: Gleichstrombremsen (Märklin): Anleitung Kapitel 3.11"/>
+  <cvbyte nr="125" cat="Effekte" desc="Effekte auf 'Stirn vorne'" info="Anleitung Kapitel 3.21"/>
+  <cvbyte nr="126" cat="Effekte" desc="Effekte auf 'Stirn hinten'" info="Anleitung Kapitel 3.21"/>
+  <cvbyte nr="127" cat="Effekte" desc="Effekte auf F1" info="Anleitung Kapitel 3.21"/>
+  <!-- <cvbyte nr="128" cat="Effekte" desc="Effekte auf F2'" info="Anleitung Kapitel 3.21"/> -->
+  <!-- <cvbyte nr="129" cat="Effekte" desc="Effekte auf F3" info="Anleitung Kapitel 3.21"/> -->
+  <!-- <cvbyte nr="130" cat="Effekte" desc="Effekte auf F4" info="Anleitung Kapitel 3.21"/> -->
+  <!-- <cvbyte nr="131" cat="Effekte" desc="Effekte auf F5" info="Anleitung Kapitel 3.21"/> -->
+  <!-- <cvbyte nr="132" cat="Effekte" desc="Effekte auf F6" info="Anleitung Kapitel 3.21"/> -->
+  <!-- <cvbyte nr="133" cat="Raucherzeuger" desc="FA4 Ventilatorausgang" info="Anleitung Kapitel 3.23"/> -->
+  <!-- <cvbyte nr="134" cat="Brake Mode" desc="Asymmetrie-Schwelle Lenz ABC" info="Signalhalt Lenz ABC. Anleitung Kapitel 3.10"/> -->
+  <!-- <cvbyte nr="135" cat="Speed" desc="km/h-Stufenregelung Steuerung" info="Anleitung Kapitel 3.8"/> -->
+  <!-- <cvbyte nr="136" cat="Speed" desc="km/h-Stufenregelung Kontrollzahl" info="Anleitung Kapitel 3.8"/> -->
+  <!-- <cvbyte nr="137" cat="Raucherzeuger" desc="Raucherzeuger Kennlinie Stillstand" info="Anleitung Kapitel 3.22	"/> -->
+  <!-- <cvbyte nr="138" cat="Raucherzeuger" desc="Raucherzeuger Kennlinie Fahrt" info="Anleitung Kapitel 3.22"/> -->
+  <!-- <cvbyte nr="139" cat="Raucherzeuger" desc="Raucherzeuger Kennlinie Beschleunigung" info="Anleitung Kapitel 3.22"/> -->
+  <!-- <cvbyte nr="140" cat="Brake Mode" desc="HLU / ABC" info="Auswahl Zimo HLU oder Lenz ABC oder beides. Anleitung Kapitel 3.10" /> -->
+  <!-- <cvbyte nr="141" cat="Brake Mode" desc="Konstanter Bremsweg" info="Anleitung Kapitel 3.12" /> -->
+  <!-- <cvbyte nr="142" cat="Brake Mode" desc="Schnellfahr-Kompensation (ABC)" info="Anleitung Kapitel 3.10" /> -->
+  <!-- <cvbyte nr="143" cat="Brake Mode" desc="Schnellfahr-Kompensation (HLU)" info="Anleitung Kapitel 3.10" /> -->
+  <cvbyte nr="144" cat="Configuration" desc="Programmier- und Updatesperren" info="" />
+  <cvbyte nr="145" cat="Motor" desc="Experimental: Spezial Rundmotor" info="Spezialregelung für Fleischmann-Rundmotor. Anleitung Kapitel 3.15" />
+  <cvbyte nr="146" cat="Motor" desc="Ausgleich Getriebeleergang" info="Wertebereich 0-255. Def. 0. ca.Werte: 100-200" />
+  <cvbyte nr="147" cat="Motor" desc="Experimental: Messlücke" info="Wertebereich 0-255. Def. 0. Anleitung Kapitel 3.6" />
+  <cvbyte nr="148" cat="Motor" desc="Experimental: D-Wert" info="Wertebereich 0-255. Def. 0. Anleitung Kapitel 3.6" />
+  <cvbyte nr="149" cat="Motor" desc="Experimantal: P-Wert" info="Wertebereich 0-255. Def. 0. Anleitung Kapitel 3.6" />
+  <cvbyte nr="150" cat="Motor" desc="Experimantal: Ausregelung bei Vollgeschwindigkeit" info="Wertebereich 0-255. Def. 0. Anleitung Kapitel 3.6" />
+  <cvbyte nr="151" cat="Motor" desc="Motorbremse" info="Wertebereich 0-9. Def. 0. Anleitung Kapitel 3.5" />
+  <cvbyte nr="152" cat="Effekte" desc="Dimm-Maske 2" info="Ausschluss einzelner Ausgänge vom Dimmen laut CV#60. Anleitung Kapitel 3.18"/>
+  <cvbyte nr="153" cat="Configuration" desc="Weiterfahrt ohne DCC-Signal" info=""/>
+ 
+  <!-- <cvbyte nr="251" cat="Root" desc="Decoder-ID 1/3" info=""/> -->
+  <!-- <cvbyte nr="252" cat="Root" desc="Decoder-ID 2/3" info=""/> -->
+  <!-- <cvbyte nr="253" cat="Root" desc="Decoder-ID 3/3" info=""/> -->
+  <cvbyte nr="378" cat="Effekte" desc="Lichtblitz beim Beschleunigen" info=""/>
+</decoder>
+

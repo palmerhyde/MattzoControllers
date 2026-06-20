@@ -1,0 +1,7 @@
+<decoder manu="Marklin" type="MfX">
+  <cvbyte nr="102" index="1" cat="speed" desc="Acceleration" info="Delay 1...255"/>
+  <cvbyte nr="102" index="2" cat="speed" desc="Brake" info="Delay 1...255"/>
+  <cvbyte nr="103" index="2" cat="speed" desc="Maximum" info="1...255"/>
+  <cvbyte nr="103" index="3" cat="speed" desc="Minimum" info="1...255"/>
+  <cvbyte nr="197" index="1" cat="sound" desc="Volume" info="1...255"/>
+</decoder>

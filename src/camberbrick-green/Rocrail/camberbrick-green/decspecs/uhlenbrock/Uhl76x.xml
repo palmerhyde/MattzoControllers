@@ -1,0 +1,107 @@
+<decoder manu="Uhlenbrock" type="76200, 76363, 76420, " web="http://www.uhlenbrock.de">
+  <cvbyte nr="8" cat="Root" desc="Decoder Man-ID" info="Hersteller-ID (Uhlenbrock = 85) und Dekoder-Reset."/>
+  <cvbyte nr="7" cat="Root" desc="Decodermodel / FW" readonly="true" info="  4- 76363
+17/19- 76200"/>
+  <cvbyte nr="1" cat="Address" desc="Adresse kurz" info="Def.1"/>
+  <cvbyte nr="17" cat="Address" desc="Adresse lang hoch" info="Def.199"/>
+  <cvbyte nr="18" cat="Address" desc="Adresse lang niedrig" info="Def.208"/>
+  <cvbyte nr="29" cat="Configuration" desc="Konfiguration1 #29" info="DIP Uhlenbrock">
+    <adip title="Konfigurationsregister">
+      <dipgroup caption="Grundeinstellungen Uhlenbr." type="1" ori="1">
+        <dipvalue name="Fahrtrichtung invers ON" value="1"/>
+        <dipvalue name="28/128 Fahrstufen ON" value="2"/>
+        <dipvalue name="Analogerkennung ON" value="4"/>
+        <dipvalue name="Motorkennlinie CV 67-94 ON" value="16"/>
+        <dipvalue name="lange Adresse (CV17/18)ON " value="32"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="53" cat="Motor Basic" desc="Regelfrequenz (EMK)" info="max. EMK-Motorspannung.(60-255) Def.150, Änderung , wenn Lok ungleichmäßig fährt."/>
+  <cvbyte nr="54" cat="Motor Basic" desc="Parameter P" info="(0-255) Def.130. Ref.120-245 (76200)
+  
+Konfiguration (76363) Def.132:
+0- Anpassung an 12 V Motor (Def.)
+1- Anpassung an 14 V Motor
+3- Anpassung an 16 V Motor
+0- Wiederholrate der Motorregelung, konstant
+4- Wiederholrate der Motorregelung, abhängig von der Fahrstufe, bei großen Fahrstufen langsamer (Def.)
+128- Bit 3-7 dürfen nicht geändert werden! (Def.)"/>
+  <cvbyte nr="55" cat="Motor Basic" desc="Parameter I" info="(0-127) Def.30 Ref.70-125 (76200) 
+ NN(76363)"/>
+  <cvbyte nr="56" cat="Motor Basic" desc="Regeleinfluß" info="(0-127) Def.48 Ref.45-120 (76200) 
+NN(76363)"/>
+  <cvbyte nr="58" cat="Motor" desc="Zeitschlitz AD-Wandlermessung" info="Def.25 Wert vergrößern, wenn die Lok bei geringer Geschwindigkeit ungleichmäßig läuft;
+Wert verkleinern, wenn bei heruntergesetztem Wert in der CV53 die Höchstgeschwindigkeit der Lok zu gering ist"/>
+  <cvbyte nr="57" cat="Motor Ext." desc="Parameter D" info="Def.10 (76200) NN(76363)"/>
+  <cvbyte nr="2" cat="Speed" desc="V-Min" info="Def.2"/>
+  <cvbyte nr="6" cat="Speed" desc="V-Mid" info="1-63 Def.31"/>
+  <cvbyte nr="5" cat="Speed" desc="V-Max" info="1-63 Def.63"/>
+  <cvbyte nr="3" cat="Speed" desc="Anfahrverzögerung" info="Def.2"/>
+  <cvbyte nr="4" cat="Speed" desc="Bremsverzögerung" info="Def.2"/>
+  <cvbyte nr="67" cat="Speed Ext." desc="Fahrstufe01" info=""/>
+  <cvbyte nr="68" cat="Speed Ext." desc="Fahrstufe02" info=""/>
+  <cvbyte nr="69" cat="Speed Ext." desc="Fahrstufe03" info=""/>
+  <cvbyte nr="70" cat="Speed Ext." desc="Fahrstufe04" info=""/>
+  <cvbyte nr="71" cat="Speed Ext." desc="Fahrstufe05" info=""/>
+  <cvbyte nr="72" cat="Speed Ext." desc="Fahrstufe06" info=""/>
+  <cvbyte nr="73" cat="Speed Ext." desc="Fahrstufe07" info=""/>
+  <cvbyte nr="74" cat="Speed Ext." desc="Fahrstufe08" info=""/>
+  <cvbyte nr="75" cat="Speed Ext." desc="Fahrstufe09" info=""/>
+  <cvbyte nr="76" cat="Speed Ext." desc="Fahrstufe10" info=""/>
+  <cvbyte nr="77" cat="Speed Ext." desc="Fahrstufe11" info=""/>
+  <cvbyte nr="78" cat="Speed Ext." desc="Fahrstufe12" info=""/>
+  <cvbyte nr="79" cat="Speed Ext." desc="Fahrstufe13" info=""/>
+  <cvbyte nr="80" cat="Speed Ext." desc="Fahrstufe14" info=""/>
+  <cvbyte nr="81" cat="Speed Ext." desc="Fahrstufe15" info=""/>
+  <cvbyte nr="82" cat="Speed Ext." desc="Fahrstufe16" info=""/>
+  <cvbyte nr="83" cat="Speed Ext." desc="Fahrstufe17" info=""/>
+  <cvbyte nr="84" cat="Speed Ext." desc="Fahrstufe18" info=""/>
+  <cvbyte nr="85" cat="Speed Ext." desc="Fahrstufe19" info=""/>
+  <cvbyte nr="86" cat="Speed Ext." desc="Fahrstufe20" info=""/>
+  <cvbyte nr="87" cat="Speed Ext." desc="Fahrstufe21" info=""/>
+  <cvbyte nr="88" cat="Speed Ext." desc="Fahrstufe22" info=""/>
+  <cvbyte nr="89" cat="Speed Ext." desc="Fahrstufe23" info=""/>
+  <cvbyte nr="90" cat="Speed Ext." desc="Fahrstufe24" info=""/>
+  <cvbyte nr="91" cat="Speed Ext." desc="Fahrstufe25" info=""/>
+  <cvbyte nr="92" cat="Speed Ext." desc="Fahrstufe26" info=""/>
+  <cvbyte nr="93" cat="Speed Ext." desc="Fahrstufe27" info=""/>
+  <cvbyte nr="94" cat="Speed Ext." desc="Fahrstufe28" info=""/>
+  <cvbyte nr="50" cat="Effekte" desc="Dimmen Funktionsausgänge" info="0-63. Def.32 (76200, 76420)
+ 0-31. Def.16 (76363)"/>
+  <cvbyte nr="51" cat="Analog" desc="Analogmodi" info="Analogformate">
+    <adip title="AC/DC Settings">
+      <dipgroup caption="Analogformate" type="1" ori="1">
+        <dipvalue name="AC" value="1"/>
+        <dipvalue name="DC" value="2"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="13" cat="Analog" desc="Analogbetrieb F1-F8 (nur 76363)" info="Wertebereich 0-7. Def.7"/>
+  <cvbyte nr="49" cat="Configuration" desc="Konfiguration2 #49" info="DIP Uhlenbrock 
+Ref. Lastregelung OFF (76200)">
+    <adip title="Extended Configuration #1">
+      <dipgroup caption="erw. Konfiguration #1 Uhlenbr." type="1" ori="1">
+        <dipvalue name="Lastregelung ON" value="1"/>
+        <dipvalue name="SUSI-IF für LISSY (Def. Sound)" value="2"/>
+        <dipvalue name="Bremsen bis FS in CV52 (Def. 0)" value="4"/>
+        <dipvalue name="Format nur DCC (Def. DCC / MM2)" value="8"/>
+        <dipvalue name="Format nur MM2 (Def. DCC / MM2)" value="16"/>
+        <dipvalue name="Dimmung AUX ON" value="32"/>
+        <dipvalue name="Ausgang Beleuchtung invers ON" value="64"/>
+        <dipvalue name="Bremsen mit DC (Def. Bremssignal)" value="128"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="52" cat="Speed" desc="V- Ende Bremsstrecke" info="Def.30, wenn CV49Bit2=1 und Bit7=1. Geschwindigkeit am Ende Bremsstrecke"/>
+  <cvbyte nr="59" cat="Configuration" desc="Reset(Werkseinstellung)" info="1- RESET. Def.0"/>
+  <cvbyte nr="60" cat="Motor" desc="Kurzschlußüberwachung" info="Def.250 (76200, 76420), 35 (76363) 0=off"/>
+  <cvbyte nr="61" cat="Motor" desc="Abschalttemperatur in °C" info="0=off"/>
+  <cvbyte nr="64" cat="Motor" desc="Vorwärtstrimm" info="Def.128 (nicht 76363)"/>
+  <cvbyte nr="65" cat="Index Registers" desc="Offset-Register für MM" info="Def.0 für CV-Programmierung mit Motorola Zentralen"/>
+  <cvbyte nr="66" cat="Index Registers" desc="Page-Register für MM" info="Def.0 für CV-Programmierung mit Motorola Zentralen"/>
+  <cvbyte nr="100" cat="Configuration" desc="Fehlerspeicher" info="0 = Kein Fehler (Fehlerspeicher zurücksetzen)
+1 = Kurzschluss Motor
+2 = Kurzschluss Licht (nur 76363)"/>
+  <cvbyte nr="95" cat="Motor" desc="Rückwärtstrimm" info="Def.128 (nicht 76363)"/>
+  <cvbyte nr="115" cat="Funktionsmapping" desc="Zugkategorie für LISSY" info=""/>
+</decoder>

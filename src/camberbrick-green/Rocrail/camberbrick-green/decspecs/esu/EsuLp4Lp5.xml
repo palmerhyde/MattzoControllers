@@ -1,0 +1,233 @@
+<decoder manu="ESU" type="LP 4.0 / LP 5" web="http://www.esu.eu" info="Universell für LP 4.0 und 5 einsetzbar. Partiell auch für LP3.0
+Benutzung auf eigenes Risiko! Details siehe Betriebsanleitung.
+Für Soundunktionen bitte Lokprogrammer benutzen!
+Def.= Standardwert (Werkseinstellung).">
+
+  <cvbyte nr="8" cat="Root" desc="Decoder Man-ID" info="151 - ESU. Reset auf Werkseinstellungen mit Wert 8."/>
+  <cvbyte nr="30" cat="Root" desc="Error Code" readonly="true" info="Nach Setzen von Wert 8 in CV8 wird hier Fehlercode angezeigt.  0 = kein Fehler vorhanden."/>
+  <cvbyte nr="7" cat="Root" desc="Decodertyp bis LP 3.0" readonly="true" info="104 - LP 3.0
+255- kein LP 3.0"/>
+  <cvbyte nr="261" cat="Root" desc="Decodertyp ab  LP 4.0" readonly="true" info="Def. CV31=0, CV32=255
+63- LP 4.0 (1)
+64- LP micro 4.0 DCC
+66- LP 4.0DCC (1) 
+68- LP 4.0 M4
+76- LP micro4.0
+91- LP 4.0 DCC FX
+86- LP Fx 4.0
+71- LP 4.0(2)
+106- LS 4.0
+133- LP 4.0DCC(2)
+
+168- LP 5
+170- LP 5 DCC
+172- LP 5 micro Next18
+173- LP 5 micro Next18 DCC
+174- LP 5 micro
+175- LP 5 micro DCC
+0  - kein LP4.0 oder 5"/>
+  <cvbyte nr="288" cat="Root" desc="FW Major Vers." readonly="true" info=""/>
+  <cvbyte nr="287" cat="Root" desc="FW Minor Vers." readonly="true" info=""/>
+  <cvbyte nr="286" cat="Root" desc="Built Nr 1" readonly="true" info="= Wert*256"/>
+  <cvbyte nr="285" cat="Root" desc="Built Nr 2" readonly="true" info="= Built Nr = CV286*256+CV285"/>
+  <cvbyte nr="31" cat="Index Registers" desc="Index Register H" info=" 0/16. Def.16"/>
+  <cvbyte nr="32" cat="Index Registers" desc="Index Register L" info=" 0-4 (16).Def.0"/>
+  <cvbyte nr="1" cat="Address" desc="Adresse kurz" info="0-127. Def.3
+gültig, wenn Bit 5 in #29 = OFF
+ROCO® Lokmaus2, Lenz digital plus,
+Lenz® compact) erlauben als kurze Adresse nur die Werte 1 – 99"/>
+  <cvbyte nr="29" cat="Configuration" desc="Konfiguration1 #29" info="NMRA ->DIP">
+    <adip title="Konfigurationsregister">
+      <dipgroup caption="Grundeinstellungen NMRA" type="1" ori="1">
+        <dipvalue name="Fahrtrichtung invers ON" value="1"/>
+        <dipvalue name="28/128 Fahrstufen ON" value="2"/>
+        <dipvalue name="Analogerkennung ON" value="4"/>
+        <dipvalue name="RailCom ON" value="8"/>
+        <dipvalue name="Motorkennlinie CV 67-94 ON" value="16"/>
+        <dipvalue name="lange Adresse (CV17/18)ON " value="32"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="56" cat="Motor Basic" desc="Regeleinfluß" info="LP4.0: Regelungseinfluß
+LP5:   Regelungseinfluß bei V-Min.
+1-255. Def.255"/>
+  <cvbyte nr="54" cat="Motor Basic" desc="Parameter K(P)" info="0-255. Def.50"/>
+  <cvbyte nr="55" cat="Motor Basic" desc="Parameter I" info="0-255. Def.100"/>
+  <cvbyte nr="52" cat="Motor" desc="Parameter K(P)-slow" info="K-Anteil des internen PI-Reglers bei V-Min. 0-255. Def.15 (LP4.0) / 10 (LP5)"/>
+  <cvbyte nr="51" cat="Motor" desc="Parameter I-slow (LP4.0)" info="I-Anteil des internen PI-Regler bei V-Min. 0-255. Def.0"/>
+  <cvbyte nr="51" cat="Motor" desc="Parameter K(P)-slow Cutoff (LP5)" info="Interne FS, bis zu der Cutoff gilt. 0-255. Def.10"/>
+  <cvbyte nr="66" cat="Motor" desc="Vorwärtstrimm" info="0-255. Def.128"/>
+  <cvbyte nr="95" cat="Motor" desc="Rückwärtstrimm" info="0-255. Def.128"/>
+  <cvbyte nr="111" cat="Motor" desc="Getriebeausgleich (LP5)" info="Wert * 16ms. Motor läuft in dieser Zeit mit minimaler Gechwindigkeit an, um Getrieberuckeln zu vermeiden. 0-255. Def.0"/>
+  <cvbyte nr="53" cat="Motor EMK" desc="Regelfrequenz EMK" info="EMK-Spannung bei V-Max. Anpassung V-max vor Änderung #5. 0-255. Def.140 (LP4.0) / 130 (LP5)
+Verändert Absolutgeschwindigkeit!"/>
+  <cvbyte nr="10" cat="Motor EMK" desc="Abtastrate EMK (LP4.0)" info="Abstand zwischen den EMK-Messungen. Einheit 1,02ms (4-8). Def.8"/>
+  <cvbyte nr="2" cat="Speed" desc="V-Min" info=""/>
+  <cvbyte nr="116" cat="Motor EMK" desc="EMK Abtastrate V-Min (LP5)" info="Meßperiode (Abtastrate) bei FS1. 25-200. Def.50"/>
+  <cvbyte nr="117" cat="Motor EMK" desc="EMK Abtastrate V-Max (LP5)" info="Meßperiode (Abtastrate) bei FS255. 25-200. Def.150"/>
+  <cvbyte nr="118" cat="Motor EMK" desc="EMK Messlücke V-Min (LP5)" info="Länge Meßlücke bei FS1. Wert * 0,1ms. 3-40. Def.15"/>
+  <cvbyte nr="119" cat="Motor EMK" desc="EMK Messlücke V-Max (LP5)" info="Länge Meßlücke bei FS255. Wert * 0,1ms. 3-40. Def.20"/>
+  <cvbyte nr="6" cat="Speed" desc="V-Mid" info=""/>
+  <cvbyte nr="5" cat="Speed" desc="V-Max" info=""/>
+  <cvbyte nr="3" cat="Speed" desc="Anfahrverzögerung" info=""/>
+  <cvbyte nr="4" cat="Speed" desc="Bremsverzögerung" info=""/>
+  <cvbyte nr="23" cat="Speed" desc="Justierung Beschleunigen (LP5)" info="Faktor zur Anpassung /Erhöhung CV3. 0-127. Def.0 Für Reduktion: + 128 (Bit7)."/>
+  <cvbyte nr="24" cat="Speed" desc="Justierung Bremsen (LP5)" info="Faktor zur Anpassung /Erhöhung CV4. 0-127. Def.0 Für Reduktion Range: + 128 (Bit7)."/>
+  <cvbyte nr="101" cat="Speed" desc="Trimmen Shunt (LP5)" info="Multiplikator Motorspannung im Rangiermodus. (Wert/128) 0-128. Def.64"/>
+  <cvbyte nr="67" cat="Speed Ext." desc="Fahrstufe01" info=""/>
+  <cvbyte nr="68" cat="Speed Ext." desc="Fahrstufe02" info=""/>
+  <cvbyte nr="69" cat="Speed Ext." desc="Fahrstufe03" info=""/>
+  <cvbyte nr="70" cat="Speed Ext." desc="Fahrstufe04" info=""/>
+  <cvbyte nr="71" cat="Speed Ext." desc="Fahrstufe05" info=""/>
+  <cvbyte nr="72" cat="Speed Ext." desc="Fahrstufe06" info=""/>
+  <cvbyte nr="73" cat="Speed Ext." desc="Fahrstufe07" info=""/>
+  <cvbyte nr="74" cat="Speed Ext." desc="Fahrstufe08" info=""/>
+  <cvbyte nr="75" cat="Speed Ext." desc="Fahrstufe09" info=""/>
+  <cvbyte nr="76" cat="Speed Ext." desc="Fahrstufe10" info=""/>
+  <cvbyte nr="77" cat="Speed Ext." desc="Fahrstufe11" info=""/>
+  <cvbyte nr="78" cat="Speed Ext." desc="Fahrstufe12" info=""/>
+  <cvbyte nr="79" cat="Speed Ext." desc="Fahrstufe13" info=""/>
+  <cvbyte nr="80" cat="Speed Ext." desc="Fahrstufe14" info=""/>
+  <cvbyte nr="81" cat="Speed Ext." desc="Fahrstufe15" info=""/>
+  <cvbyte nr="82" cat="Speed Ext." desc="Fahrstufe16" info=""/>
+  <cvbyte nr="83" cat="Speed Ext." desc="Fahrstufe17" info=""/>
+  <cvbyte nr="84" cat="Speed Ext." desc="Fahrstufe18" info=""/>
+  <cvbyte nr="85" cat="Speed Ext." desc="Fahrstufe19" info=""/>
+  <cvbyte nr="86" cat="Speed Ext." desc="Fahrstufe20" info=""/>
+  <cvbyte nr="87" cat="Speed Ext." desc="Fahrstufe21" info=""/>
+  <cvbyte nr="88" cat="Speed Ext." desc="Fahrstufe22" info=""/>
+  <cvbyte nr="89" cat="Speed Ext." desc="Fahrstufe23" info=""/>
+  <cvbyte nr="90" cat="Speed Ext." desc="Fahrstufe24" info=""/>
+  <cvbyte nr="91" cat="Speed Ext." desc="Fahrstufe25" info=""/>
+  <cvbyte nr="92" cat="Speed Ext." desc="Fahrstufe26" info=""/>
+  <cvbyte nr="93" cat="Speed Ext." desc="Fahrstufe27" info=""/>
+  <cvbyte nr="94" cat="Speed Ext." desc="Fahrstufe28" info=""/>
+  <cvbyte nr="103" cat="Effects" desc="Alternative Last (LP5)" info="Wert / 128 = Faktor Veränderung CV3/CV4/Sound, wenn alt. Last aktiv. 0-255. Def.0"/>
+  <cvbyte nr="104" cat="Effects" desc="Schwere Last (LP5)" info="Wert / 128 = Faktor Veränderung CV3/CV4/Sound, wenn alt. Last aktiv. 0-255. Def.255"/>
+  <cvbyte nr="249" cat="Effects" desc="min. Dampfstoßabstand (LP5)" info="minimaler Abstand zweier Dampfstöße, unabhängig von Sensordaten. 0-255. Def.0"/>
+  <cvbyte nr="18" cat="Address" desc="Adresse lang niedrig" info="128-10239. Def.128.
+Setup via 'Erw. Adresse CV117/118'"/>
+  <cvbyte nr="17" cat="Address" desc="Adresse lang hoch" info="128-10239. Def.192.
+Setup via 'Erw. Adresse CV117/118'"/>
+  <cvbyte nr="19" cat="Consist" desc="Verbundadresse" info="Fahrzeugadresse für Verbundbetrieb."/>
+  <cvbyte nr="21" cat="Consist" desc="Consist Modus F1-F8" info="Zustand Funktionen F1-F8 im Consistmodus."/>
+  <cvbyte nr="22" cat="Consist" desc="Consist Modus FL,F9-F15" info="Zustand Funktionen F0 und F9-F15 im Consistmodus"/>
+  <cvbyte nr="27" cat="Brake Mode" desc="Bremsmodus" info="Bremsmodi ->DIP">
+    <adip title="Brake Configuration">
+      <dipgroup caption="Brake Configuration" type="1" ori="1">
+        <dipvalue name="ABC Bremsen - Spannung rechts &gt;" value="1"/>
+        <dipvalue name="ABC Bremsen - Spannung links &gt;" value="2"/>
+        <dipvalue name="Zimo HLU Bremsen aktiv" value="4"/>
+        <dipvalue name="Brake On DC Polarität ungleich Fahrtrichtung" value="8"/>
+        <dipvalue name="Brake on DC Polarität gleich Fahrtrichtung" value="16"/>
+        <dipvalue name="Selectrix Bremsmode Polarität ungleich Fahrtrichtung (LP5)" value="32"/>
+        <dipvalue name="Selectrix Bremsmode Polarität gleich Fahrtrichtung (LP5)" value="64"/>
+        <dipvalue name="Bremsweg konstant, wenn FS=0 (LP5)" value="128"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="149" cat="Brake Mode" desc="ABC Pendelzug Wartezeit (LP5)" info="0-255. Def.255"/>
+  <cvbyte nr="49" cat="Configuration" desc="Konfiguration2 #49 (LP4.0)" info="NMRA ->DIP">
+    <adip id="CV49LP40" title="Extended Configuration #1 (LP4.0)">
+      <dipgroup caption="erw. Konfiguration #1 NMRA" type="1" ori="1">
+        <dipvalue name="Lastregelung ON" value="1"/>
+        <dipvalue name="PWM 40kHz ON (20kHz OFF)" value="2"/>
+        <dipvalue name="MM Delta ON" value="4"/>
+        <dipvalue name="2.MM-Adresse ON" value="8"/>
+        <dipvalue name="Fahrstufenerkennung DCC ON" value="16"/>
+        <dipvalue name="LGB Fn-Tastenmodus ON" value="32"/>
+        <dipvalue name="ZIMO Manualfunktion ON" value="64"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="49" cat="Configuration" desc="Konfiguration2 #49 (LP5)" info="NMRA ->DIP">
+    <adip title="Extended Configuration #1 (LP5)">
+      <dipgroup caption="erw. Konfiguration #1 NMRA" type="1" ori="1">
+        <dipvalue name="Lastregelung ON" value="1"/>
+        <dipvalue name="MM-Folgeadresse low-Bit" value="8"/>
+        <dipvalue name="Fahrstufenerkennung DCC ON" value="16"/>
+        <dipvalue name="LGB Fn-Tastenmodus ON" value="32"/>
+        <dipvalue name="MM-Folgeadresse high-Bit" value="128"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="124" cat="Configuration" desc="Konfiguration3 #124 (LP4.0)" info="ESU ->DIP">
+    <adip title="Extended Configuration #2 (LP4.0)">
+      <dipgroup caption="erw. Konfiguration #2" type="1" ori="1">
+        <dipvalue name="Falschfahrbit ON" value="1"/>
+        <dipvalue name="Decoderlock mit CV15/16 ON" value="2"/>
+        <dipvalue name="Ser. Protokoll für C-Sinus ON" value="8"/>
+        <dipvalue name="Fixe Regelfrequenz ON (adaptive OFF)" value="16"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="124" cat="Configuration" desc="Konfiguration3 #124 (LP5)" info="ESU ->DIP">
+    <adip title="Extended Configuration #2 (LP5)">
+      <dipgroup caption="erw. Konfiguration #2" type="1" ori="1">
+        <dipvalue name="Falschfahrbit ON" value="1"/>
+        <dipvalue name="Decoderlock mit CV15/16 ON" value="2"/>
+        <dipvalue name="Anfahrverzögerung ON" value="4"/>
+        <dipvalue name="SUSI ser. Protokoll ON" value="8"/>
+        <dipvalue name="AUX 10 aktiv. Radsensor EIN. ON" value="16"/>
+        <dipvalue name="Motorschutz bei Blockieren ON" value="32"/>
+        <dipvalue name="Parkbremse (EMK-Bremse aktiv bei Halt) ON" value="64"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="9" cat="Motor" desc="PWM-Frequenz (LP5)" info="Vielfaches von 1000Hz. 10-50. Def. 40"/>
+  <cvbyte nr="49" cat="Motor" desc="PWM / Lastregelung... (LP4.0)" dipid="CV49LP40" info="identisch mit #49 (LP4.0)"/>
+  <cvbyte nr="47" cat="Configuration" desc="Digitalformate" info="Auswahl Digitalprotokolle DCC/mfx/MM/Selectrix ->DIP">
+    <adip title="Protocol Select">
+      <dipgroup caption="Protokollauswahl" type="1" ori="1">
+        <dipvalue name="DCC ON" value="1"/>
+        <dipvalue name="M4 (mfx) ON" value="2"/>
+        <dipvalue name="MM2 ON" value="4"/>
+        <dipvalue name="Selectrix ON" value="8"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="113" cat="Configuration" desc="Power Fail Bypass" info="Überbrückungszeit durch Powerpack. Wert x 0,016384 sec. 0-255. Def.50"/>
+  <cvbyte nr="132" cat="Effects" desc="Grade Crossing Holdtime" info="Grade Crossing Haltezeit"/>
+  <cvbyte nr="112" cat="Effects" desc="Blinkfrequenz" info="Blinkfrequenz Strobeeffekte Wert x 0.065536 sec. 4-64. Def.39"/>
+  <cvbyte nr="246" cat="Coupling" desc="V- autom. Entkuppeln" info="Geschwindigkeit beim autom. Entkuppeln. Wert0 = AUS. Funktionsausgang muß auf &apos;Pulse&apos; oder &apos;Kuppler&apos; stehen. 0-255. Def.0"/>
+  <cvbyte nr="247" cat="Coupling" desc="Abrückzeit (weg)" info="Zeit zum Wegfahren von Zug nach autom. Entkuppeln. Wert* 0,016. 0-255. Def.0"/>
+  <cvbyte nr="248" cat="Coupling" desc="Andrückzeit (hin)" info="Zeit zum Wegdrücken des Zuges nach autom. Entkuppeln. Wert* 0,016. 0-255. Def.0"/>
+  <cvbyte nr="253" cat="Brake Mode" desc="Konstanter Bremsmodus " info="Nur aktiv, wenn CV254 &gt; 0. 0=linear. &gt; 0 = constant linear"/>
+  <cvbyte nr="254" cat="Brake Mode" desc="Konstanter Bremsweg Vorwärts" info="Bremsweg vorwärts, unabhängig von Geschwindigkeit. 0-255. Def.0"/>
+  <cvbyte nr="255" cat="Brake Mode" desc="Konstanter Bremsweg Rückwärts" info="Bremsweg rückwärts, unabhängig von Geschwindigkeit. Wert 0 = Bremsweg identisch mit Wert bei Vorwärts (CV254). 0-255. Def.0"/>
+  <cvbyte nr="102" cat="Brake Mode" desc="Verzögerung Aufhebung Bremsstrecke (LP5)" info="Wert * 16ms, bis Bremsstrecke aufgehoben wird. 0-255. Def.12"/>
+  <cvbyte nr="122" cat="Configuration" desc="Datenspeicherung (LP4.0)" info="Speichern Zustand Fn-Tasten und Sollgeschwindigkeit (DIP)">
+    <adip title="Datenspeicherung">
+      <dipgroup caption="Speichern Zustände" type="1" ori="1">
+        <dipvalue name="Fn-Tasten" value="1"/>
+        <dipvalue name="Sollgeschwindigkeit" value="2"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="28" cat="Configuration" desc="Railcom" info="RailCom Konfigurationen ->DIP">
+    <adip title="Railcom Configuration">
+      <dipgroup caption="Railcom  Konfiguration" type="1" ori="1">
+        <dipvalue name="Kanal 1 für Adressbroadcast ON" value="1"/>
+        <dipvalue name="Kanal 2 für Datenübertragung ON" value="2"/>
+        <dipvalue name="Railcom Plus autom. Anmeldung ON" value="128"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="50" cat="Analog" desc="Analogmodi (LP4.0)" info="Analogformate ->DIP">
+    <adip title="AC/DC Settings">
+      <dipgroup caption="Analogformate" type="1" ori="1">
+        <dipvalue name="AC" value="1"/>
+        <dipvalue name="DC" value="2"/>
+        <dipvalue name="QSI Quantum DC ON (LP5)" value="4"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="125" cat="Analog" desc="Anfahrspannung Analog DC" info=""/>
+  <cvbyte nr="126" cat="Analog" desc="Höchstgeschwindigkeit Analog DC" info=""/>
+  <cvbyte nr="127" cat="Analog" desc="Anfahrspannung Analog AC" info=""/>
+  <cvbyte nr="128" cat="Analog" desc="Höchstgeschwindigkeit Analog AC" info=""/>
+  <cvbyte nr="13" cat="Analog" desc="Analogbetrieb F1-F8" info="Zustand Funktionen im Analogbetrieb."/>
+  <cvbyte nr="14" cat="Analog" desc="Analogbetrieb F0,F9-F12" info="Zustand Funktionen im Analogbetrieb."/>
+  <cvbyte nr="105" cat="Scratchpad" desc="Anwenderinfos #1" info="Anwenderinfos. Keine Auswertung durch Decoder. 1/2."/>
+  <cvbyte nr="106" cat="Scratchpad" desc="Anwenderinfos #2" info="Anwenderinfos. Keine Auswertung durch Decoder. 2/2."/>
+</decoder>

@@ -1,0 +1,138 @@
+<decoder manu="Tams" type="LD-G-3xPlus" web="http://www.tams-online.de n">
+  <cvbyte nr="8" cat="Root" desc="Decoder Man-ID" info="Hersteller-ID (Tams = 62) und Dekoder-Reset."/>
+  <cvbyte nr="7" cat="Root" desc="Firmware-Version" readonly="true" info=""/>
+  <cvbyte nr="1" cat="Address" desc="Adresse kurz" info="Kurze Adresse."/>
+  <cvbyte nr="29" cat="Configuration" desc="Konfiguration1 #29" info="NMRA-DCC">
+    <adip title="Konfigurationsregister">
+      <dipgroup caption="Grundeinstellungen NMRA" type="1" ori="1">
+        <dipvalue name="Fahrtrichtung invers ON" value="1"/>
+        <dipvalue name="28/128 Fahrstufen ON" value="2"/>
+        <dipvalue name="Analogerkennung ON" value="4"/>
+        <dipvalue name="RailCom ON" value="8"/>
+        <dipvalue name="Motorkennlinie CV 67-94 ON" value="16"/>
+        <dipvalue name="lange Adresse (CV17/18)ON " value="32"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="50" cat="Motor Basic" desc="Parameter P" info="proport. Anteil Lastregelung Def.16"/>
+  <cvbyte nr="51" cat="Motor Basic" desc="Parameter I" info="integraler Anteil Lastregelung Def.14"/>
+  <cvbyte nr="65" cat="Motor" desc="Anfahrkick" info="kurzzeitige Erhöhung Motorspannung beim Anfahren"/>
+  <cvbyte nr="2" cat="Speed" desc="V-Min" info=""/>
+  <cvbyte nr="6" cat="Speed" desc="V-Mid" info=""/>
+  <cvbyte nr="5" cat="Speed" desc="V-Max" info=""/>
+  <cvbyte nr="3" cat="Speed" desc="Anfahrverzögerung" info=""/>
+  <cvbyte nr="4" cat="Speed" desc="Bremsverzögerung" info=""/>
+  <remark text=" &lt;cvbyte nr=&quot;67&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe  1&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;68&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe  2&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;69&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe  3&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;70&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe  4&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;71&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe  5&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;72&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe  6&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;73&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe  7&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;74&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe  8&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;75&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe  9&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;76&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe10&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;77&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe11&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;78&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe12&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;79&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe13&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;80&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe14&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;81&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe15&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;82&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe16&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;83&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe17&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;84&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe18&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;85&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe19&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;86&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe 20&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;87&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe 21&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;88&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe 22&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;89&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe 23&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;90&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe 24&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;91&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe 25&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;92&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe 26&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;93&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe 27&quot; info=&quot;&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;94&quot; cat=&quot;&quot;Speed Ext.&quot;&quot; desc=&quot;Fahrstufe 28&quot; info=&quot;&quot; &gt; "/>
+  <cvbyte nr="33" cat="Effekte" desc="F0 vorne" info="1- AUX1
+ 2- AUX2"/>
+  <cvbyte nr="34" cat="Effekte" desc="F0 hinten" info="1- AUX1
+ 2- AUX2"/>
+  <cvbyte nr="31" cat="Index Registers" desc="Index Register H" info=" "/>
+  <cvbyte nr="32" cat="Index Registers" desc="Index Register L" info=" "/>
+  <cvbyte nr="11" cat="Analog" desc="Zeit biscAnalog erkannt wird." info="Def.5"/>
+  <cvbyte nr="13" cat="Analog" desc="Analogbetrieb F1-F8" info="Wertebereich 0-255. Standardwert 0."/>
+  <cvbyte nr="9" cat="Motor" desc="PWM (max.58, Def.30=0)" info="Motorfrequenz Def. 0 = 30 kHz (max)
+255 = 58 Hz (min)
+Frequenz [Hz] = 30.000 / (2 x Wert von CV 9)"/>
+  <cvbyte nr="17" cat="Address" desc="Adresse lang hoch" info="Standardwert 192."/>
+  <cvbyte nr="18" cat="Address" desc="Adresse lang niedrig" info="Standardwert 128."/>
+  <remark text=" &lt;cvbyte nr=&quot;19&quot; cat=&quot;Address&quot; desc=&quot;Verbundadresse&quot; info=&quot;Fahrzeugadresse für Verbundbetrieb.&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;27&quot; cat=&quot;Brake Mode&quot; desc=&quot;Bremsen bei DC&quot; info=&quot;NULL=0  +=16  -=32&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;28&quot; cat=&quot;Configuration&quot; desc=&quot;RailCom&quot; info=&quot;&quot; &gt; "/>
+  <cvbyte nr="12" cat="Analog" desc="Analogmodus" info="Fahrtrichtungswechsel analog 1=Überspannung 0=Polarität"/>
+  <remark text=" &lt;cvbyte nr=&quot;35&quot; cat=&quot;Functions&quot; desc=&quot;Function Mapping F1&quot; info=&quot;F1-Funktionsmapping.&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;36&quot; cat=&quot;Functions&quot; desc=&quot;Function Mapping F2&quot; info=&quot;F2-Funktionsmapping.&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;37&quot; cat=&quot;Functions&quot; desc=&quot;Function Mapping F3&quot; info=&quot;F3-Funktionsmapping.&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;38&quot; cat=&quot;Functions&quot; desc=&quot;Function Mapping F4&quot; info=&quot;F4-Funktionsmapping.&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;39&quot; cat=&quot;Functions&quot; desc=&quot;Function Mapping F5&quot; info=&quot;F5-Funktionsmapping.&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;40&quot; cat=&quot;Functions&quot; desc=&quot;Function Mapping F6&quot; info=&quot;F6-Funktionsmapping.&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;41&quot; cat=&quot;Functions&quot; desc=&quot;Function Mapping F7&quot; info=&quot;F7-Funktionsmapping.&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;42&quot; cat=&quot;Functions&quot; desc=&quot;Function Mapping F8&quot; info=&quot;F8-Funktionsmapping.&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;43&quot; cat=&quot;Functions&quot; desc=&quot;Function Mapping F9&quot; info=&quot;F9-Funktionsmapping.&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;44&quot; cat=&quot;Functions&quot; desc=&quot;Function Mapping F10&quot; info=&quot;F10-Funktionsmapping.&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;45&quot; cat=&quot;Functions&quot; desc=&quot;Function Mapping F11&quot; info=&quot;F11-Funktionsmapping.&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;46&quot; cat=&quot;Functions&quot; desc=&quot;Function Mapping F12&quot; info=&quot;F12-Funktionsmapping.&quot; &gt; "/>
+  <cvbyte nr="49" cat="Configuration" desc="Konfiguration2 #49" info="Tams">
+    <adip title="Extended Configuration #1">
+      <dipgroup caption="erw. Konfiguration #1 Tams" type="1" ori="1">
+        <dipvalue name="Lastregelung ON" value="1"/>
+        <dipvalue name="Rangiergang mit F1" value="2"/>
+        <dipvalue name="Rangiergang mit F2" value="4"/>
+        <dipvalue name="Rangiergang mit F3" value="8"/>
+        <dipvalue name="Rangiergang mit F4" value="16"/>
+        <dipvalue name="ABV mit F3" value="32"/>
+        <dipvalue name="ABV mit F4" value="64"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="52" cat="Motor" desc="Parameter D" info="different. Anteil Lastregelung Def.8"/>
+  <remark text=" &lt;cvbyte nr=&quot;53&quot; cat=&quot;Effekte&quot; desc=&quot;Effekte AUX1&quot; info=&quot;Richtungsabhängigkeit, Blinken etc.&quot;&gt; "/>
+  <remark text=" &lt;adip title=&quot;AUX1 Effekte&quot;&gt; "/>
+  <remark text=" &lt;dipgroup caption=&quot;Effekt AUX1&quot; type=&quot;1&quot; ori=&quot;1&quot;&gt; "/>
+  <remark text=" &lt;dipvalue name=&quot;AUX bei Vorwärts OFF (Def. ON)&quot; value=&quot;1&quot; &gt; "/>
+  <remark text=" &lt;dipvalue name=&quot;AUX bei Rückwärts OFF (Def. ON&quot; value=&quot;2&quot; &gt; "/>
+  <remark text=" &lt;dipvalue name=&quot;Blinken invertiert&quot; value=&quot;8&quot; &gt; "/>
+  <remark text=" &lt; dipgroup&gt; "/>
+  <remark text=" &lt; adip&gt; "/>
+  <remark text=" &lt; cvbyte&gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;54&quot; cat=&quot;Effekte&quot; desc=&quot;Effekte AUX2&quot; info=&quot;Richtungsabhängigkeit, Blinken etc.&quot;&gt; "/>
+  <remark text=" &lt;adip title=&quot;AUX2 Effekte&quot;&gt; "/>
+  <remark text=" &lt;dipgroup caption=&quot;Effekt AUX2&quot; type=&quot;1&quot; ori=&quot;1&quot;&gt; "/>
+  <remark text=" &lt;dipvalue name=&quot;AUX bei Vorwärts OFF (Def. ON)&quot; value=&quot;1&quot; &gt; "/>
+  <remark text=" &lt;dipvalue name=&quot;AUX bei Rückwärts OFF (Def. ON&quot; value=&quot;2&quot; &gt; "/>
+  <remark text=" &lt;dipvalue name=&quot;Blinken invertiert&quot; value=&quot;8&quot; &gt; "/>
+  <remark text=" &lt; dipgroup&gt; "/>
+  <remark text=" &lt; adip&gt; "/>
+  <remark text=" &lt; cvbyte&gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;62&quot; cat=&quot;Effekte&quot; desc=&quot;Dimmen AUX&quot; info=&quot;Reduzierung Spannung aller AUX-Ausgänge&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;112&quot; cat=&quot;Effekte&quot; desc=&quot;Blinkfrequenz&quot; info=&quot;Frequenz für alle Blinklichter&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;113&quot; cat=&quot;Effekte&quot; desc=&quot;Fahrstufe für #116&quot; info=&quot;Fahrstufe für Dimmen Ausgänge lt. #116&quot; &gt; "/>
+  <cvbyte nr="47" cat="Address" desc="2.MM-Adresse" info="nur für Motorola"/>
+  <remark text=" &lt;cvbyte nr=&quot;116&quot; cat=&quot;Effekte&quot; desc=&quot;Dimmen geschw.&quot; info=&quot;Ausänge, die geschwindigkeitsabhängig (#113)) gedimmt werden.&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;118&quot; cat=&quot;Effekte&quot; desc=&quot;alt. Dimmen&quot; info=&quot;alt. Dimmen über #113 für AUX1   AUX2&quot; &gt; "/>
+  <remark text=" &lt;cvbyte nr=&quot;124&quot; cat=&quot;Motor&quot; desc=&quot;Optimierung Lastregelung&quot; info=&quot;Anpassung Lastregelung an ind. Motoreingenschaften&quot; &gt; "/>
+  <cvbyte nr="131" cat="Effekte" desc="Rangierlicht" info="Tams">
+    <adip title="Shunting light">
+      <dipgroup caption="Rangierlicht Zuordnung" type="1" ori="1">
+        <dipvalue name="F0f" value="1"/>
+        <dipvalue name="F0r" value="2"/>
+        <dipvalue name="AUX1" value="4"/>
+        <dipvalue name="AUX2" value="8"/>
+        <dipvalue name="AUX3" value="16"/>
+        <dipvalue name="AUX4" value="32"/>
+        <dipvalue name="über F3" value="64"/>
+        <dipvalue name="über F4" value="128"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="165" cat="Motor" desc="EMK Abtastrate" info=" Faktor, mit dem der Wert der Lastreglung multipliziert wird"/>
+  <cvbyte nr="166" cat="Motor" desc="EMK Meßlücke" info="Anzahl der Mittelungen der gemessenen Werte der Lastregelung"/>
+  <cvbyte nr="199" cat="Analog" desc="Spannung Umschaltimpuls" info="Def.100"/>
+</decoder>

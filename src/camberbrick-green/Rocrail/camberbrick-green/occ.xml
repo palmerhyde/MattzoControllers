@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modocc>
+  <occ bkid="platform1" arrivetime="1757248507" lcid="" auto="false" closed="true" placing="0" blockenterside="0"/>
+  <occ bkid="platform2" arrivetime="1757259799" lcid="10233" auto="false" closed="false" placing="1" blockenterside="1"/>
+  <occ bkid="platform3" arrivetime="1757259787" lcid="60197" auto="false" closed="false" placing="1" blockenterside="1"/>
+  <occ bkid="platform4" arrivetime="1757259670" lcid="" auto="false" closed="true" placing="0" blockenterside="0" scid=""/>
+  <occ bkid="outer_loop_back" arrivetime="1757259786" lcid="" auto="false" closed="false" placing="0" blockenterside="0"/>
+  <occ bkid="inner_loop_left" arrivetime="1757259746" lcid="" auto="false" closed="false" placing="0" blockenterside="0"/>
+  <occ bkid="inner_loop_back" arrivetime="1757259750" lcid="" auto="false" closed="false" placing="0" blockenterside="0"/>
+  <occ bkid="inner_loop_right" arrivetime="1757259787" lcid="" auto="false" closed="false" placing="0" blockenterside="0"/>
+  <occ bkid="outer_loop_right" arrivetime="1757259782" lcid="" auto="false" closed="false" placing="0" blockenterside="0"/>
+  <occ bkid="outer_approach_left" arrivetime="1757259799" auto="false" closed="false" placing="0" blockenterside="0" lcid=""/>
+</modocc>

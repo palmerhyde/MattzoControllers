@@ -1,0 +1,219 @@
+﻿<!--  This is for the ESU Loksound V5.0 decoder. Sounds not available here  -->
+<decoder manu="ESU" type="V5.0" web="http://www.esu.eu" collapse="true">
+  <cvbyte nr="1" cat="Address" desc="Short Decoder Address" info="Range 0-127 - (Range 1-255 for Motorola) Default 3"/>
+	<cvbyte nr="2" cat="Speed" desc="Vstart" info="Start voltage Sets the minimum speed of the engine Range 1 - 255 Default 3"/>
+	<cvbyte nr="3" cat="Speed" desc="Acceleration Rate" info="This value multiplied by 0.25 is the time from stop to maximum speed. For LokSound 5 DCC: The unit is 0.896 seconds 0 - 255 Default 28"/>
+	<cvbyte nr="4" cat="Speed" desc="Deceleration Rate" info="This value multiplied by 0.25 is the time from maximum speed to stop For LokSound 5 DCC: The unit is 0.896 seconds 0 - 255  Default 21"/>
+	<cvbyte nr="5" cat="Speed" desc="Maximum speed" info="Maximum speed of the engine Range 0 - 255 Default 255"/>
+  <cvbyte nr="6" cat="Speed" desc="Medium speed" info="Medium speed of the engine. Use only if 3-point speed table is enabled. For LokSound 5 DCC only."/>
+	<cvbyte nr="7" cat="Info" desc="Manufacturer Version No." readonly="true" info="Version number Internal software version of decoder"/>
+	<cvbyte nr="8" cat="Info" desc="Manufacturer's ID" readonly="true" info="ID ESU - Read Default 151"/>
+  <cvbyte nr="8" cat="Reset" desc="Reset Decoder" readonly="false" info="WARNING Writing value 8 in this CV will trigger a reset to factory default values"/>
+	<cvbyte nr="9" cat="Motor" desc="Motor PWM Frequency" info="Motor PWM frequency as a multiple of 1000 Hz. Range 10 - 50 Default 40"/>
+	<cvbyte nr="13" cat="Functions" desc="Analog Modes F1-F8" info="Status of functions F1 to F8 in analogue mode (see ESU Man. chapter 12.7) Range 0-255 Default 1"/>
+	<cvbyte nr="14" cat="Functions" desc="Analog Modes FL, F9-F15" info="Status of function F0, F9 to F12 in analogue mode (see ESU Man. chapter 12.7) Range 0-63 Default 1"/>
+	<cvbyte nr="15" cat="Lock" desc="Decoder Lock High" info="Decoder-Lock Function according to NMRA. For details please see:    Range 0 - 255 Default 0"/>
+	<cvbyte nr="16" cat="Lock" desc="Decoder Lock Low" info="http://www.nmra.org/standards/DCC/WGpublic/0305051/0305051.html      Range 0 - 255 Default 0"/>
+	<cvbyte nr="17" cat="Address" desc="Extended address high" info="Long address of engine (see ESU Man. chapter 9.2) Range Bitwise 11000000 to 11100111 Default 11000000 (192)"/>
+	<cvbyte nr="18" cat="Address" desc="Extended address low" info="Long address of engine (see ESU Man. chapter 9.2) Range Bitwise 00000000 to 11111111 (0 - 255) Default 0"/>
+	<cvbyte nr="19" cat="Consist" desc="Consist Address" info="Additional address for consist operation. Value 0 or 128 means: consist address is disabled. Active consist address Range for Forward 1 - 127. Active consist address Range for Reverse 129 - 255. Default 0"/>
+	<cvbyte nr="21" cat="Consist" desc="Consist Mode F1-F8" info="Status of functions F1 to F8 in Consist mode Meaning of the bits as in CV 13 Range 0-255 Default 0"/>
+	<cvbyte nr="22" cat="Consist" desc="Consist Mode FL, F9-F12" info="Status of functions FL, F9 to F12 in Consist mode Meaning of the bits as in CV 14 Range 0-63 Default 0"/>
+	<cvbyte nr="23" cat="Speed" desc="Adjust Acceleration Factor for CV 3" info="Values from 0 to 127 are added to CV 3. If the values are to be subtracted, additionally set bit 7 (value 128). The unit is 0.896 seconds. Range 0 - 127 Default 0"/>
+	<cvbyte nr="24" cat="Speed" desc="Adjust Deceleration Factor for CV 4" info="Values from 0 to 127 are added to CV 3. If the values are to be subtracted, additionally set bit 7 (value 128). The unit is 0.896 seconds. Range 0 - 127 Default 0"/>
+  <cvbyte nr="27" cat="Config" desc="Enabled Brake modes" info=".">
+    <adip>
+      <dipgroup caption="Allowed (enabled) Brake modes Default 28" type="1" ori="1" spacing="2">
+        <dipvalue name="ABC braking, voltage higher on the right hand side" value="1"/>
+        <dipvalue name="ABC braking, voltage higher on the left hand side" value="2"/>
+        <dipvalue name="ZIMO HLU brakes active" value="4"/>
+        <dipvalue name="Brake on DC, if polarity against driving direction" value="8"/>
+        <dipvalue name="Brake on DC, if polarity like driving direction" value="16"/>
+        <dipvalue name="Selectrix brake diode, brakes if polarity is against driving direction" value="32"/>
+        <dipvalue name="Selectrix brake diode, rakes if polarity is like driving direction" value="64"/>
+        <dipvalue name="Loco brakes with constant brake distance if Speed=0" value="128"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="28" cat="Config" desc="RailCom Configuration Default 131" info=".">
+    <adip>
+      <dipgroup caption="Railcom Settings" type="1" ori="1">
+        <dipvalue name="Channel 1 Address broadcast enabled" value="1"/>
+        <dipvalue name="Data transmission allowed on Channel 2" value="2"/>
+        <dipvalue name="RailCom Plus automatic loco recognition active" value="128"/>
+      </dipgroup>
+    </adip>
+  </cvbyte> 
+  <cvbyte nr="29" cat="Config" desc="Decoder Configuration 1 Default 12" info=".">
+    <adip title="General Decoder Configuration">
+      <dipgroup caption="General Configuration" type="1" ori="1">
+        <dipvalue name="Invert direction" value="1"/>
+        <dipvalue name="28/128 speed steps" value="2"/>
+        <dipvalue name="Enable Analog mode" value="4"/>
+        <dipvalue name="Enable RailCom" value="8"/>
+        <dipvalue name="Speed curve through CV 67 - 94" value="16"/>
+        <dipvalue name="Long address as per CV17/18" value="32"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="31" cat="Config" desc="Loksound Index Register High" info="Index Register H Selection page for CV257-512. For LokSound 5 usually set to 16 Default=16"/>
+  <cvbyte nr="32" cat="Config" desc="Loksound Index Register Low" info="Index Register L Selection page for CV257-512. For LokSound 5 Range 0 - 16 Default=0"/>
+  <cvbyte nr="47" cat="Config" desc="Decoder Protocol selection Default 13" info=".">
+    <adip title="Which decoder protocols are active. Please see Loksound 5 manual chapter 9.5.">
+      <dipgroup caption="Protocol selection" type="1" ori="1">
+        <dipvalue name="DCC protocol active" value="1"/>
+        <dipvalue name="M4 protocol active (Not for LokSound 5 DCC)" value="2"/>
+        <dipvalue name="Motorola protocol active (Not for LokSound 5 DCC)" value="4"/>
+        <dipvalue name="Selectric protocol active (Not for LokSound 5 DCC)" value="8"/>
+      </dipgroup>
+    </adip>
+  </cvbyte> 
+	<cvbyte nr="49" cat="BEMF" desc="ESU BEMF" info="Extended Configuration #1 Range 0 - 255 Default 19">
+    <adip title="BEMF Config">
+      <dipgroup caption="BEMF" type="0" ori="1">
+        <dipvalue name="Enable Load control (Back-EMF)" value="1"/>
+        <dipvalue name="Reserved" value="0"/>
+        <dipvalue name="Reserved" value="0"/>
+        <dipvalue name="Märklin Consecutive addresses, low Bit" value="8"/>
+        <dipvalue name="Enable DCC speed step detection" value="16"/>
+        <dipvalue name="Enable LGB function button mode" value="32"/>
+        <dipvalue name="Reserved" value="0"/>
+        <dipvalue name="Märklin® Consecutive addresses, High Bit" value="128"/>
+      </dipgroup>
+    </adip>
+  </cvbyte> 
+  <cvbyte nr="50" cat="Config" desc="Analog mode Selection Default 3" info=".">
+    <adip title="Selection of allowed Analog modes">
+      <dipgroup caption="Analog modes" type="1" ori="1">
+        <dipvalue name="AC Analog Mode" value="1"/>
+        <dipvalue name="DC Analog mode" value="2"/>
+        <dipvalue name="Enable QSI Quantum Engineer Support" value="4"/>
+      </dipgroup>
+    </adip>
+  </cvbyte> 
+  <cvbyte nr="51" cat="BEMF" desc="K Slow Cutoff" info="Internal Speedstep, until K Slow is active Range 0-255 Default=10"/>
+  <cvbyte nr="52" cat="BEMF" desc="BEMF Param. K Slow" info="K -Portion of the PI-Controller valid for lower speed steps Range 0-255 Default=10"/>
+  <cvbyte nr="53" cat="BEMF" desc="Control Reference voltage" info="Defines the Back EMF voltage, which the motor should generate at maximum speed Range 0-255 Default=130"/>
+  <cvbyte nr="54" cat="BEMF" desc="Load control Parameter K" info="K–component of the internal PI-controller. Defines the effect of load control. The higher the value, the stronger the effect of Back EMF control. Range 0 - 255 Default=50"/>
+  <cvbyte nr="55" cat="BEMF" desc="Load control Parameter I" info="«I»–component of the internal PI-controller. Defines the momentum (inertia) of the motor. The higher the momentum of the motor (large flywheel or bigger motor), the lower this value has to be set. Range 0 - 255 Default=100"/>
+  <cvbyte nr="56" cat="BEMF" desc="BEMF Influence at VMin 0-100%" info="Defines the »Strengh« of the BEMF at minimum speed step Range 1 - 255 Default=255"/>
+  <cvbyte nr="57" cat="Sound" desc="Steam chuff synchronization #1" info="Defines the steam chuff synchronization. See chapter 13.3. Range 1-255 Default=30"/>
+  <cvbyte nr="58" cat="Sound" desc="Steam chuff synchronization #2" info="Defines the steam chuff synchronization. See chapter 13.3. Range 1-255 Default=30"/>
+  <cvbyte nr="63" cat="Sound" desc="Sound volume Master" info="Master volume for all sounds. Range 0-192 Default=128"/>
+  <cvbyte nr="64" cat="Sound" desc="Brake sound threshold - Brake On" info="If the actual loco speed step is smaller than or equals the value indicated here, the brake sound is triggered. Compare chapter 13.4. Range 0 - 255 Default=60"/>
+  <cvbyte nr="65" cat="Sound" desc="Brake sound threshold - Brake Off" info="If the actual loco speed step is smaller than the one indicated here (up to 255), the brake sound will be switched off again. Compare chapter 13.4. Range 0 - 255 Default=7"/>
+  <cvbyte nr="66" cat="Speed" desc="Forward Trim" info="Forward Trim Divided by 128 is the factor used to multiply the motor voltage when driving forward. The value 0 deactivates the trim. Range 0 - 255 Default=128"/>
+  <cvbyte nr="67" cat="Speed Table" desc="Index 1"/>
+  <cvbyte nr="68" cat="Speed Table" desc="Index 2"/>
+  <cvbyte nr="69" cat="Speed Table" desc="Index 3"/>
+  <cvbyte nr="70" cat="Speed Table" desc="Index 4"/>
+  <cvbyte nr="71" cat="Speed Table" desc="Index 5"/>
+  <cvbyte nr="72" cat="Speed Table" desc="Index 6"/>
+  <cvbyte nr="73" cat="Speed Table" desc="Index 7"/>
+  <cvbyte nr="74" cat="Speed Table" desc="Index 8"/>
+  <cvbyte nr="75" cat="Speed Table" desc="Index 9"/>
+  <cvbyte nr="76" cat="Speed Table" desc="Index 10"/>
+  <cvbyte nr="77" cat="Speed Table" desc="Index 11"/>
+  <cvbyte nr="78" cat="Speed Table" desc="Index 12"/>
+  <cvbyte nr="79" cat="Speed Table" desc="Index 13"/>
+  <cvbyte nr="80" cat="Speed Table" desc="Index 14"/>
+  <cvbyte nr="81" cat="Speed Table" desc="Index 15"/>
+  <cvbyte nr="82" cat="Speed Table" desc="Index 16"/>
+  <cvbyte nr="83" cat="Speed Table" desc="Index 17"/>
+  <cvbyte nr="84" cat="Speed Table" desc="Index 18"/>
+  <cvbyte nr="85" cat="Speed Table" desc="Index 19"/>
+  <cvbyte nr="86" cat="Speed Table" desc="Index 20"/>
+  <cvbyte nr="87" cat="Speed Table" desc="Index 21"/>
+  <cvbyte nr="88" cat="Speed Table" desc="Index 22"/>
+  <cvbyte nr="89" cat="Speed Table" desc="Index 23"/>
+  <cvbyte nr="90" cat="Speed Table" desc="Index 24"/>
+  <cvbyte nr="91" cat="Speed Table" desc="Index 25"/>
+  <cvbyte nr="92" cat="Speed Table" desc="Index 26"/>
+  <cvbyte nr="93" cat="Speed Table" desc="Index 27"/>
+  <cvbyte nr="94" cat="Speed Table" desc="Index 28"/>
+  <cvbyte nr="95" cat="Speed" desc="Reverse Trim" info="Reverse Trim Divided by 128 is the factor used to multiply the motor voltage when driving backwards. Value 0 deactivates the trim. Range 0 - 255 Default=128"/>
+  <cvbyte nr="96" cat="ROCO" desc="Multimaus/Lokmaus II address offset" readonly="true" info="Saves the CV number that should be actually programmed in hundreds. See manual section 8.2.8/9 Range 0 - 9"/>
+  <cvbyte nr="97" cat="ROCO" desc="Multimaus/Lokmaus II address" readonly="true" info="Saves the CV number that should be actually programmed in units and tens. See manual section 8.2.8/9 Range 0 - 99"/>
+  <cvbyte nr="98" cat="ROCO" desc="Lokmaus II Value offset" readonly="true" info="Saves the value of the CV that should be actually programmed in hundreds. See manual section 8.2.9 Range 0 - 9"/>
+  <cvbyte nr="99" cat="ROCO" desc="Multimaus/Lokmaus II Value" readonly="true" info="Saves the CV number that should be actually programmed in units and tens. See manual section 8.2.8/9 Range 0 - 99"/>
+  <cvbyte nr="101" cat="Speed" desc="Shunting Mode Trim" info="Shunting Mode Trim Divided by 128, this gives the factor by which the motor voltage is multiplied when the shunting gear is active. See section 10.1.2. Range 0 - 128 Default=64"/>
+  <cvbyte nr="102" cat="Speed" desc="Brake Mode Exit Delay Time" info="Brake Mode Exit Delay Time as a multiple of 16 milliseconds that must pass before a detected braking distance is left again. See section 10.4.6. Range 0 - 255 Default=12"/>
+  <cvbyte nr="103" cat="Speed" desc="Load adjustment" info="Load adjustment »Optional Load” Divided by 128, this gives the factor that changes CV3, CV4 and the sound when »Optional Load« is active. See section 10.7. Range 0 - 255 Default=0"/>
+  <cvbyte nr="104" cat="Speed" desc="Load adjustment" info="Load adjustment »Primary Load” Divided by 128, this gives the factor that changes CV3, CV4 and the sound when »Primry Load« is active. See section 10.7. Range 0 - 255 Default=255"/>
+  <cvbyte nr="105" cat="User" desc="User CV #1" info="Here you are able to save what ever you want. Range 0 - 255 Default=0"/>
+  <cvbyte nr="106" cat="User" desc="User CV #2" info="Here you are able to save what ever you want. Range 0 - 255 Default=0"/>
+  <cvbyte nr="111" cat="Motor" desc="Gearbox backlash Time" info="Gearbox backlash Time as a multiple of 16 mS, for which the motor runs at minimum speed after reversing the direction to prevent gear box jerking. Range 0 - 255 Default=0"/>
+  <cvbyte nr="112" cat="Functions" desc="Frequency for Flashing light effects" info="Flashing frequency for Strobe lighting effects.Multiple of 0.065536 seconds. See section 12.5.4. Range 0 - 255 Default=20"/>
+  <cvbyte nr="113" cat="Motor" desc="Power Fail Bypass" info="The time that the decoder bridges via the PowerPack after an interruption of voltage. Unit: A multiple of 0.032768 sec. See section 6.12.2. Range 0 - 255 Default=32"/>
+  <cvbyte nr="116" cat="BEMF" desc="Slow speed BEMF Sampling period" info="Frequency of BEMF measurement in 0.1 milliseconds at speed step 1 Range 50 - 200 Default=50"/>
+  <cvbyte nr="117" cat="BEMF" desc="Full speed BEMF Sampling period" info="Frequency of BEMF measurement in 0.1 milliseconds at speed step 255 Range 50 - 200 Default=150"/>
+  <cvbyte nr="118" cat="BEMF" desc="Slow speed BEMF Measurement gap length" info="VMin Length of the BEMF measuring gap in 0.1 milliseconds at speed step 1 Range 10 - 20 Default=15"/>
+  <cvbyte nr="119" cat="BEMF" desc="Full speed BEMF Measurement gap length" info="Vmax Length of the BEMF measuring gap in 0.1 milliseconds at speed step 255 Range 10 - 20 Default=15"/>
+  <cvbyte nr="123" cat="Speed" desc="ABC Mode »Slow drive«" info="Speed which is valid in the slow driving section during ABC braking. Range 0 - 255 Default=100"/>
+  <cvbyte nr="124" cat="Config" desc="Extended Configuration #2" info="Additional important settings for decoders - Default=21">
+    <adip title="Extended Configuration #2">
+      <dipgroup caption="Extended  Configuration #2" type="1" ori="1">
+        <dipvalue name="Bi-directional bit: Keep driving direction when changing direction." value="1"/>
+        <dipvalue name="Enable decoder lock with CV15/16" value="2"/>
+        <dipvalue name="Enable prime mover startup delay" value="4"/>
+        <dipvalue name="Enable SUSI protocol" value="8"/>
+        <dipvalue name="Enable Output AUX9 (LokSound 5 H0 only)" value="16"/>
+        <dipvalue name="Disable=Motor Overload Protection Motor is not switched off when blocked. Enable=Motor is switched off for a few seconds when blocked to avoid burnout" value="32"/>
+        <dipvalue name="Enable Automatic parking Brake (EMK Braking)" value="64"/>
+        <dipvalue name="Reserved" value="128"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="125" cat="Speed" desc="Start voltage Analog DC" info="See manual section 10.8. Range 0 - 255 Default=90"/>
+  <cvbyte nr="126" cat="Speed" desc="Maximum speed Analog DC" info="See manual section 10.8. Range 0 - 255 Default=130"/>
+  <cvbyte nr="127" cat="Speed" desc="Start voltage Analog AC" info="See manual section 10.8. Range 0 - 255 Default=90"/>
+  <cvbyte nr="128" cat="Speed" desc="Maximum speed Analog AC" info="See manual section 10.8. Range 0 - 255 Default=130"/>
+  <cvbyte nr="129" cat="Speed" desc="Analog Functions hysteresis" info="Offset voltage for functions in Analog mode. Chapter 10.8. Range 0 - 255 Default=15"/>
+  <cvbyte nr="130" cat="Speed" desc="Analog Motor hysteresis" info="Offset voltage for motor functions in Analog mode. Chapter 10.8. Range 0 - 255 Default=5"/>
+  <cvbyte nr="132" cat="Functions" desc="Grade Crossing Hold Time" info="Grade Crossing holding time. See manual chapter 12.5.3. Range 0 - 255 Default=80"/>
+  <cvbyte nr="133" cat="Sound" desc="Sound Fader" info="Volume when sound fader is active. See chapter 13.5. Range 0 - 255 Default=128"/>
+  <cvbyte nr="134" cat="Speed" desc="ABC-Mode" info="ABC-Mode Sensitivity Threshold, from which asymmentry on ABC shall be recognized. Range 4 - 32 Default=10"/>
+  <cvbyte nr="138" cat="Functions" desc="Smoke Unit" info="Smoke Unit Trim Fan Divided by 128, this gives the factor by which the fan speed of synchronized smoke units can be adjusted. Range 0 - 255 Default=128"/>
+  <cvbyte nr="139" cat="Functions" desc="Smoke Unit" info="Smoke Unit Trim Temperature Divided by 128, this gives the factor by which the temperature of synchronized smoke units can be adjusted. Range 0 - 255 Default=128"/>
+  <cvbyte nr="140" cat="Functions" desc="Smoke Unit" info="Smoke TimeOut Time until automatic shutdown of the smoke unit. Range 0 - 255 Default=255"/>
+  <cvbyte nr="141" cat="Functions" desc="Smoke Unit" info="Smoke Chuff Min Minimum duration of a steam chuff of an external smoke unit in 0.041 seconds resolution. Range 0 - 255 Default=10"/>
+  <cvbyte nr="142" cat="Functions" desc="Smoke Unit" info="Smoke Chuff max Maximum duration of a steam chuff of an external smoke unit in 0.041 seconds resolution. Range 0 - 255 Default=125"/>
+  <cvbyte nr="143" cat="Functions" desc="Smoke Unit" info="Smoke Chuff Length Divided by 128, this gives the factor by which the duration of the steam chuffs can be adjusted relative to the trigger pulses. Range 0 - 255 Default=100"/>
+  <cvbyte nr="144" cat="Functions" desc="Smoke Unit" info="Smoke Pre Heat Temperature Preheating temperature in degrees Celsius for secondary smoke generators (cylinder smoke unit) Range 0 - 255 Default=150"/>
+  <cvbyte nr="149" cat="Speed" desc="ABC Shuttle Train Holdtime" info="ABC Shuttle Train Holdtime Time in seconds, which has to be passed for ABC shuttle train operation, before the direction of travel is changed. See section 10.4.4.3. Range 0 - 255 Default=255"/>
+  <cvbyte nr="150" cat="Speed" desc="HLU Speedlimit 1" info="HLU Speed limit 1. Internal speedstep. Range 0 - 255 Default=42"/>
+  <cvbyte nr="151" cat="Speed" desc="HLU Speedlimit 2" info="HLU Speed limit 2 (U). Internal speedstep. Range 0 - 255 Default=85"/>
+  <cvbyte nr="152" cat="Speed" desc="HLU Speedlimit 3" info="HLU Speed limit 3. Internal speedstep. Range 0 - 255 Default=127"/>
+  <cvbyte nr="153" cat="Speed" desc="HLU Speedlimit 4" info="HLU Speed limit 4 (L). Internal speedstep. Range 0 - 255 Default=170"/>
+  <cvbyte nr="154" cat="Speed" desc="HLU Speedlimit 5" info="HLU Speed limit 5. Internal speedstep. Range 0 - 255 Default=212"/>
+  <cvbyte nr="155" cat="Sound" desc="TBA" info="16 CVs for selecting sounds that can be assigned within sound projects. Please note the documentation for the sound project. Range 0 - 255 Default=0"/>
+  <cvbyte nr="156" cat="Sound" desc="TBA" info=""/>
+  <cvbyte nr="157" cat="Sound" desc="TBA" info=""/>
+  <cvbyte nr="158" cat="Sound" desc="TBA" info=""/>
+  <cvbyte nr="159" cat="Sound" desc="TBA" info=""/>
+  <cvbyte nr="160" cat="Sound" desc="TBA" info=""/>
+  <cvbyte nr="161" cat="Sound" desc="TBA" info=""/>
+  <cvbyte nr="162" cat="Sound" desc="TBA" info=""/>
+  <cvbyte nr="163" cat="Sound" desc="TBA" info=""/>
+  <cvbyte nr="164" cat="Sound" desc="TBA" info=""/>
+  <cvbyte nr="165" cat="Sound" desc="TBA" info=""/>
+  <cvbyte nr="166" cat="Sound" desc="TBA" info=""/>
+  <cvbyte nr="167" cat="Sound" desc="TBA" info=""/>
+  <cvbyte nr="168" cat="Sound" desc="TBA" info=""/>
+  <cvbyte nr="169" cat="Sound" desc="TBA" info=""/>
+  <cvbyte nr="170" cat="Sound" desc="TBA" info=""/>
+	<cvbyte nr="179" cat="Speed" desc="Brake Function 1" info="Deceleration Value of which 33% of CV 4 will be deducted if the Brake Function 1 is active. See section 10.6. Range 0 - 255 Default=80"/>
+	<cvbyte nr="180" cat="Speed" desc="Brake Function 2" info="Deceleration Value of which 33% of CV 4 will be deducted if the Brake Function 2 is active. See section 10.6. Range 0 - 255 Default=40"/>
+	<cvbyte nr="181" cat="Speed" desc="Brake Function 3" info="Deceleration Value of which 33% of CV 4 will be deducted if the Brake Function 3 is active. See section 10.6. Range 0 - 255 default=40"/>
+	<cvbyte nr="182" cat="Speed" desc="Brake Function 1" info="max. Speed Highest speed step that can be reached when Brake function 1 is active. Range 0 - 126 Default=0"/>
+	<cvbyte nr="183" cat="Speed" desc="Brake Function 2" info="max. Speed Highest speed step that can be reached when Brake function 1 is active. Range 0 - 126 Default=126"/>
+	<cvbyte nr="184" cat="Speed" desc="Brake Function 3" info="max. Speed Highest speed step that can be reached when Brake function 1 is active. Range 0 - 126 Default=126"/>
+	<cvbyte nr="246" cat="Speed" desc="Automatic decoupling Driving speed" info="Speed of the loco while decoupling; the higher the value, the faster the loco. Value 0 switches the automatic coupler off. Automatic decoupling is only active if the function output is adjusted to pulse or coupler. Range 0 - 255 default=0"/>
+	<cvbyte nr="247" cat="Functions" desc="Automatic Decoupling - Removing time" info="This value multiplied with 0.016 defines the time the loco needs for moving away from the train (automatic decoupling). Range 0 – 255 default=0"/>
+	<cvbyte nr="248" cat="Functions" desc="Automatic Decoupling - Pushing time" info=" This value multiplied with 0.016 defines the time the loco needs for pushing against the train (automatic decoupling). Range 0 – 255 default=0"/>
+	<cvbyte nr="249" cat="Sound" desc="Minimum steam chuff distance" info="Minimum distance of two steam chuffs, independent from sensor data. See chapter 13.3. Range 0 – 255 Default=0"/>
+	<cvbyte nr="250" cat="Sound" desc="Secondary steam chuff trigger" info="Defines the distance between two consecutive steam chuffs for the secondary steam chuff generator. The value indicates the promilles the steam chuff distances of the secondary steam chuff generator ought to be shorter then those of the primary steam chuff generator. It is needed for steam locos with two independent engines, such as Big Boy or Mallet. Range 0 – 255 Default=0"/>
+	<cvbyte nr="253" cat="Speed" desc="Constant brake mode" info="Determines the constant brake mode. If CV 253 = 0: Decoder stops linearly, if CV 253 > 0: Decoder stops constantly linear. Only active, if CV254 > 0 Range 0 – 255 Default=0"/>
+	<cvbyte nr="254" cat="Speed" desc="Constant braking distance forward" info="A value > 0 determines the way of brake distance it adheres to, independent from speed. Range 0 – 255 Default=0"/>
+	<cvbyte nr="255" cat="Speed" desc="Constant braking distance backward" info="Constant braking distances during reverse driving. Only active, if value > 0, otherwise the value of CV 254 is used. Useful for reversible trains. Range 0 – 255 Default=0"/>
+</decoder>

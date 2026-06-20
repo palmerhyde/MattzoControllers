@@ -1,0 +1,164 @@
+<decoder manu="Viessmann" type="5238" web="http://www.viessmann-modell.de">
+   <cvbyte nr="8" cat="Root" desc="Decoder Man-ID" info="Hersteller-ID (Viessmann = 109) und Dekoder-Reset."/>
+   <cvbyte nr="7" cat="Root" desc="Decodermodel" readonly="true" info="19- 5238"/>
+   
+  <cvbyte nr="1" cat="Address" desc="Adresse kurz" info="Kurze Adresse."/>
+  
+  <cvbyte nr="29" cat="Configuration" desc="Konfiguration1 #29" info="NMRA-DCC">
+ <adip title="Konfigurationsregister">
+ <dipgroup caption="Grundeinstellungen NMRA" type="1" ori="1">
+      <dipvalue name="Fahrtrichtung invers ON" value="1"/>
+      <dipvalue name="28/128 Fahrstufen ON" value="2"/>
+      <dipvalue name="Analogerkennung ON" value="4"/>
+      <dipvalue name="RailCom ON" value="8"/>
+      <dipvalue name="Motorkennlinie CV 67-94 ON" value="16"/>
+      <dipvalue name="lange Adresse (CV17/18)ON " value="32"/>
+  </dipgroup>
+</adip>
+</cvbyte>  
+  
+  <cvbyte nr="50" cat="Motor Basic" desc="Parameter P" info="proport. Anteil Lastregelung. Def.90"/>
+  <cvbyte nr="51" cat="Motor Basic" desc="Parameter I" info="integraler Anteil Lastregelung. Def.70"/>
+  
+   <cvbyte nr="65" cat="Motor" desc="Anfahrkick" info="kurzzeitige Erhöhung Motorspannung beim Anfahren"/>
+  
+  <cvbyte nr="2" cat="Speed" desc="V-Min" info=""/>
+  <!-- <cvbyte nr="6" cat="Speed" desc="V-Mid" info=""/> -->
+  <cvbyte nr="5" cat="Speed" desc="V-Max" info=""/>
+  <cvbyte nr="3" cat="Speed" desc="Anfahrverzögerung" info=""/>
+  <cvbyte nr="4" cat="Speed" desc="Bremsverzögerung" info=""/>
+  
+   <!-- <cvbyte nr="67" cat=""Speed Ext."" desc="Fahrstufe  1" info=""/> -->
+  <!-- <cvbyte nr="68" cat=""Speed Ext."" desc="Fahrstufe  2" info=""/> -->
+  <!-- <cvbyte nr="69" cat=""Speed Ext."" desc="Fahrstufe  3" info=""/> -->
+  <!-- <cvbyte nr="70" cat=""Speed Ext."" desc="Fahrstufe  4" info=""/> -->
+  <!-- <cvbyte nr="71" cat=""Speed Ext."" desc="Fahrstufe  5" info=""/> -->
+  <!-- <cvbyte nr="72" cat=""Speed Ext."" desc="Fahrstufe  6" info=""/> -->
+  <!-- <cvbyte nr="73" cat=""Speed Ext."" desc="Fahrstufe  7" info=""/> -->
+  <!-- <cvbyte nr="74" cat=""Speed Ext."" desc="Fahrstufe  8" info=""/> -->
+  <!-- <cvbyte nr="75" cat=""Speed Ext."" desc="Fahrstufe  9" info=""/> -->
+  <!-- <cvbyte nr="76" cat=""Speed Ext."" desc="Fahrstufe10" info=""/> -->
+  <!-- <cvbyte nr="77" cat=""Speed Ext."" desc="Fahrstufe11" info=""/> -->
+  <!-- <cvbyte nr="78" cat=""Speed Ext."" desc="Fahrstufe12" info=""/> -->
+  <!-- <cvbyte nr="79" cat=""Speed Ext."" desc="Fahrstufe13" info=""/> -->
+  <!-- <cvbyte nr="80" cat=""Speed Ext."" desc="Fahrstufe14" info=""/> -->
+  <!-- <cvbyte nr="81" cat=""Speed Ext."" desc="Fahrstufe15" info=""/> -->
+  <!-- <cvbyte nr="82" cat=""Speed Ext."" desc="Fahrstufe16" info=""/> -->
+  <!-- <cvbyte nr="83" cat=""Speed Ext."" desc="Fahrstufe17" info=""/> -->
+  <!-- <cvbyte nr="84" cat=""Speed Ext."" desc="Fahrstufe18" info=""/> -->
+  <!-- <cvbyte nr="85" cat=""Speed Ext."" desc="Fahrstufe19" info=""/> -->
+  <!-- <cvbyte nr="86" cat=""Speed Ext."" desc="Fahrstufe 20" info=""/> -->
+  <!-- <cvbyte nr="87" cat=""Speed Ext."" desc="Fahrstufe 21" info=""/> -->
+  <!-- <cvbyte nr="88" cat=""Speed Ext."" desc="Fahrstufe 22" info=""/> -->
+  <!-- <cvbyte nr="89" cat=""Speed Ext."" desc="Fahrstufe 23" info=""/> -->
+  <!-- <cvbyte nr="90" cat=""Speed Ext."" desc="Fahrstufe 24" info=""/> -->
+  <!-- <cvbyte nr="91" cat=""Speed Ext."" desc="Fahrstufe 25" info=""/> -->
+  <!-- <cvbyte nr="92" cat=""Speed Ext."" desc="Fahrstufe 26" info=""/> -->
+  <!-- <cvbyte nr="93" cat=""Speed Ext."" desc="Fahrstufe 27" info=""/> -->
+  <!-- <cvbyte nr="94" cat=""Speed Ext."" desc="Fahrstufe 28" info=""/> -->
+
+<cvbyte nr="12" cat="Configuration" desc="Analogmodus" info="Fahrtrichtungswechsel analog 1=Überspannung 0=Polarität"/>
+  
+   <cvbyte nr="33" cat="Effekte" desc="F0 vorne" info="1- AUX1
+2- AUX2"/>
+  <cvbyte nr="34" cat="Effekte" desc="F0 hinten" info="1- AUX1
+2- AUX2"/>
+  
+  <cvbyte nr="13" cat="Analog" desc="Analogbetrieb F1-F8" info="Wertebereich 0-255. Standardwert 0."/>
+  <cvbyte nr="17" cat="Address" desc="Adresse lang hoch" info="Standardwert 192."/>
+  <cvbyte nr="18" cat="Address" desc="Adresse lang niedrig" info="Standardwert 128."/>
+  <!-- <cvbyte nr="19" cat="Address" desc="Verbundadresse" info="Fahrzeugadresse für Verbundbetrieb."/> -->
+  <!-- <cvbyte nr="27" cat="Brake Mode" desc="Bremsen bei DC" info="NULL=0/ +=16/ -=32"/> -->
+
+
+ 
+
+ <cvbyte nr="115" cat="Effekte" desc="Rangierlicht" info="Zuordnung Rangierlicht">
+  	<adip title="Shunting light">
+	<dipgroup caption="Rangierlicht Zuordnung" type="1" ori="1">
+
+      <dipvalue name="Rangierlicht für AUX1" value="1"/>
+      <dipvalue name="Rangierlicht für AUX2" value="2"/>
+      <dipvalue name="Einschalten mit F3" value="64"/>
+      <dipvalue name="Einschalten mit F4" value="128"/>
+	</dipgroup>
+
+	</adip>
+  </cvbyte> 
+  <!-- <cvbyte nr="35" cat="Functions" desc="Function Mapping F1" info="F1-Funktionsmapping."/> -->
+  <!-- <cvbyte nr="36" cat="Functions" desc="Function Mapping F2" info="F2-Funktionsmapping."/> -->
+  <!-- <cvbyte nr="37" cat="Functions" desc="Function Mapping F3" info="F3-Funktionsmapping."/> -->
+  <!-- <cvbyte nr="38" cat="Functions" desc="Function Mapping F4" info="F4-Funktionsmapping."/> -->
+  <!-- <cvbyte nr="39" cat="Functions" desc="Function Mapping F5" info="F5-Funktionsmapping."/> -->
+  <!-- <cvbyte nr="40" cat="Functions" desc="Function Mapping F6" info="F6-Funktionsmapping."/> -->
+  <!-- <cvbyte nr="41" cat="Functions" desc="Function Mapping F7" info="F7-Funktionsmapping."/> -->
+  <!-- <cvbyte nr="42" cat="Functions" desc="Function Mapping F8" info="F8-Funktionsmapping."/> -->
+  <!-- <cvbyte nr="43" cat="Functions" desc="Function Mapping F9" info="F9-Funktionsmapping."/> -->
+  <!-- <cvbyte nr="44" cat="Functions" desc="Function Mapping F10" info="F10-Funktionsmapping."/> -->
+  <!-- <cvbyte nr="45" cat="Functions" desc="Function Mapping F11" info="F11-Funktionsmapping."/> -->
+  <!-- <cvbyte nr="46" cat="Functions" desc="Function Mapping F12" info="F12-Funktionsmapping."/> -->
+
+  <cvbyte nr="49" cat="Configuration" desc="Konfiguration2 #49" info="Tams">  
+	<adip title="Extended Configuration #1">
+	<dipgroup caption="erw. Konfiguration #1 Tams" type="1" ori="1">
+
+      <dipvalue name="Lastregelung ON" value="1"/>
+      <dipvalue name="Rangiergang mit F1" value="2"/>
+      <dipvalue name="Rangiergang mit F2" value="4"/>
+      <dipvalue name="Rangiergang mit F3" value="8"/>
+      <dipvalue name="Rangiergang mit F4" value="16"/>
+      <dipvalue name="ABV mit F3" value="32"/>
+      <dipvalue name="ABV mit F4" value="64"/>
+	</dipgroup>
+
+	</adip>
+  </cvbyte> 
+  
+  <cvbyte nr="52" cat="Motor" desc="Parameter D" info="different. Anteil Lastregelung. Def.40"/>
+  <cvbyte nr="53" cat="Effekte" desc="Effekte AUX1" info="Richtungsabhängigkeit, Blinken etc.">
+	<adip title="AUX1 Effekte">
+	<dipgroup caption="Effekt AUX1" type="1" ori="1">
+
+      <dipvalue name="AUX bei Vorwärts OFF (Def. ON)" value="1"/>
+      <dipvalue name="AUX bei Rückwärts OFF (Def. ON" value="2"/>
+      <dipvalue name="Blinken invertiert" value="8"/>
+    </dipgroup>
+
+	</adip>
+  </cvbyte>
+  
+  <cvbyte nr="54" cat="Effekte" desc="Effekte AUX2" info="Richtungsabhängigkeit, Blinken etc.">
+	<adip title="AUX2 Effekte">
+	<dipgroup caption="Effekt AUX2" type="1" ori="1">
+
+      <dipvalue name="AUX bei Vorwärts OFF (Def. ON)" value="1"/>
+      <dipvalue name="AUX bei Rückwärts OFF (Def. ON" value="2"/>
+      <dipvalue name="Blinken invertiert" value="8"/>
+    </dipgroup>
+
+	</adip>
+  </cvbyte>
+  
+  <cvbyte nr="62" cat="Effekte" desc="Dimmen AUX" info="Reduzierung Spannung aller AUX-Ausgänge"/>
+ 
+ 
+  <cvbyte nr="112" cat="Effekte" desc="Blinkfrequenz" info="Frequenz für alle Blinklichter"/>
+  
+  <cvbyte nr="114" cat="Address" desc="2.MM-Adresse" info="nur für Motorola"/>
+  
+ 
+  <cvbyte nr="116" cat="Effekte" desc="Ausgänge für #116" info="Ausgänge, die geschwindigkeitsabhängig (#113) gedimmt werden.">
+  	<adip title="Dimmed from Speedlevel">
+	<dipgroup caption="AUX geschwindigkeitsabhängig gedimmt" type="1" ori="1">
+      <dipvalue name="AUX1" value="1"/>
+      <dipvalue name="AUX2" value="2"/>
+	</dipgroup>
+
+	</adip>
+  </cvbyte> 
+  
+  <cvbyte nr="113" cat="Effekte" desc="Fahrstufe für #116" info="Fahrstufe für Start Dimmen Ausgänge #116"/>
+  <cvbyte nr="118" cat="Effekte" desc="Dimmung für #116" info=" Stärke Dimmung für Dimmen über #113 AUX1 / AUX2. (0-255)"/>
+  <cvbyte nr="124" cat="Motor" desc="Optimierung Lastregelung" info="Anpassung Lastregelung an ind. Motoreingenschaften. (1-15) Def.2"/>
+</decoder>
+

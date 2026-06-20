@@ -1,0 +1,16 @@
+<decoder manu="Doehler-Haass" type="RM" web="" collapse="false" info="Feedback Module">
+  <cvbyte nr="1" cat="Address" desc="Module number" info="Value between 0 and 103, default 10."/>
+  <cvbyte nr="2" cat="Configuration" desc="Parameter" info="Module parameter bits; See manual."/>
+  <cvbyte nr="12" cat="Delay" desc="SX1" info=""/>
+  <cvbyte nr="13" cat="Delay" desc="DCC channel 1" info="Decoder address."/>
+  <cvbyte nr="14" cat="Delay" desc="DCC channel 2" info="Feedback information."/>
+  <cvbyte nr="15" cat="Sensitivity" desc="Occupancy" info=""/>
+  <cvbyte nr="16" cat="Sensitivity" desc="SX1" info=""/>
+  <cvbyte nr="17" cat="Sensitivity" desc="DCC" info=""/>
+  <cvbyte nr="128" cat="Manufacturer" desc="ID low" info="Manufacturer ID low part."/>
+  <cvbyte nr="129" cat="Manufacturer" desc="ID high" info="Manufacturer ID high part."/>
+  <cvbyte nr="130" cat="Manufacturer" desc="Type low" info="Module type number low part."/>
+  <cvbyte nr="131" cat="Manufacturer" desc="Type high" info="Module type number high part."/>
+  <cvbyte nr="132" cat="Firmware" desc="Version low" info="Module firmware version low part."/>
+  <cvbyte nr="133" cat="Firmware" desc="Version high" info="Module firmware version high part."/>
+</decoder>

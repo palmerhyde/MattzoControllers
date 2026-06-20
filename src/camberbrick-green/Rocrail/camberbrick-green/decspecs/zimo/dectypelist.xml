@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dectypelist id="145" desc="ZIMO ELEKTRONIK GmbH" typecv="250">
+  <dectype val="199" type="MX600"/> 
+  <dectype val="200" type="MX82"/> 
+  <dectype val="201" type="MX620"/> 
+  <dectype val="202" type="MX62"/> 
+  <dectype val="203" type="MX63"/>  
+  <dectype val="204" type="MX64"/> 
+  <dectype val="205" type="MX64H"/>  
+  <dectype val="206" type="MX64D"/>  
+  <dectype val="207" type="MX680"/>  
+  <dectype val="208" type="MX690"/>  
+  <dectype val="209" type="MX69"/>  
+  <dectype val="210" type="MX640"/>  
+  <dectype val="211" type="MX630-P2520"/>  
+  <dectype val="212" type="MX632"/>  
+  <dectype val="213" type="MX631"/>  
+  <dectype val="214" type="MX642"/>  
+  <dectype val="215" type="MX643"/>  
+  <dectype val="216" type="MX647"/>  
+  <dectype val="217" type="MX646"/>  
+  <dectype val="218" type="MX630-P25K22"/>  
+  <dectype val="219" type="MX631-P25K22"/>  
+  <dectype val="220" type="MX632-P25K22"/>  
+  <dectype val="221" type="MX645"/>  
+  <dectype val="222" type="MX644"/>  
+  <dectype val="223" type="MX621"/>  
+  <dectype val="224" type="MX695-RevB"/>    
+  <dectype val="225" type="MX648"/>  
+  <dectype val="226" type="MX685"/>  
+  <dectype val="227" type="MX695-RevC"/>  
+  <dectype val="228" type="MX681"/>  
+  <dectype val="229" type="MX695N"/>  
+  <dectype val="230" type="MX696"/>  
+  <dectype val="231" type="MX696N"/>  
+  <dectype val="232" type="MX686"/>  
+  <dectype val="233" type="MX622"/>  
+  <dectype val="234" type="MX623"/>  
+  <dectype val="235" type="MX687"/>  
+  <dectype val="236" type="MX621-Fleischmann"/>  
+  <dectype val="237" type="MX633"/>  
+  <dectype val="240" type="MX634"/>  
+  <dectype val="241" type="MX686B"/>  
+  <dectype val="242" type="MX820B"/>  
+  <dectype val="243" type="MX618"/>  
+  <dectype val="244" type="Roco NextG"/>  
+  <dectype val="245" type="MX697"/>  
+  <dectype val="246" type="MX658"/>  
+  <dectype val="247" type="MX688"/>  
+  <dectype val="248" type="MX821"/>  
+  <dectype val="249" type="MX648-RevC,D"/>  
+  <dectype val="251" type="Roco 2067"/>  
+  <dectype val="252" type="Roco ICE"/>  
+  <dectype val="253" type="MX649"/>  
+  <dectype val="254" type="MX697-RevB"/> 
+</dectypelist>

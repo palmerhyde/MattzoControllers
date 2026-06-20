@@ -1,0 +1,2 @@
+Make sure switches have address and port set.
+The address should be the id of the MatzzoController

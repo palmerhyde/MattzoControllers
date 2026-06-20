@@ -1,0 +1,739 @@
+<decoder manu="Marklin" type="mfx3" web="https://www.maerklin.de/de/service/technische-informationen/decoder">
+  <remark text=" REV 2.0 Avril 2023 by stefo"/>
+  <remark text=" for mld3, msd3, from FW 3.2.x.x. Inapplicable for mfx-OEM-Decoders from ESU (DCC: CV8:4 = 151)"/>
+  <remark text=" testet with DecPartNos 263819, 280229, 280851, 347462, 347463"/>
+  <remark text=" EN: bevor use, copy the follow string into the invidual Rocrail loctable CV
+  DE: Vor Verwendung, bitte die nachfolgenden CV's in die lokspezifische CV-Definition kopieren:
+	
+	1:0,2:5,2:6,2:7,2:8,8:4,8:8,11:9,11:1,11:2,11:3,11:4,322:1,187:1,183:6,183:5,178:1,178:2,179:1,179:2,179:3,179:4,179:5,179:6,179:7,179:8,179:9,179:10,179:11,179:12,179:13,179:14,179:15,179:16,179:17,179:18,179:19,179:20,179:21,179:22,179:23,179:24,179:25,179:26,179:27,179:28,180:1,181:1,183:1,183:2,183:3,183:4,183:7,183:8,183:9,184:1,188:1,188:4,188:2,188:3,189:1,189:2,189:3,189:5,182:1,182:2,186:1,191:1,191:2,191:3,301:1,302:1,302:2,303:1,308:1,309:1,310:1,310:2,337:1,338:1,314:1,318:1,326:1,364:2,340:1,340:2,340:3,340:4,328:1,328:2,328:3,316:1,316:2,320:1,320:2,315:8,315:7,315:6,315:5,197:1,197:2,197:3,197:4,198:1,198:2,198:3,198:4,199:1,199:2,199:3,199:4,200:1,200:2,200:3,200:4,201:1,201:2,201:3,201:4,202:1,202:2,202:3,202:4,203:1,203:2,203:3,203:4,204:1,204:2,204:3,204:4,206:2,185:1,339:1,307:1,306:1,304:1,214:2,215:2,216:2,217:2,218:2,219:2,220:2,221:2,222:2,223:2,224:2,225:2,226:2,227:2,228:2,229:2,230:2,231:2,232:2,233:2,234:2,235:2,236:2,237:2,238:2,239:2,240:2,241:2,242:2,97:1,97:2,97:3,97:4,97:5,97:6,97:7,97:8,97:9,97:10,97:11,97:12,97:13,97:14,97:15,97:16,97:17,97:18,97:19,97:20,97:21,97:22,97:23,97:24,97:25,97:26,97:27,97:28,97:29,97:30,97:31,97:32,97:33,97:34,97:35,97:36,97:37,97:38,97:39,97:40,97:41,97:42,97:43,97:44,97:45,97:46,97:47,97:48,98:1,98:2,98:3,98:4,98:5,98:6,98:7,98:8,98:9,98:10,98:11,98:12,98:13,98:14,98:15,98:16,98:17,98:18,98:19,98:20,98:21,98:22,98:23,98:24,98:25,98:26,98:27,98:28,98:29,98:30,98:31,98:32,98:33,98:34,98:35,98:36,98:37,98:38,98:39,98:40,98:41,98:42,98:43,98:44,98:45,98:46,98:47,98:48,99:1,99:2,99:3,99:4,99:5,99:6,99:7,99:8,99:9,99:10,99:11,99:12,99:13,99:14,99:15,99:16,99:17,99:18,99:19,99:20,99:21,99:22,99:23,99:24,99:25,99:26,99:27,99:28,99:29,99:30,99:31,99:32,99:33,99:34,99:35,99:36,99:37,99:38,99:39,99:40,99:41,99:42,99:43,99:44,99:45,99:46,99:47,99:48,363:1,363:2,363:3,363:4,363:5
+  
+  "/>
+  <remark text=" EN: Do not change the order of the cv bytes or adjust the order at the cv bytes string accordingly.
+  DE: Ändern Sie nicht die Reihenfolge der CV-Bytes. Andernfalls passen Sie die Reihenfolge im CV-Bytes-String entsprechend an."/>
+  <cvbyte nr="1" index="0" cat="Root-Info" desc="Start-CV" readonly="true" info="ohne Inhalt"/>
+  <cvbyte nr="2" index="5" cat="Root-Info" desc="NMRA Herst.-ID" readonly="true" info="  (DCC: CV8)
+  131 Maerklin"/>
+  <cvbyte nr="2" index="6" cat="Root-Info" desc="ArtNrPart1/3" readonly="true" info=""/>
+  <cvbyte nr="2" index="7" cat="Root-Info" desc="ArtNrPart2/3" readonly="true" info=""/>
+  <cvbyte nr="2" index="8" cat="Root-Info" desc="ArtNrPart3/3" readonly="true" info=""/>
+  <cvbyte nr="8" index="4" cat="Root-Info" desc="Decoder Man-ID" readonly="true" info="  (DCC: CV7) 
+  Decoderhersteller:
+  131-Maerklin
+  151-ESU OEM for Maerklin"/>
+  <cvbyte nr="8" index="8" cat="Root-Info" desc="DecPartNo" readonly="true" info="  mfx3.xml for msd3/mld3: 
+  205 - 349645
+  139 - 263819
+  165 - 280229
+   19 - 280851
+   70 - 347462
+   71 - 347463
+   
+  Inapplicable mld3-Decoder is 60906:
+  255 - 314569
+  
+  mfx2.xml for msd/mld:
+  151 - 157847
+  127 - 160895
+   39 - 168743
+  100 - 197476
+  
+  mfx1.xml for ESU (OEM):
+   34 - 33445566"/>
+  <cvbyte nr="11" index="9" cat="Root-Info" desc="Dectype" readonly="true" info="  237 Start Up Decoder
+  238-Nachrüstd. AC-Motor
+  245-Seriend.
+  246-Nachrüstd. DC-Motor
+  247-Seriend./Spielwelt"/>
+  <cvbyte nr="11" index="1" cat="Root-Info" desc="FW 1st" info="Firmwarevers. 1.Stelle
+ Eingabe 77 für autom. Einmessen der Lok"/>
+  <cvbyte nr="11" index="2" cat="Root-Info" desc="FW 2st" readonly="true" info="Firmwarevers. 2.Stelle"/>
+  <cvbyte nr="11" index="3" cat="Root-Info" desc="FW 3st" readonly="true" info="Firmwarevers. 3.Stelle"/>
+  <cvbyte nr="11" index="4" cat="Root-Info" desc="FW 4st" readonly="true" info="Firmwarevers. 4.Stelle"/>
+  <cvbyte nr="322" index="1" cat="Digital Formate" desc="MM2-Format" valuerange="DIP" info="(DCC: CV 29/50.2)">
+	<adip title="MM2 Konfiguration">
+      <dipgroup caption="Parameter für Protokoll MM2" type="1" ori="1">
+        <dipvalue name="MM2 ON" value="1"/>
+        <dipvalue name="Halbstufen" value="2"/>
+		<dipvalue name="2/4 Adressen" value="4"/>
+		<dipvalue name="3/4 Adressen" value="8"/>
+		<dipvalue name="Folgeadressen OFF" value="16"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="187" index="1" cat="Motor Basic" desc="Reglertyp" valuerange="DIP" info="  (DCC: CV 48) Def.1 (Auto-PI)">
+	<adip title="Reglertyp:">
+      <dipgroup caption="Grundeinstellung nach Reglertyp" type="0" ori="1">
+        <dipvalue name="2-Punkt" value="0"/>
+        <dipvalue name="Auto-PI" value="1"/>
+        <dipvalue name="PID" value="2"/>
+		<dipvalue name="Zustand (Analogregler)" value="3"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="183" index="6" cat="Motor" desc="Langsamgrenze" info="(DCC: CV 166). Übergang 2Pkt- zu PI-Regler. Def.115"/>
+  <cvbyte nr="183" index="5" cat="Motor PID" desc="Parameter D" info="(DCC: CV 165). Nur für PID-Reglertyp (#187.1) relevant. Def.0"/>
+  <cvbyte nr="178" index="1" cat="Speed" desc="Anfahrverzögerung" info="(DCC: CV3) Def.12"/>
+  <cvbyte nr="178" index="2" cat="Speed" desc="Bremsverzögerung" info="(DCC: CV4) Def.12"/>
+  <cvbyte nr="179" index="1" cat="Speed" desc="V-Min" info="(DCC: CV2) Def.4"/>
+  <cvbyte nr="179" index="2" cat="Speed" desc="V-Max" info="(DCC: CV5) Def.180"/>
+  <cvbyte nr="179" index="3" cat="Speed Ext." desc="Fahrstufe01" info="(DCC: CV-/67-94) Def.3"/>
+  <cvbyte nr="179" index="4" cat="Speed Ext." desc="Fahrstufe02" info="(DCC: CV-/67-94) Def.7"/>
+  <cvbyte nr="179" index="5" cat="Speed Ext." desc="Fahrstufe03" info="(DCC: CV-/67-94) Def.10"/>
+  <cvbyte nr="179" index="6" cat="Speed Ext." desc="Fahrstufe04" info="(DCC: CV-/67-94) Def.14"/>
+  <cvbyte nr="179" index="7" cat="Speed Ext." desc="Fahrstufe05" info="(DCC: CV-/67-94) Def.18"/>
+  <cvbyte nr="179" index="8" cat="Speed Ext." desc="Fahrstufe06" info="(DCC: CV-/67-94) Def.23"/>
+  <cvbyte nr="179" index="9" cat="Speed Ext." desc="Fahrstufe07" info="(DCC: CV-/67-94) Def.29"/>
+  <cvbyte nr="179" index="10" cat="Speed Ext." desc="Fahrstufe08" info="(DCC: CV-/67-94) Def.36"/>
+  <cvbyte nr="179" index="11" cat="Speed Ext." desc="Fahrstufe09" info="(DCC: CV-/67-94) Def.43"/>
+  <cvbyte nr="179" index="12" cat="Speed Ext." desc="Fahrstufe10" info="(DCC: CV-/67-94) Def.50"/>
+  <cvbyte nr="179" index="13" cat="Speed Ext." desc="Fahrstufe11" info="(DCC: CV-/67-94) Def.59"/>
+  <cvbyte nr="179" index="14" cat="Speed Ext." desc="Fahrstufe12" info="(DCC: CV-/67-94) Def.69"/>
+  <cvbyte nr="179" index="15" cat="Speed Ext." desc="Fahrstufe13" info="(DCC: CV-/67-94) Def.79"/>
+  <cvbyte nr="179" index="16" cat="Speed Ext." desc="Fahrstufe14" info="(DCC: CV-/67-94) Def.89"/>
+  <cvbyte nr="179" index="17" cat="Speed Ext." desc="Fahrstufe15" info="(DCC: CV-/67-94) Def.100"/>
+  <cvbyte nr="179" index="18" cat="Speed Ext." desc="Fahrstufe16" info="(DCC: CV-/67-94) Def.111"/>
+  <cvbyte nr="179" index="19" cat="Speed Ext." desc="Fahrstufe17" info="(DCC: CV-/67-94) Def.122"/>
+  <cvbyte nr="179" index="20" cat="Speed Ext." desc="Fahrstufe18" info="(DCC: CV-/67-94) Def.133"/>
+  <cvbyte nr="179" index="21" cat="Speed Ext." desc="Fahrstufe19" info="(DCC: CV-/67-94) Def.146"/>
+  <cvbyte nr="179" index="22" cat="Speed Ext." desc="Fahrstufe20" info="(DCC: CV-/67-94) Def.159"/>
+  <cvbyte nr="179" index="23" cat="Speed Ext." desc="Fahrstufe21" info="(DCC: CV-/67-94) Def.172"/>
+  <cvbyte nr="179" index="24" cat="Speed Ext." desc="Fahrstufe22" info="(DCC: CV-/67-94) Def.186"/>
+  <cvbyte nr="179" index="25" cat="Speed Ext." desc="Fahrstufe23" info="(DCC: CV-/67-94) Def.198"/>
+  <cvbyte nr="179" index="26" cat="Speed Ext." desc="Fahrstufe24" info="(DCC: CV-/67-94) Def.212"/>
+  <cvbyte nr="179" index="27" cat="Speed Ext." desc="Fahrstufe25" info="(DCC: CV-/67-94) Def.225"/>
+  <cvbyte nr="179" index="28" cat="Speed Ext." desc="Fahrstufe26" info="(DCC: CV-/67-94) Def.240"/>
+  <cvbyte nr="180" index="1" cat="Effekte" desc="Tachoskala für CS2/CS3" info="Anzeige Tachoskala in CS2/CS3. 0-x km/h"/>
+  <cvbyte nr="181" index="1" cat="Motor Basic" desc="Motor Typ" valuerange="DIP" info="  (DCC: CV52)ab SW 3.2 Def.5 (DC-weich)">
+    <adip title="Motortyp:">
+      <dipgroup caption="Grundeinstellung nach Motortyp" type="0" ori="1">
+        <dipvalue name="C-Sinus" value="1"/>
+        <dipvalue name="ungeregelt" value="2"/>
+        <dipvalue name="C90" value="3"/>
+		<dipvalue name="Glockenanker" value="4"/>
+		<dipvalue name="DC-weich" value="5"/>
+		<dipvalue name="DC-hart" value="6"/>
+        <dipvalue name="Spur I" value="7"/>
+		<dipvalue name="DC EMK kurz" value="8"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="183" index="1" cat="Motor Basic" desc="Regeleinfluß" info="(DCC: CV56). Exaktheit der Regelung. Def.255"/>
+  <cvbyte nr="183" index="2" cat="Motor Basic" desc="Regelfrequenz (EMK)" info="(DCC: CV53). Def.40"/>
+  <cvbyte nr="183" index="3" cat="Motor Basic" desc="Parameter K (P)" info="(DCC: CV54). Höhe Verstärkungsfaktor des Fehlerverstärkers (Proportionalanteil). Def.80"/>
+  <cvbyte nr="183" index="4" cat="Motor Basic" desc="Parameter I" info="(DCC: CV55). Stärke der Filterung (Integralanteil). Def.60"/>
+  <cvbyte nr="183" index="7" cat="Motor PID" desc="Parameter K-slow" info="(DCC: CV 167). Nur für PID-Reglertyp (#187.1) relevant. Def.0"/>
+  <cvbyte nr="183" index="8" cat="Motor PID" desc="Parameter I-slow" info="(DCC: CV 168). Nur für PID-Reglertyp (#187.1) relevant. Def.0"/>
+  <cvbyte nr="183" index="9" cat="Motor PID" desc="Parameter D-slow" info="(DCC: CV 169). Nur für PID-Reglertyp (#187.1) relevant. Def.0"/>
+  <cvbyte nr="184" index="1" cat="Brake Conf." desc="Bremsverhalten" valuerange="DIP" info="(DCC: CV27) Def.48">
+	<adip title="Bremsverhalten">
+      <dipgroup caption="Bremsverhalten" type="1" ori="1">
+        <dipvalue name="normales Bremsverhalten ON" value="16"/>
+        <dipvalue name="inverses Bremsverhalten ON" value="32"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="188" index="1" cat="Motor" desc="PWM-Start" info="(DCC: CV 170. Beeinflußt Anfahrverhalten.) Def.200"/>
+  <cvbyte nr="188" index="4" cat="Motor" desc="PWM-Offset" info="(DCC: CV 172) Beeinflußt Übergang zwischen Parameter K (P) und Parameter I. Def.90"/>
+  <cvbyte nr="188" index="2" cat="Motor" desc="EMK Max (1/2 *256)" info="(DCC: CV 171a. max Regelung bei höchster FS. Summe aus EMK Max 1/2 + 2/2) Def.8 (x256) = 2048. EMK-Spannung am Motor. Anpassung V-max vor Änderung #179.2 (V-max / CV5)."/>
+  <cvbyte nr="188" index="3" cat="Motor" desc="EMK Max (2/2 *1)" info="(DCC: CV 171b max Regelung bei höchster FS. Summe aus EMK Max 1/2 + 2/2)) Def.252 (x1) = 252. EMK-Spannung am Motor. Anpassung V-max vor Änderung #179.2 (V-max / CV5)."/>
+  <cvbyte nr="189" index="1" cat="Motor Wegstrecke" desc="Drehzahl-Offset" info="Wegstrecke: Basisspannung EMK. f(x)=a*x+b
+a=Steigung, b=Basisspannung(DCC: CV248) Def.8"/>
+  <cvbyte nr="189" index="2" cat="Motor Wegstrecke" desc="Drehzahl-Steigung" info="Wegstrecke: Steigung EMK (DCC: CV249) Def.65"/>
+  <cvbyte nr="189" index="3" cat="Motor Wegstrecke" desc="Getriebe-Übersetzung" info="Wegstrecke: Getriebeübersetzung(DCC: CV250). Bestimmt das Verhältnis x Motordrehzahl zu y Raddrehzahl.
+  
+Eine Radumdrehung ergibt x Motorumdrehungen. Def.23)"/>
+
+  <cvbyte nr="189" index="5" cat="Motor Wegstrecke" desc="Radumfang" info="Wegstrecke: Radumfang. Bestimmt aus der Raddrehzahl
+die Wegstrecke.
+(U = π*d=2*π*r )(DCC: CV251/CV252) Def.64"/><cvbyte nr="182" index="1" cat="Motor" desc="Vorwärtstrimm" info="(DCC: CV-/66) Def.128. Höherer Wert erhöht Geschwindigkeit in allen Fahrstufen bei Vorwärtsfahrt."/>
+  <cvbyte nr="182" index="2" cat="Motor" desc="Rückwärtstrimm" info="(DCC: CV-/95) Def.128. Höherer Wert erhöht Geschwindigkeit in allen Fahrstufen bei Rückwärtsfahrt."/>
+  <cvbyte nr="186" index="1" cat="Analog Formate" desc="Regler Analog" valuerange="DIP" info="Motorregelung für Analogbetrieb (AC/DC) (DCC: CV47)">
+	<adip title="Motorregelung analog:">
+      <dipgroup caption="Motorregelung bei Analogbetrieb (AC/DC)" type="0" ori="1">
+        <dipvalue name="Motorregelung AN" value="1"/>
+        <dipvalue name="Motorregelung AUS" value="0"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="191" index="1" cat="Brake Conf." desc="Bremsweg-Kontrolle" valuerange="DIP" info="Konstanten Bremsweg aktivieren  (DCC: CV 253) Def.0 (AUS)">
+  <adip title="Bremsweg-Kontrolle:">
+      <dipgroup caption="Auswahl Bremstyp" type="0" ori="1">
+        <dipvalue name="immer AUS" value="0"/>
+        <dipvalue name="nur AN im Bremsblock" value="1"/>
+        <dipvalue name="immer AN" value="2"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="191" index="2" cat="Brake Conf." desc="Bremsweg vorwärts (cm)" info="(DCC: CV 254) Def.50"/>
+  <cvbyte nr="191" index="3" cat="Brake Conf." desc="Bremsweg rückwärts (cm)" info="(DCC: CV 255) Def.50"/>
+  <cvbyte nr="301" index="1" cat="Sound" desc="Lautstärke gesamt" info="Änderung wirkt auf alle Sound-Ausgänge.(DCC: CV 63)"/>
+  <cvbyte nr="302" index="1" cat="Sound" desc="Zufallsinterv. MIN" info="(DCC: CV 61)"/>
+  <cvbyte nr="302" index="2" cat="Sound" desc="Zufallsinterv. MAX" info="(DCC: CV 62)"/>
+  <cvbyte nr="303" index="1" cat="Snd Break" desc="Bremsschwelle" info="Schwelle für Bremsenquietschen(DCC: CV 64)"/>
+  <cvbyte nr="308" index="1" cat="Snd Break" desc="Bandbreite Bremssound" info="(DCC: CV 164)
+ maximieren für Beginn früher
+ minimieren für Beginn später"/>
+  <cvbyte nr="309" index="1" cat="Snd Break" desc="Auslaufkorrektur" info="(DCC: CV 163)
+ maximieren für Ende früher
+ minimieren für Ende später"/>
+  <cvbyte nr="310" index="1" cat="Sound" desc="Sound Abstand FS=1" info="(DCC: CV57)"/>
+  <cvbyte nr="310" index="2" cat="Sound" desc="Sound Abstand FS&gt;1" info="(DCC: CV58)"/>
+  <cvbyte nr="337" index="1" cat="Speicher" desc="Speicher A" valuerange="DIP" info="Speicherung Funktionszustände (DCC: CV 173)">
+  <adip title="Speichern Funktionszustände">
+      <dipgroup caption="Speicher A" type="1" ori="1">
+        <dipvalue name="Funktion" value="1"/>
+        <dipvalue name="Geschwindigkeit" value="2"/>
+        <dipvalue name="ABV" value="3"/>
+		<dipvalue name="Richtung" value="4"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="338" index="1" cat="Speicher" desc="Speicher B" valuerange="DIP" info="Speicherung Funktionszustände (DCC: CV 174)">
+  <adip title="Speichern Funktionszustände">
+      <dipgroup caption="Speicher B" type="1" ori="1">
+        <dipvalue name="Richtung" value="1"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="314" index="1" cat="Analog Formate" desc="AC Konfig." valuerange="DIP" info="(DCC: CV 29.2/50.0)">
+	<adip title="AC Konfiguration">
+      <dipgroup caption="Analogmodus AC" type="0" ori="1">
+        <dipvalue name="Analogmouds AC ON" value="1"/>
+        <dipvalue name="Analogmouds AC OFF" value="0"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="318" index="1" cat="Analog Formate" desc="DC Konfig." valuerange="DIP" info="(DCC: CV 29.2/50.1)">
+	<adip title="DC Konfiguration">
+      <dipgroup caption="Analogmodus DC" type="0" ori="1">
+        <dipvalue name="Analogmouds DC ON" value="1"/>
+        <dipvalue name="Analogmouds DC OFF" value="0"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>  
+  <cvbyte nr="326" index="1" cat="Digital Formate" desc="DCC-Format" valuerange="DIP" info="(DCC: CV 29/50.2)">
+	<adip title="DCC Konfiguration">
+      <dipgroup caption="Parameter für Protokoll DCC" type="1" ori="1">
+        <dipvalue name="DCC ON" value="1"/>
+        <dipvalue name="Fahrstufen: 14 OFF /28(128) ON" value="2"/>
+		<dipvalue name="Analogbetrieb AUS und DCC mit Bremsstrecke ON" value="4"/>
+		<dipvalue name="lange Adresse ON" value="32"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="364" index="2" cat="Motor" desc="Empfangsfehler" info="(DCC: CV 30)(Def.0)"/>
+  <cvbyte nr="340" index="1" cat="Motor" desc="Motorstromschwelle analog" info="Def.120"/>
+  <cvbyte nr="340" index="2" cat="Motor" desc="Motorstromschwelle digital" info="Def.100"/>
+  <cvbyte nr="340" index="3" cat="Motor" desc="Motorstromschwelle Aux" info="Def.100"/>
+  <cvbyte nr="340" index="4" cat="Motor" desc="Funktionsstromschwelle" info="Def.65"/>
+  <cvbyte nr="328" index="1" cat="Digital Formate" desc="Adresse kurz DCC" valuerange="1-99" info="Def.3"/>
+  <cvbyte nr="328" index="2" cat="Digital Formate" desc="Adresse lang DCC höherw. Byte" info="Def.192"/>
+  <cvbyte nr="328" index="3" cat="Digital Formate" desc="Adresse lang DCC niederw. Byte" info="Def.128"/>
+  <cvbyte nr="316" index="1" cat="Analog Formate" desc="AC Anfahrspannung" info="(DCC: CV178)"/>
+  <cvbyte nr="316" index="2" cat="Analog Formate" desc="AC Maximalspannung" info="(DCC: CV179)"/>
+  <cvbyte nr="320" index="1" cat="Analog Formate" desc="DC Anfahrspannung" info="(DCC: CV176)"/>
+  <cvbyte nr="320" index="2" cat="Analog Formate" desc="DC Maximalspannung" info="(DCC: CV177)"/>
+  <cvbyte nr="315" index="8" cat="Analog Formate" desc="AC/DC akt. Funktionen F0-F7" valuerange="DIP" info="(DCC: CV262/263)">
+	<adip title="AC/DC akt. Funktionen F0-F7">
+      <dipgroup caption="analog permanent aktive Funktionen F0-F7" type="1" ori="1">
+        <dipvalue name="F0" value="1"/>
+        <dipvalue name="F1" value="2"/>
+		<dipvalue name="F2" value="4"/>
+		<dipvalue name="F3" value="8"/>
+		<dipvalue name="F4" value="16"/>
+		<dipvalue name="F5" value="32"/>
+		<dipvalue name="F6" value="64"/>
+		<dipvalue name="F7" value="128"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="315" index="7" cat="Analog Formate" desc="AC/DC akt. Funktionen F8-F15" valuerange="DIP" info="(DCC: CV262/263)">
+	<adip title="AC/DC akt. Funktionen F8-F15">
+      <dipgroup caption="analog permanent aktive Funktionen F8-F15" type="1" ori="1">
+        <dipvalue name="F8" value="1"/>
+        <dipvalue name="F9" value="2"/>
+		<dipvalue name="F10" value="4"/>
+		<dipvalue name="F11" value="8"/>
+		<dipvalue name="F12" value="16"/>
+		<dipvalue name="F13" value="32"/>
+		<dipvalue name="F14" value="64"/>
+		<dipvalue name="F15" value="128"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="315" index="6" cat="Analog Formate" desc="AC/DC akt. Funktionen F16-F23" valuerange="DIP" info="(DCC: CV262/263)">
+	<adip title="AC/DC akt. Funktionen F16-F23">
+      <dipgroup caption="analog permanent aktive Funktionen F16-F23" type="1" ori="1">
+        <dipvalue name="F16" value="1"/>
+        <dipvalue name="F17" value="2"/>
+		<dipvalue name="F18" value="4"/>
+		<dipvalue name="F19" value="8"/>
+		<dipvalue name="F20" value="16"/>
+		<dipvalue name="F21" value="32"/>
+		<dipvalue name="F22" value="64"/>
+		<dipvalue name="F23" value="128"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="315" index="5" cat="Analog Formate" desc="AC/DC akt. Funktionen F24-F31" valuerange="DIP" info="(DCC: CV262/263)">
+	<adip title="AC/DC akt. Funktionen F24-F31">
+      <dipgroup caption="analog permanent aktive Funktionen" type="1" ori="1">
+        <dipvalue name="F24" value="1"/>
+        <dipvalue name="F25" value="2"/>
+		<dipvalue name="F26" value="4"/>
+		<dipvalue name="F27" value="8"/>
+		<dipvalue name="F28" value="16"/>
+		<dipvalue name="F29" value="32"/>
+		<dipvalue name="F30" value="64"/>
+		<dipvalue name="F31" value="128"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="197" index="1" cat="Effekte" desc="Modus F0V" valuerange="DIP" info="(DCC: CV112)">
+	<adip id="FnAUX" title="Auswahl Modus">
+      <dipgroup caption="Modus für diesen Ausgang" type="0" ori="1">
+        <dipvalue name="Ausgang aus" value="0"/>
+        <dipvalue name="Dimmer" value="1"/>
+		<dipvalue name="Blinklicht 1" value="2"/>
+		<dipvalue name="Blinklicht 2" value="3"/>
+		<dipvalue name="Einzelnes Blitzlicht" value="4"/>
+		<dipvalue name="Doppeltes Blitzlicht" value="5"/>
+		<dipvalue name="Zufallsgenerator (z.B. Feuerbüchse)" value="6"/>
+		<dipvalue name="Rauchgenerator. Zustand abhängig von „Stand“ oder „Fahrt“" value="7"/>
+		<dipvalue name="Licht auf- / abblenden" value="8"/>
+		<dipvalue name="Mars Licht" value="9"/>
+		<dipvalue name="Gyra Licht" value="10"/>
+		<dipvalue name="Licht nach „Rule 17“ vorwärts. Licht wird im Stand gedimmt" value="11"/>
+		<dipvalue name="Licht nach „Rule 17“ rückwärts. Licht wird im Stand gedimmt" value="12"/>
+		<dipvalue name="Neonröhre" value="13"/>
+		<dipvalue name="Energiesparlampe" value="14"/>
+		<dipvalue name="Telex" value="15"/>
+		<dipvalue name="Genaue Zeit schalten. Manuell ein und zeitgesteuert aus." value="16"/>
+		<dipvalue name="Mindest Zeit schalten. Kann erst nach vorgegebener Zeit ausgeschaltet werden." value="17"/>
+		<dipvalue name="Genaue Zeit ein, mit Sensor aus." value="18"/>
+		<dipvalue name="Dauerhaft einschalten. Nur einschalten. Aus nur über STOP." value="19"/>
+		<dipvalue name="Puffersteuerung" value="20"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="197" index="2" cat="Effekte" desc="Dimmer F0V" valuerange="0-255" info="(DCC: CV113)"/>
+  <cvbyte nr="197" index="3" cat="Effekte" desc="Periode F0V" info="Def.20(DCC: CV114)"/>
+  <cvbyte nr="197" index="4" cat="Effekte" desc="Verzögerung F0V" info="(DCC: CV115)"/>
+  <cvbyte nr="198" index="1" cat="Effekte" desc="Modus F0H" dipid="FnAUX" valuerange="DIP" info="(DCC: CV116) ->DIP >"/>
+  <cvbyte nr="198" index="2" cat="Effekte" desc="Dimmer F0H" valuerange="0-255" info="(DCC: CV117)"/>
+  <cvbyte nr="198" index="3" cat="Effekte" desc="Periode F0H" info="Def.20(DCC: CV118)"/>
+  <cvbyte nr="198" index="4" cat="Effekte" desc="Verzögerung F0H" info="(DCC: CV119)"/>
+  <cvbyte nr="199" index="1" cat="Effekte" desc="Modus AUX1" dipid="FnAUX" valuerange="DIP" info="(DCC: CV120)"/>
+  <cvbyte nr="199" index="2" cat="Effekte" desc="Dimmer AUX1" valuerange="0-255" info="(DCC: CV121)"/>
+  <cvbyte nr="199" index="3" cat="Effekte" desc="Periode AUX1" info="Def.20(DCC: CV122)"/>
+  <cvbyte nr="199" index="4" cat="Effekte" desc="Verzögerung AUX1" info="(DCC: CV123)"/>
+  <cvbyte nr="200" index="1" cat="Effekte" desc="Modus AUX2" dipid="FnAUX" valuerange="DIP" info="(DCC: CV124)"/>
+  <cvbyte nr="200" index="2" cat="Effekte" desc="Dimmer AUX2" valuerange="0-255" info="(DCC: CV125)"/>
+  <cvbyte nr="200" index="3" cat="Effekte" desc="Periode AUX2" info="Def.20(DCC: CV126)"/>
+  <cvbyte nr="200" index="4" cat="Effekte" desc="Verzögerung AUX2" info="(DCC: CV127)"/>
+  <cvbyte nr="201" index="1" cat="Effekte" desc="Modus AUX3" dipid="FnAUX" valuerange="DIP" info="(DCC: CV128)"/>
+  <cvbyte nr="201" index="2" cat="Effekte" desc="Dimmer AUX3" valuerange="0-255" info="(DCC: CV129)"/>
+  <cvbyte nr="201" index="3" cat="Effekte" desc="Periode AUX3" info="Def.20(DCC: CV130)"/>
+  <cvbyte nr="201" index="4" cat="Effekte" desc="Verzögerung AUX3" info="(DCC: CV131)"/>
+  <cvbyte nr="202" index="1" cat="Effekte" desc="Modus AUX4" dipid="FnAUX" valuerange="DIP" info="(DCC: CV132)"/>
+  <cvbyte nr="202" index="2" cat="Effekte" desc="Dimmer AUX4" valuerange="0-255" info="(DCC: CV133)"/>
+  <cvbyte nr="202" index="3" cat="Effekte" desc="Periode AUX4" info="Def.20(DCC: CV134)"/>
+  <cvbyte nr="202" index="4" cat="Effekte" desc="Verzögerung AUX4" info="(DCC: CV135)"/>
+  <cvbyte nr="203" index="1" cat="Effekte" desc="Modus AUX5" dipid="FnAUX" valuerange="DIP" info="(DCC: CV136)"/>
+  <cvbyte nr="203" index="2" cat="Effekte" desc="Dimmer AUX5" valuerange="0-255" info="(DCC: CV137)"/>
+  <cvbyte nr="203" index="3" cat="Effekte" desc="Periode AUX5" info="Def.20(DCC: CV138)"/>
+  <cvbyte nr="203" index="4" cat="Effekte" desc="Verzögerung AUX5" info="(DCC: CV139)"/>
+  <cvbyte nr="204" index="1" cat="Effekte" desc="Modus AUX6" dipid="FnAUX" valuerange="DIP" info="(DCC: CV140)"/>
+  <cvbyte nr="204" index="2" cat="Effekte" desc="Dimmer AUX6" valuerange="0-255" info="(DCC: CV141)"/>
+  <cvbyte nr="204" index="3" cat="Effekte" desc="Periode AUX6" info="Def.20(DCC: CV142)"/>
+  <cvbyte nr="204" index="4" cat="Effekte" desc="Verzögerung AUX6" info="(DCC: CV143)"/>
+  <cvbyte nr="206" index="2" cat="Speed" desc="Rangiergang" valuerange="DIP" info="(DCC: CV145) Def.128 (50%)">
+	<adip title="Shunt Speed">
+      <dipgroup caption="Reduzierung Rangiergang" type="0" ori="1">
+        <dipvalue name="keine Reduzierung" value="0"/>
+        <dipvalue name="1/2  Fahrstufe (-50%)" value="128"/>
+		<dipvalue name="1/4  Fahrstufe (-75%)" value="64"/>
+		<dipvalue name="1/8  Fahrstufe (-88%)" value="32"/>
+		<dipvalue name="1/16 Fahrstufe (-94%)" value="16"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>
+   <cvbyte nr="185" index="1" cat="Motor" desc="Fahrtrichtung invers" valuerange="DIP" info="Änderung Standardfahrtrichtung (DCC: CV29.0)">
+	<adip title="Fahrtrichtung">
+      <dipgroup caption="Standardfahrtrichtung" type="0" ori="1">
+        <dipvalue name="Fahrtrichtung VORWÄRTS" value="0"/>
+        <dipvalue name="Fahrtrichtung RÜCKWÄRTS" value="1"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="339" index="1" cat="Motor" desc="Ausgänge Konfiguration" valuerange="DIP" info="(DCC: CV51)">
+	<adip title="Ausgänge tauschen">
+      <dipgroup caption="Change Output" type="1" ori="1">
+        <dipvalue name="Motorausgänge tauschen" value="1"/>
+        <dipvalue name="Lichtausgänge tauschen" value="2"/>
+		<dipvalue name="Gleisanschlüsse tauschen" value="4"/>
+		<dipvalue name="AUX 3 verstärkt / Logik" value="8"/>
+		<dipvalue name="AUX 4 verstärkt / Logik" value="16"/>
+		<dipvalue name="AUX 5 verstärkt / Logik" value="32"/>
+		<dipvalue name="AUX 6 verstärkt / Logik" value="64"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="307" index="1" cat="Sound" desc="Betriebsgeräusch nach Fahrstufe oder lastabhängig" info="Def.0 = nach Fahrstufe.(DCC: CV162)"/>
+  <cvbyte nr="306" index="1" cat="Sound" desc="Synchronisation Pantograph" info="Anpassung Sound für Heben / Senken mit Pantographfunktion (DCC: CV161?)"/>
+  <cvbyte nr="304" index="1" cat="Sound" desc="Sound bei Richtungswechsel" valuerange="0-255" info="Lautstärke Def.0 = kein Sound.(DCC: CV59)"/>
+  <cvbyte nr="214" index="2" cat="Sound" desc="Fahr- / Betriebsgeräusch" valuerange="0-255" info="Lautstärke(DCC: CV300)"/>
+  <cvbyte nr="215" index="2" cat="Sound" desc="Soundslot  1" valuerange="0-255" info="Lautstärke(DCC: CV301)"/>
+  <cvbyte nr="216" index="2" cat="Sound" desc="Soundslot  2" valuerange="0-255" info="Lautstärke(DCC: CV302)"/>
+  <cvbyte nr="217" index="2" cat="Sound" desc="Soundslot  3" valuerange="0-255" info="Lautstärke(DCC: CV303)"/>
+  <cvbyte nr="218" index="2" cat="Sound" desc="Soundslot  4" valuerange="0-255" info="Lautstärke(DCC: CV304)"/>
+  <cvbyte nr="219" index="2" cat="Sound" desc="Soundslot  5" valuerange="0-255" info="Lautstärke(DCC: CV305)"/>
+  <cvbyte nr="220" index="2" cat="Sound" desc="Soundslot  6" valuerange="0-255" info="Lautstärke(DCC: CV306)"/>
+  <cvbyte nr="221" index="2" cat="Sound" desc="Soundslot  7" valuerange="0-255" info="Lautstärke(DCC: CV307)"/>
+  <cvbyte nr="222" index="2" cat="Sound" desc="Soundslot  8" valuerange="0-255" info="Lautstärke(DCC: CV308)"/>
+  <cvbyte nr="223" index="2" cat="Sound" desc="Soundslot  9" valuerange="0-255" info="Lautstärke(DCC: CV309)"/>
+  <cvbyte nr="224" index="2" cat="Sound" desc="Soundslot 10" valuerange="0-255" info="Lautstärke(DCC: CV310)"/>
+  <cvbyte nr="225" index="2" cat="Sound" desc="Soundslot 11" valuerange="0-255" info="Lautstärke(DCC: CV311)"/>
+  <cvbyte nr="226" index="2" cat="Sound" desc="Soundslot 12" valuerange="0-255" info="Lautstärke(DCC: CV312)"/>
+  <cvbyte nr="227" index="2" cat="Sound" desc="Soundslot 13" valuerange="0-255" info="Lautstärke(DCC: CV313)"/>
+  <cvbyte nr="228" index="2" cat="Sound" desc="Soundslot 14" valuerange="0-255" info="Lautstärke(DCC: CV314)"/>
+  <cvbyte nr="229" index="2" cat="Sound" desc="Soundslot 15" valuerange="0-255" info="Lautstärke(DCC: CV315)"/>
+  <cvbyte nr="230" index="2" cat="Sound" desc="Soundslot 16" valuerange="0-255" info="Lautstärke(DCC: CV316)"/>
+  <cvbyte nr="231" index="2" cat="Sound" desc="Soundslot 17" valuerange="0-255" info="Lautstärke(DCC: CV317)"/>
+  <cvbyte nr="232" index="2" cat="Sound" desc="Soundslot 18" valuerange="0-255" info="Lautstärke(DCC: CV318)"/>
+  <cvbyte nr="233" index="2" cat="Sound" desc="Soundslot 19" valuerange="0-255" info="Lautstärke(DCC: CV319)"/>
+  <cvbyte nr="234" index="2" cat="Sound" desc="Soundslot 20" valuerange="0-255" info="Lautstärke(DCC: CV320)"/>
+  <cvbyte nr="235" index="2" cat="Sound" desc="Soundslot 21" valuerange="0-255" info="Lautstärke(DCC: CV321)"/>
+  <cvbyte nr="236" index="2" cat="Sound" desc="Soundslot 22" valuerange="0-255" info="Lautstärke(DCC: CV322)"/>
+  <cvbyte nr="237" index="2" cat="Sound" desc="Soundslot 23" valuerange="0-255" info="Lautstärke(DCC: CV323)"/>
+  <cvbyte nr="238" index="2" cat="Sound" desc="Soundslot 24" valuerange="0-255" info="Lautstärke(DCC: CV324)"/>
+  <cvbyte nr="239" index="2" cat="Sound" desc="Soundslot 25" valuerange="0-255" info="Lautstärke(DCC: CV325)"/>
+  <cvbyte nr="240" index="2" cat="Sound" desc="Soundslot 26" valuerange="0-255" info="Lautstärke(DCC: CV326)"/>
+  <cvbyte nr="241" index="2" cat="Sound" desc="Soundslot 27" valuerange="0-255" info="Lautstärke(DCC: CV327)"/>
+  <cvbyte nr="242" index="2" cat="Sound" desc="Soundslot 28" valuerange="0-255" info="Lautstärke(DCC: CV328)"/>
+  <cvbyte nr="97" index="1" cat="MappCV97" desc="Mapp01 Auslöser" valuerange="DIP" info="(DCC: CV)">
+	<adip id="FnAct" title="Auslöser Mapp 01">
+	  <dipgroup caption="F0 - F15" type="0" ori="1">
+        <dipvalue name="-" value="0"/>
+		<dipvalue name="F0" value="0"/>
+        <dipvalue name="F1" value="1"/>
+		<dipvalue name="F2" value="2"/>
+		<dipvalue name="F3" value="3"/>
+		<dipvalue name="F4" value="4"/>
+		<dipvalue name="F5" value="5"/>
+		<dipvalue name="F6" value="6"/>
+		<dipvalue name="F7" value="7"/>
+        <dipvalue name="F8" value="8"/>
+        <dipvalue name="F9" value="9"/>
+		<dipvalue name="F10" value="10"/>
+		<dipvalue name="F11" value="11"/>
+		<dipvalue name="F12" value="12"/>
+		<dipvalue name="F13" value="13"/>
+		<dipvalue name="F14" value="14"/>
+		<dipvalue name="F15" value="15"/>
+       </dipgroup>
+	   <dipgroup caption="F16 - F31" type="0" ori="1">
+		<dipvalue name="-" value="0"/>
+		<dipvalue name="F16" value="16"/>
+        <dipvalue name="F17" value="17"/>
+		<dipvalue name="F18" value="18"/>
+		<dipvalue name="F19" value="19"/>
+		<dipvalue name="F20" value="20"/>
+		<dipvalue name="F21" value="21"/>
+		<dipvalue name="F22" value="22"/>
+		<dipvalue name="F23" value="23"/>
+		<dipvalue name="F24" value="24"/>
+        <dipvalue name="F25" value="25"/>
+		<dipvalue name="F26" value="26"/>
+		<dipvalue name="F27" value="27"/>
+		<dipvalue name="F28" value="28"/>
+		<dipvalue name="F29" value="29"/>
+		<dipvalue name="F30" value="20"/>
+		<dipvalue name="F31" value="31"/>
+       </dipgroup>
+	   <dipgroup caption="Logik" type="0" ori="1">				
+		<dipvalue name="-" value="0"/>
+		<dipvalue name="und 1" value="160"/>
+		<dipvalue name="und 2" value="161"/>
+		<dipvalue name="und 3" value="162"/>
+		<dipvalue name="und 4" value="163"/>
+		<dipvalue name="und 5" value="164"/>
+		<dipvalue name="und 6" value="165"/>
+		<dipvalue name="und 7" value="166"/>
+		<dipvalue name="und 8" value="167"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>
+   <cvbyte nr="97" index="2" cat="MappCV97" desc="Mapp01 Bedingungen" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)">
+	<adip id="FnBed" title="Bedingungen Mapp 01">
+	  <dipgroup caption="Bedingungen Stand / Fahrt" type="0" ori="1">
+		<dipvalue name="immer" value="0"/>
+        <dipvalue name="im Stand" value="4"/>
+		<dipvalue name="bei Fahrt" value="8"/>
+		<dipvalue name="bei Fahrtrichtung VORWÄRTS" value="16"/>
+		<dipvalue name="bei Fahrtrichtung RÜCKWÄRTS" value="32"/>
+		<dipvalue name="ohne Pegel (OFF)" value="64"/>
+      </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="97" index="3" cat="MappCV97" desc="Mapp01 Ereignis" valuerange="DIP" info="(DCC: CV)">
+	<adip id="FnEvt" title="Ereignis Mapp 01">
+      <dipgroup caption="AUX / Logik" type="0" ori="1">
+        <dipvalue name="-" value="0"/>
+		<dipvalue name="immer" value="64"/>
+		<dipvalue name="Sensor 1" value="68"/>
+		<dipvalue name="Sensor 2" value="69"/>
+		<dipvalue name="Li vorne" value="80"/>
+		<dipvalue name="Li hinten" value="81"/>
+		<dipvalue name="AUX1" value="82"/>
+		<dipvalue name="AUX2" value="83"/>
+		<dipvalue name="AUX3" value="84"/>
+		<dipvalue name="AUX4" value="85"/>
+		<dipvalue name="AUX5" value="86"/>
+		<dipvalue name="AUX6" value="87"/>
+		<dipvalue name="ABV OFF" value="112"/>
+		<dipvalue name="Rangiergang" value="113"/>
+		<dipvalue name="Bremsenquietschen OFF" value="114"/>
+		<dipvalue name="Sound Mute-Modus" value="117"/>
+		<dipvalue name="Motor STOP" value="119"/>
+		<dipvalue name="Fahrsound halten" value="120"/>
+		<dipvalue name="und 1" value="160"/>
+		<dipvalue name="und 2" value="161"/>
+		<dipvalue name="und 3" value="162"/>
+		<dipvalue name="und 4" value="163"/>
+		<dipvalue name="und 5" value="164"/>
+		<dipvalue name="und 6" value="165"/>
+		<dipvalue name="und 7" value="166"/>
+		<dipvalue name="und 8" value="167"/>
+       </dipgroup>
+      <dipgroup caption="Sounds" type="0" ori="1">	   
+        <dipvalue name="-" value="0"/>
+		<dipvalue name="Fahrsound" value="176"/>
+		<dipvalue name="Sound 01" value="177"/>
+		<dipvalue name="Sound 02" value="178"/>
+		<dipvalue name="Sound 03" value="179"/>
+		<dipvalue name="Sound 04" value="180"/>
+		<dipvalue name="Sound 05" value="181"/>
+		<dipvalue name="Sound 06" value="182"/>
+		<dipvalue name="Sound 07" value="183"/>
+		<dipvalue name="Sound 08" value="184"/>
+		<dipvalue name="Sound 09" value="185"/>
+		<dipvalue name="Sound 10" value="186"/>
+		<dipvalue name="Sound 11" value="187"/>
+		<dipvalue name="Sound 12" value="188"/>
+		<dipvalue name="Sound 13" value="189"/>
+		<dipvalue name="Sound 14" value="190"/>
+		<dipvalue name="Sound 15" value="191"/>
+		<dipvalue name="Sound 16" value="192"/>
+		<dipvalue name="Sound 17" value="193"/>
+		<dipvalue name="Sound 18" value="194"/>
+		<dipvalue name="Sound 19" value="195"/>
+		<dipvalue name="Sound 20" value="196"/>
+		<dipvalue name="Sound 21" value="197"/>
+		<dipvalue name="Sound 22" value="198"/>
+		<dipvalue name="Sound 23" value="199"/>
+		<dipvalue name="Sound 24" value="200"/>
+		<dipvalue name="Sound 25" value="201"/>
+		<dipvalue name="Sound 26" value="202"/>
+		<dipvalue name="Sound 27" value="203"/>
+		<dipvalue name="Sound 28" value="204"/>
+       </dipgroup>
+    </adip>
+  </cvbyte>
+  <cvbyte nr="97" index="4" cat="MappCV97" desc="Mapp02 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="5" cat="MappCV97" desc="Mapp02 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="97" index="6" cat="MappCV97" desc="Mapp02 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="7" cat="MappCV97" desc="Mapp03 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="8" cat="MappCV97" desc="Mapp03 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="97" index="9" cat="MappCV97" desc="Mapp03 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="10" cat="MappCV97" desc="Mapp04 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="11" cat="MappCV97" desc="Mapp04 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="97" index="12" cat="MappCV97" desc="Mapp04 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="13" cat="MappCV97" desc="Mapp05 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="14" cat="MappCV97" desc="Mapp05 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="97" index="15" cat="MappCV97" desc="Mapp05 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="16" cat="MappCV97" desc="Mapp06 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="17" cat="MappCV97" desc="Mapp06 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="97" index="18" cat="MappCV97" desc="Mapp06 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="19" cat="MappCV97" desc="Mapp07 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="20" cat="MappCV97" desc="Mapp07 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="97" index="21" cat="MappCV97" desc="Mapp07 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="22" cat="MappCV97" desc="Mapp08 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="23" cat="MappCV97" desc="Mapp08 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="97" index="24" cat="MappCV97" desc="Mapp08 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="25" cat="MappCV97" desc="Mapp09 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="26" cat="MappCV97" desc="Mapp09 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="97" index="27" cat="MappCV97" desc="Mapp09 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="28" cat="MappCV97" desc="Mapp10 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="29" cat="MappCV97" desc="Mapp10 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="97" index="30" cat="MappCV97" desc="Mapp10 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="31" cat="MappCV97" desc="Mapp11 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="32" cat="MappCV97" desc="Mapp11 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="97" index="33" cat="MappCV97" desc="Mapp11 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="34" cat="MappCV97" desc="Mapp12 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="35" cat="MappCV97" desc="Mapp12 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="97" index="36" cat="MappCV97" desc="Mapp12 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="37" cat="MappCV97" desc="Mapp13 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="38" cat="MappCV97" desc="Mapp13 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="97" index="39" cat="MappCV97" desc="Mapp13 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="40" cat="MappCV97" desc="Mapp14 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="41" cat="MappCV97" desc="Mapp14 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="97" index="42" cat="MappCV97" desc="Mapp14 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="43" cat="MappCV97" desc="Mapp15 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="44" cat="MappCV97" desc="Mapp15 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="97" index="45" cat="MappCV97" desc="Mapp15 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="46" cat="MappCV97" desc="Mapp16 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="97" index="47" cat="MappCV97" desc="Mapp16 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="97" index="48" cat="MappCV97" desc="Mapp16 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  
+  <cvbyte nr="98" index="1" cat="MappCV98" desc="Mapp17 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="2" cat="MappCV98" desc="Mapp17 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="3" cat="MappCV98" desc="Mapp17 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="4" cat="MappCV98" desc="Mapp18 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="5" cat="MappCV98" desc="Mapp18 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="6" cat="MappCV98" desc="Mapp18 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="7" cat="MappCV98" desc="Mapp19 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="8" cat="MappCV98" desc="Mapp19 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="9" cat="MappCV98" desc="Mapp19 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="10" cat="MappCV98" desc="Mapp20 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="11" cat="MappCV98" desc="Mapp20 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="12" cat="MappCV98" desc="Mapp20 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="13" cat="MappCV98" desc="Mapp21 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="14" cat="MappCV98" desc="Mapp21 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="15" cat="MappCV98" desc="Mapp21 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="16" cat="MappCV98" desc="Mapp22 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="17" cat="MappCV98" desc="Mapp22 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="18" cat="MappCV98" desc="Mapp22 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="19" cat="MappCV98" desc="Mapp23 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="20" cat="MappCV98" desc="Mapp23 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="21" cat="MappCV98" desc="Mapp23 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="22" cat="MappCV98" desc="Mapp24 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="23" cat="MappCV98" desc="Mapp24 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="24" cat="MappCV98" desc="Mapp24 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="25" cat="MappCV98" desc="Mapp25 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="26" cat="MappCV98" desc="Mapp25 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="27" cat="MappCV98" desc="Mapp25 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="28" cat="MappCV98" desc="Mapp26 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="29" cat="MappCV98" desc="Mapp26 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="30" cat="MappCV98" desc="Mapp26 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="31" cat="MappCV98" desc="Mapp27 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="32" cat="MappCV98" desc="Mapp27 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="33" cat="MappCV98" desc="Mapp27 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="34" cat="MappCV98" desc="Mapp28 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="35" cat="MappCV98" desc="Mapp28 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="36" cat="MappCV98" desc="Mapp28 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="37" cat="MappCV98" desc="Mapp29 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="38" cat="MappCV98" desc="Mapp29 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="39" cat="MappCV98" desc="Mapp29 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="40" cat="MappCV98" desc="Mapp30 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="41" cat="MappCV98" desc="Mapp30 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="42" cat="MappCV98" desc="Mapp30 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="43" cat="MappCV98" desc="Mapp31 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="44" cat="MappCV98" desc="Mapp31 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="45" cat="MappCV98" desc="Mapp31 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="46" cat="MappCV98" desc="Mapp32 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="98" index="47" cat="MappCV98" desc="Mapp32 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="98" index="48" cat="MappCV98" desc="Mapp32 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/> 
+  
+  <cvbyte nr="99" index="1" cat="MappCV99" desc="Mapp33 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="2" cat="MappCV99" desc="Mapp33 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="3" cat="MappCV99" desc="Mapp33 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="4" cat="MappCV99" desc="Mapp34 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="5" cat="MappCV99" desc="Mapp34 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="6" cat="MappCV99" desc="Mapp34 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="7" cat="MappCV99" desc="Mapp35 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="8" cat="MappCV99" desc="Mapp35 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="9" cat="MappCV99" desc="Mapp35 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="10" cat="MappCV99" desc="Mapp36 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="11" cat="MappCV99" desc="Mapp36 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="12" cat="MappCV99" desc="Mapp36 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="13" cat="MappCV99" desc="Mapp37 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="14" cat="MappCV99" desc="Mapp37 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="15" cat="MappCV99" desc="Mapp37 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="16" cat="MappCV99" desc="Mapp38 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="17" cat="MappCV99" desc="Mapp38 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="18" cat="MappCV99" desc="Mapp38 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="19" cat="MappCV99" desc="Mapp39 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="20" cat="MappCV99" desc="Mapp39 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="21" cat="MappCV99" desc="Mapp39 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="22" cat="MappCV99" desc="Mapp40 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="23" cat="MappCV99" desc="Mapp40 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="24" cat="MappCV99" desc="Mapp40 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="25" cat="MappCV99" desc="Mapp41 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="26" cat="MappCV99" desc="Mapp41 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="27" cat="MappCV99" desc="Mapp41 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="28" cat="MappCV99" desc="Mapp42 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="29" cat="MappCV99" desc="Mapp42 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="30" cat="MappCV99" desc="Mapp42 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="31" cat="MappCV99" desc="Mapp43 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="32" cat="MappCV99" desc="Mapp43 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="33" cat="MappCV99" desc="Mapp43 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="34" cat="MappCV99" desc="Mapp44 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="35" cat="MappCV99" desc="Mapp44 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="36" cat="MappCV99" desc="Mapp44 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="37" cat="MappCV99" desc="Mapp45 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="38" cat="MappCV99" desc="Mapp45 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="39" cat="MappCV99" desc="Mapp45 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="40" cat="MappCV99" desc="Mapp46 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="41" cat="MappCV99" desc="Mapp46 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="42" cat="MappCV99" desc="Mapp46 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="43" cat="MappCV99" desc="Mapp47 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="44" cat="MappCV99" desc="Mapp47 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="45" cat="MappCV99" desc="Mapp47 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="46" cat="MappCV99" desc="Mapp48 Auslöser" dipid="FnAct" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="99" index="47" cat="MappCV99" desc="Mapp48 Bedingung" dipid="FnBed" valuerange="DIP" info="Ohne Zustand Flanke. 
+Hierfür man. Eingabe CV erforderlich.(DCC: CV)"/>
+  <cvbyte nr="99" index="48" cat="MappCV99" desc="Mapp48 Ereignis" dipid="FnEvt" valuerange="DIP" info="(DCC: CV)"/>
+  <cvbyte nr="363" index="1" cat="Telemetrie" desc="Wegstrecke1" info="Status: undefined"/>
+  <cvbyte nr="363" index="2" cat="Telemetrie" desc="Wegstrecke2" info="Status: undefined"/>
+  <cvbyte nr="363" index="3" cat="Telemetrie" desc="Wegstrecke3" info="Status: undefined"/>
+  <cvbyte nr="363" index="4" cat="Telemetrie" desc="Wegstrecke4" info="Status: undefined"/>
+  <cvbyte nr="363" index="5" cat="Telemetrie" desc="Wegstrecke5" info="Status: undefined"/>
+</decoder>

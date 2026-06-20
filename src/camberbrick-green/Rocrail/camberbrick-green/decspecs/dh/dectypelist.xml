@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dectypelist id="97" desc="Doehler&Haass GmbH" typecv="261" defspec="DH-SX2-1.1.xml">
+  <dectype val="16" type="DHP160"/>
+  <dectype val="25" type="DHP250"/>
+  <dectype val="26" type="DHP260"/>
+  <dectype val="40" type="FH05A"/>
+  <dectype val="50" type="DH05A"/>
+  <dectype val="100" type="DH10A"/>
+  <dectype val="51" type="DH05B"/>
+  <dectype val="101" type="DH10B"/>
+  <dectype val="52" type="DH05C"/>
+  <dectype val="60" type="DH06A"/>
+  <dectype val="102" type="DH10C"/>
+  <dectype val="120" type="DH12A"/>
+  <dectype val="160" type="DH16A"/>
+  <dectype val="180" type="DH18A"/>
+  <dectype val="200" type="DH21A"/>
+  <dectype val="202" type="DH22A"/>
+  <dectype val="41" type="FH05B"/>
+  <dectype val="130" type="PD12A"/>
+  <dectype val="210" type="SD10A"/>
+  <dectype val="216" type="SD16A"/>
+  <dectype val="218" type="SD18A"/>
+  <dectype val="221" type="SD21A"/>
+  <dectype val="222" type="SD22A"/>
+</dectypelist>
+  

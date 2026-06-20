@@ -1,0 +1,82 @@
+<decoder manu="Marklin" type="mfx2">
+	<remark text=" only for mfx-60906 Decoder. Inapplicable for msd/mld and msd3/mld3 Decoders."/>
+	<remark text=" testet with DecPartNos 314569"/>
+	<remark text=" bevor use, copy the follow string into the invidual Rocrail loctable CV:
+	
+	2:5,7:4,7:8,11:9,11:1,11:2,11:3,11:4,78:1,78:2,79:1,79:2,79:3,79:4,79:5,79:6,79:7,79:8,79:9,79:10,79:11,79:12,79:13,79:14,79:15,79:16,79:17,79:18,79:19,79:20,79:21,79:22,79:23,79:24,79:25,79:26,79:27,79:28,80:1,81:1,81:2,126:1,129:1,132:1,134:1,136:1
+ 
+  "/>
+  <cvbyte nr="2" index="5" cat="Root" desc="NMRA Herst.-ID" info="  (CV8) tag=22
+  131 Maerklin"/>
+  <cvbyte nr="7" index="4" cat="Root" desc="Decoder Man-ID" info="  (CV NULL) 
+  Decoderhersteller:
+  131 Maerklin"/> 
+  <cvbyte nr="7" index="8" cat="Root" desc="DecPartNo" info="Dec 60906:  
+  201 - 314569
+  
+  mfx3.xml for msd3/mld3: 
+  139 - 263819
+  165 - 280229
+   19 - 280851
+   71 - 347463
+   
+  mfx2.xml for msd/mld:
+  151 - 157847
+  127 - 160895
+   39 - 168743
+  100 - 197476
+   
+  mfx1.xml for ESU (OEM):
+   34 - 33445566"/>
+  <cvbyte nr="11" index="9" cat="Root" desc="Dectype" info="  237 Start Up Decoder
+  245 Seriend.
+  246 Nachrüstd.
+  247 Seriend./Spielwelt"/>
+  <cvbyte nr="11" index="1" cat="Root" desc="FW 1st" info="Firmwarevers. 1.Stelle"/>
+  <cvbyte nr="11" index="2" cat="Root" desc="FW 2st" info="Firmwarevers. 2.Stelle"/>
+  <cvbyte nr="11" index="3" cat="Root" desc="FW 3st" info="Firmwarevers. 3.Stelle"/>
+  <cvbyte nr="11" index="4" cat="Root" desc="FW 4st" info="Firmwarevers. 4.Stelle"/>
+  <cvbyte nr="78" index="1" cat="Motor" desc="Anfahrverzögerung" info="(CV3)"/>
+  <cvbyte nr="78" index="2" cat="Motor" desc="Bremsverzögerung" info="(CV4)"/>
+  <cvbyte nr="79" index="1" cat="Motor" desc="V-Min" info="(CV2)"/>
+  <cvbyte nr="79" index="2" cat="Motor" desc="V-Max" info="(CV5)"/>
+  <cvbyte nr="79" index="3" cat="Motor" desc="Fahrstufe01" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="4" cat="Motor" desc="Fahrstufe02" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="5" cat="Motor" desc="Fahrstufe03" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="6" cat="Motor" desc="Fahrstufe04" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="7" cat="Motor" desc="Fahrstufe05" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="8" cat="Motor" desc="Fahrstufe06" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="9" cat="Motor" desc="Fahrstufe07" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="10" cat="Motor" desc="Fahrstufe08" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="11" cat="Motor" desc="Fahrstufe09" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="12" cat="Motor" desc="Fahrstufe10" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="13" cat="Motor" desc="Fahrstufe11" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="14" cat="Motor" desc="Fahrstufe12" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="15" cat="Motor" desc="Fahrstufe13" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="16" cat="Motor" desc="Fahrstufe14" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="17" cat="Motor" desc="Fahrstufe15" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="18" cat="Motor" desc="Fahrstufe16" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="19" cat="Motor" desc="Fahrstufe17" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="20" cat="Motor" desc="Fahrstufe18" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="21" cat="Motor" desc="Fahrstufe19" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="22" cat="Motor" desc="Fahrstufe20" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="23" cat="Motor" desc="Fahrstufe21" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="24" cat="Motor" desc="Fahrstufe22" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="25" cat="Motor" desc="Fahrstufe23" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="26" cat="Motor" desc="Fahrstufe24" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="27" cat="Motor" desc="Fahrstufe25" info="(CV-/67-94)"/>
+  <cvbyte nr="79" index="28" cat="Motor" desc="Fahrstufe26" info="(CV-/67-94)"/>
+  <cvbyte nr="80" index="1" cat="Motor" desc="Fahrstufe / Tacho" info="Tacho in CS2"/>
+ 
+  <cvbyte nr="81" index="1" cat="Motor" desc="Korrekturfaktor Vorw." info="(CV-/66)"/>
+  <cvbyte nr="81" index="2" cat="Motor" desc="Korrekturfaktor Rückw." info="(CV-/95)"/>
+  
+  <cvbyte nr="126" index="1" cat="Formate" desc="AC Konfig." info="(CV 29.2/50.0) (Default 0)"/>
+  <cvbyte nr="129" index="1" cat="Formate" desc="DC Konfig." info="(CV 29.2/50.1) (Default 0)"/>
+  
+  <cvbyte nr="132" index="1" cat="Formate" desc="MM2-Format" info="(CV 29/50.2)(Default 0)"/>
+  <cvbyte nr="134" index="1" cat="Formate" desc="MM2-Adr.1" info="Def.78 = 84!!!"/>
+  <cvbyte nr="136" index="1" cat="Formate" desc="DCC-Format" info="(CV 29/50.2)(Def.0)"/>
+  
+  
+</decoder>

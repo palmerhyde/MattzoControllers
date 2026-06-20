@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="bidib_products_en.xsl"?>
+<bidib title="BiDiB" version="1.0">
+	<productlist>
+	  <product vid="13" pid="101" desc="GBM16TC Stand-Alone" url="http://www.opendcc.de/s88/gbm_bidi/gbm_bidi.html"/> 
+	  <product vid="13" pid="102" desc="GBM16TC Interface" url="http://www.opendcc.de/s88/gbm_bidi/gbm_bidi.html"/> 
+	  <product vid="13" pid="103" desc="GBMBoost Node" url="http://www.opendcc.de/elektronik/gbmboost/gbmboost.html"/> 
+	  <product vid="13" pid="104" desc="GBMBoost Master" url="http://www.opendcc.de/elektronik/gbmboost/gbmboost.html"/> 
+	  <product vid="13" pid="105" desc="BiDiB-S88-Bridge" url="http://www.opendcc.de/s88/s88_bidib/s88_bidib.html"/> 
+	  <product vid="13" pid="106" desc="BiDiB-IO16" url="http://www.opendcc.de/bidib/overview/in_entwicklung.html"/> 
+	  <product vid="13" pid="107" desc="LightControl" url="http://www.opendcc.de/elektronik/lightcontrol1/lightcontrol.html"/> 
+	  <product vid="13" pid="108" desc="MoBaLiSt" url="http://www.opendcc.de/elektronik/lightcontrol1/mobalist.html"/> 
+	  <product vid="13" pid="110" desc="LightControl (BOOT)" url="http://www.opendcc.de/elektronik/lightcontrol1/lightcontrol.html"/> 
+	  <product vid="13" pid="111" desc="GBMBoost (BOOT)" url="http://www.opendcc.de/elektronik/gbmboost/gbmboost_download.html"/> 
+	  <product vid="13" pid="112" desc="BiDiBOne (BOOT)" url="http://www.opendcc.de/elektronik/bidibone/bidibone.html"/> 
+	  <product vid="13" pid="113" desc="OneTester" url="http://www.opendcc.de/elektronik/bidibone/onetester.html"/> 
+	  <product vid="13" pid="114" desc="OneHub" url="http://www.opendcc.de/elektronik/bidibone/onehub.html"/> 
+	  <product vid="13" pid="115" desc="OneDMX" url="http://www.opendcc.de/elektronik/bidibone/onedmx.html"/> 
+    <product vid="13" pid="116" desc="OneOC" url="http://wiki.fichtelbahn.de/doku.php?id=oneoc"/> 
+	  <product vid="13" pid="117" desc="OneControl" url="http://wiki.fichtelbahn.de/doku.php?id=onecontrol"/> 
+    <product vid="13" pid="118" desc="OneIO" url="http://wiki.fichtelbahn.de/doku.php?id=onecontrol"/> 
+    <product vid="13" pid="120" desc="StepControl"/> 
+    <product vid="13" pid="121" desc="OneST" url="http://wiki.fichtelbahn.de/doku.php?id=onecontrol"/> 
+    <product vid="13" pid="122" desc="OneDriveTurn" url="http://wiki.fichtelbahn.de/doku.php?id=onecontrol"/> 
+    <product vid="13" pid="134" desc="GBM16TS"/> 
+    <product vid="13" pid="204" desc="OneOC" url="http://wiki.fichtelbahn.de/doku.php?id=onecontrol"/> 
+    <product vid="13" pid="205" desc="NEO-Control Light" url="http://www.bidib.org/support/product_id.html"/> 
+    <product vid="13" pid="206" desc="NEO-Control Signal" url="http://www.bidib.org/support/product_id.html"/> 
+    <product vid="13" pid="220" desc="Switch-64" url="http://www.bidib.org/support/product_id.html"/> 
+	  <product vid="13" pid="221" desc="LED-Optics" url="http://www.bidib.org/support/product_id.html"/>
+	  <product vid="13" pid="32770" desc="RF-Basis" url="http://www.bidib.org/support/product_id.html"/> 
+    <product vid="62" pid="144" desc="Tams BiDiB-Interface" url="http://www.tams-online.de"/> 
+    <product vid="62" pid="145" desc="Tams S88 Adapter" url="http://www.tams-online.de"/> 
+    <product vid="62" pid="146" desc="Tams Booster" url="http://www.tams-online.de"/> 
+    <product vid="62" pid="147" desc="Tams Hermes" url="http://www.tams-online.de"/> 
+    <product vid="62" pid="150" desc="Tams SD-34" url="http://www.tams-online.de"/> 
+    <product vid="62" pid="151" desc="Tams Multi-Dekoder" url="http://www.tams-online.de"/> 
+  </productlist>
+</bidib>
